@@ -1,0 +1,49 @@
+{
+  "cache_version": 1,
+  "cache_mode": "strict",
+  "event_time": "2026-08-26 10:30:00",
+  "event_cutoff": "2026-08-26 10:00:00",
+  "control_years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "excluded_validation_year": 2025,
+  "top_factor_count": 5,
+  "source_files": {
+    "base_ranking": {
+      "path": "C:\\Users\\刘润洲\\Documents\\Codex\\2026-10-23\\we-j\\MathorCup赛道B建模\\第一问\\02_特征构造与主分析\\outputs\\03_物理因素排序.csv",
+      "size_bytes": 3002,
+      "sha256": "46fd28896c1a15c3cd6d98bc59d227053b44d5b5af08d78fc5ccb691c0e7a756"
+    },
+    "event_trajectory": {
+      "path": "C:\\Users\\刘润洲\\Documents\\Codex\\2026-10-23\\we-j\\MathorCup赛道B建模\\第一问\\02_特征构造与主分析\\outputs\\05_2026灾前7天衍生指标轨迹.parquet",
+      "size_bytes": 59561,
+      "sha256": "09c0fbe8632276468c013d1ba614ebf715aafdd0d8be14e03d8a2e1100a3ecc9"
+    },
+    "sensitivity_scenarios": {
+      "path": "C:\\Users\\刘润洲\\Documents\\Codex\\2026-10-23\\we-j\\MathorCup赛道B建模\\第一问\\02_特征构造与主分析\\outputs\\06_敏感性检验全部场景.csv",
+      "size_bytes": 137298,
+      "sha256": "94b5dcf54dc625b7e81dae763192414bcae9c5fe9b1bda40f1b391cd8db0a883"
+    },
+    "stability_summary": {
+      "path": "C:\\Users\\刘润洲\\Documents\\Codex\\2026-10-23\\we-j\\MathorCup赛道B建模\\第一问\\02_特征构造与主分析\\outputs\\07_物理因素稳定性汇总.csv",
+      "size_bytes": 1488,
+      "sha256": "09207651518dba8758ca38146a2302327db888ca2fa44dbba675d4a58ca7a166"
+    },
+    "analysis_script": {
+      "path": "C:\\Users\\刘润洲\\Documents\\Codex\\2026-10-23\\we-j\\MathorCup赛道B建模\\第一问\\02_特征构造与主分析\\scripts\\01_run_2026_main_analysis.py",
+      "size_bytes": 27258,
+      "sha256": "2b4648f3e7d5f91f8bc5cd2af7098b1a3405417139c2936de566bee4cf2bc7f8"
+    }
+  },
+  "cache_files": [
+    "base_factor_ranking.csv",
+    "factor_stability.csv",
+    "top5_factor_metadata.csv",
+    "top5_sensitivity_grid.csv",
+    "top5_matched_trajectory.parquet",
+    "top5_event_control_distribution.parquet"
+  ]
+}
