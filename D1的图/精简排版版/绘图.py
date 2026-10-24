@@ -55,8 +55,8 @@ def save(fig,name):
 def fig02(c):
     d=c['stability'].sort_values(['进入前五比例','因素排名中位数'],ascending=[False,True],kind='stable')
     chosen=set(c['top5']['物理因素']);color=[BLUE if v in chosen else PALE for v in d['物理因素']]
-    fig,(a,b)=plt.subplots(1,2,figsize=(WIDTH,4.45),sharey=True,gridspec_kw={'width_ratios':[1.2,1]})
-    fig.subplots_adjust(left=.235,right=.975,bottom=.20,top=.80,wspace=.19)
+    fig,(a,b)=plt.subplots(1,2,figsize=(WIDTH,4.70),sharey=True,gridspec_kw={'width_ratios':[1.2,1]})
+    fig.subplots_adjust(left=.235,right=.975,bottom=.20,top=.765,wspace=.19)
     y=np.arange(len(d));a.barh(y,d['进入前五比例'],height=.53,color=color)
     for i,v in enumerate(d['进入前五比例']):
         a.text(v+.025,i,f'{100*v:.1f}'.rstrip('0').rstrip('.')+'%',va='center',fontsize=7.5,color=INK)
@@ -64,17 +64,17 @@ def fig02(c):
     a.set_yticks(y,labels);a.invert_yaxis();a.set_xlim(0,1.25)
     a.set_xticks([0,.5,1]);a.xaxis.set_major_formatter(PercentFormatter(1))
     a.set_xlabel('前五入选率',labelpad=6)
-    a.set_title('a  入选稳定性',loc='left',fontsize=9,pad=12,color=INK)
+    a.set_title('a  入选稳定性',loc='left',fontsize=8.6,pad=10,color=INK)
     for i,(_,row) in enumerate(d.iterrows()):
         b.plot([row['因素排名最优'],row['因素排名最差']],[i,i],lw=2,color=color[i],solid_capstyle='round')
     b.scatter(d['因素排名中位数'],y,s=25,c=color,edgecolor='white',lw=.5,zorder=3)
     b.set_xlim(.5,10.5);b.set_xticks([1,3,5,7,10]);b.tick_params(axis='y',left=False,labelleft=False)
-    b.set_xlabel('跨场景排名（1为最优）',labelpad=6);b.set_title('b  排名中位数与范围',loc='left',fontsize=9,pad=12,color=INK)
+    b.set_xlabel('跨场景排名（1为最优）',labelpad=6);b.set_title('b  排名中位数与范围',loc='left',fontsize=8.6,pad=10,color=INK)
     for ax in [a,b]:
         polish(ax,'x');ax.spines['left'].set_visible(False);ax.tick_params(axis='y',length=0)
-    header(fig,'关键因素筛选的稳健性')
+    fig.suptitle('关键因素筛选的稳健性',x=.5,y=.973,ha='center',va='top',fontsize=11,fontweight='normal')
     fig.legend(handles=[Patch(color=BLUE,label='最终前五'),Patch(color=PALE,label='其他因素')],
-               loc='upper center',bbox_to_anchor=(.59,.914),ncol=2,frameon=False,fontsize=7.5,handlelength=1.4,columnspacing=2)
+               loc='upper center',bbox_to_anchor=(.5,.899),ncol=2,frameon=False,fontsize=7.5,handlelength=2.2,columnspacing=2.8,borderaxespad=0)
     fig.text(.51,.068,'48个预设场景；点为排名中位数，线为最优—最差范围。',ha='center',fontsize=7,color=MUTED)
     fig.text(.51,.031,'* 湍流热交换仅12/48场景可用；入选率仍统一以48为分母。',ha='center',fontsize=7,color=MUTED)
     return fig

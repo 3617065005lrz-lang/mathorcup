@@ -1,0 +1,21 @@
+{
+  "cache_mode": "strict",
+  "event_time": "2026-08-26 10:30:00",
+  "event_cutoff": "2026-08-26 10:00:00",
+  "control_years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "excluded_validation_year": 2025,
+  "source_commit": "5f3b4146178fb1770b41764bb32b60784bbf1f94",
+  "source_files": {
+    "第一问\\03_可视化\\plot_cache\\top5_matched_trajectory.parquet": "b6aa23fc85f3cd7c2e136c165e2afa4627c0c5de52a2ccfe14ab2a1714913bdc",
+    "第一问\\02_特征构造与主分析\\outputs\\09_五个关键特征最终结果.csv": "6bd8dccad38b1b424a063b8aaf9c7b11c499df3efaca047782f20d69d5baec95"
+  },
+  "data_sha256": {
+    "final_features.csv": "6bd8dccad38b1b424a063b8aaf9c7b11c499df3efaca047782f20d69d5baec95",
+    "trajectory.csv": "b9fbee4186859cb5ac7cd44d2e7c914bdc7f6f25deda36cb8643ffc08f196183"
+  }
+}

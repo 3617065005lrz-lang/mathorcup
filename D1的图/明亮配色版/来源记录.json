@@ -1,0 +1,13 @@
+{
+  "source_sha256": {
+    "base_factor_ranking.csv": "1d686a5ceb806c555ba14b574eaff647ea196cbb19a7cc7cc77ba8a3a1c5be90",
+    "factor_stability.csv": "29ce9185782e68221113d7ed2de5df53e4196aba749c77846d0e45fef067e1d9",
+    "manifest.json": "b591b91f7e69ba4ed16260b47fc85ea78c428e4ef52e77caad4236149984190a",
+    "top5_event_control_distribution.parquet": "e221e8f0933669ee0868a25f8527991601f815653db8c9373e8d0803e9c26d0e",
+    "top5_factor_metadata.csv": "07810663c8b14fb17b62b81546177d934e964be60af1b05770cf3944a9aef01b",
+    "top5_matched_trajectory.parquet": "b6aa23fc85f3cd7c2e136c165e2afa4627c0c5de52a2ccfe14ab2a1714913bdc",
+    "top5_sensitivity_grid.csv": "1c86f6579644eb12a46180ae9963d564a196c2b8e7598559dfa5e2208957f0eb"
+  },
+  "design": "参考实际期刊图：明亮五因素分类色，热图浅黄至青色顺序色标，历史珊瑚红与事件天蓝；布局及数值不变",
+  "exports": "SVG文字转轮廓、无栅格数据；PNG 600DPI"
+}

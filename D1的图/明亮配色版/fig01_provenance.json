@@ -1,0 +1,30 @@
+{
+  "source_commit": "5f3b4146178fb1770b41764bb32b60784bbf1f94",
+  "source_data_sha256": {
+    "final_features.csv": "6bd8dccad38b1b424a063b8aaf9c7b11c499df3efaca047782f20d69d5baec95",
+    "trajectory.csv": "b9fbee4186859cb5ac7cd44d2e7c914bdc7f6f25deda36cb8643ffc08f196183"
+  },
+  "size_cm": [
+    17.5,
+    21.0
+  ],
+  "dpi": 600,
+  "outputs": [
+    "fig01_pre_event_trajectories.png",
+    "fig01_pre_event_trajectories.svg"
+  ],
+  "palette": "Bright sky blue #29A8E0 and coral #FF805C",
+  "svg": "纯矢量路径；文字转轮廓；无嵌入位图",
+  "versions": {
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5"
+  },
+  "transformations": [
+    "按相对小时排序",
+    "小时除以24换算为天",
+    "数值显示舍入；轨迹不平滑、不插值、不重新筛选特征"
+  ],
+  "uncertainty": "历史匹配时刻Q1—Q3；非置信区间",
+  "summary": "最终24小时事件评价窗口与历史匹配窗口中位数，取自冻结结果表"
+}
