@@ -1,0 +1,13 @@
+value,class_name
+0,NoData (check product metadata)/未分类（以产品元数据为准）
+10,Tree cover/树木覆盖
+20,Shrubland/灌木地
+30,Grassland/草地
+40,Cropland/耕地
+50,Built-up/建成区
+60,Bare or sparse vegetation/裸地或稀疏植被
+70,Snow and ice/积雪与冰川
+80,Permanent water bodies/永久水体
+90,Herbaceous wetland/草本湿地
+95,Mangroves/红树林
+100,Moss and lichen/苔藓与地衣

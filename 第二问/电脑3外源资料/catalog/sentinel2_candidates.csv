@@ -1,0 +1,10 @@
+item_id,date,platform,orbit,grid,cloud_cover_percent,size_bytes,phase,post_event_validation_only,collection,product_href
+S2B_MSIL2A_20260615T044659_N0512_R076_T45RUM_20260615T083228,2026-06-15,Sentinel-2B,R076,T45RUM,18.42,723072181,pre_event,false,sentinel-2-l2a,https://dataspace.copernicus.eu/
+S2C_MSIL2A_20260812T045701_N0512_R119_T45RUM_20260812T100317,2026-08-12,Sentinel-2C,R119,T45RUM,18.75,1142877173,pre_event,false,sentinel-2-l2a,https://dataspace.copernicus.eu/
+S2B_MSIL2A_20260605T044659_N0512_R076_T45RUM_20260605T083347,2026-06-05,Sentinel-2B,R076,T45RUM,27.47,711165048,pre_event,false,sentinel-2-l2a,https://dataspace.copernicus.eu/
+S2C_MSIL2A_20260603T045701_N0512_R119_T45RUM_20260603T100112,2026-06-03,Sentinel-2C,R119,T45RUM,36.11,1118707900,pre_event,false,sentinel-2-l2a,https://dataspace.copernicus.eu/
+S2B_MSIL2A_20260824T044659_N0512_R076_T45RUM_20260824T083447,2026-08-24,Sentinel-2B,R076,T45RUM,38.57,705327603,pre_event,false,sentinel-2-l2a,https://dataspace.copernicus.eu/
+S2A_MSIL2A_20260824T050231_N0512_R119_T45RUM_20260824T115710,2026-08-24,Sentinel-2A,R119,T45RUM,50.97,1068980451,pre_event,false,sentinel-2-l2a,https://dataspace.copernicus.eu/
+S2C_MSIL2A_20260908T044701_N0512_R076_T45RUM_20260908T094920,2026-09-08,Sentinel-2C,R076,T45RUM,62.75,673088523,post_event,true,sentinel-2-l2a,https://dataspace.copernicus.eu/
+S2B_MSIL2A_20260903T044659_N0512_R076_T45RUM_20260903T084603,2026-09-03,Sentinel-2B,R076,T45RUM,69.48,607331181,post_event,true,sentinel-2-l2a,https://dataspace.copernicus.eu/
+S2B_MSIL2A_20260827T045659_N0512_R119_T45RUM_20260827T084453,2026-08-27,Sentinel-2B,R119,T45RUM,78.47,941787579,post_event,true,sentinel-2-l2a,https://dataspace.copernicus.eu/

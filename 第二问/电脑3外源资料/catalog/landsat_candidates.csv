@@ -1,0 +1,11 @@
+scene_id,date,satellite,path,row,cloud_cover_percent,phase,post_event_validation_only,collection,stac_url,notes
+LC08_L2SP_141040_20260615_20260619_02_T1_SR,2026-06-15,Landsat 8,141,040,13.00,pre_event,false,landsat-c2l2-sr,https://landsatlook.usgs.gov/stac-server/,C2 L2 SR;优先检查AOI有效像元
+LC09_L2SP_141040_20260623_20260624_02_T1_SR,2026-06-23,Landsat 9,141,040,25.83,pre_event,false,landsat-c2l2-sr,https://landsatlook.usgs.gov/stac-server/,次选；先确认S2同日/邻近日缺口
+LC09_L2SP_141041_20260623_20260624_02_T1_SR,2026-06-23,Landsat 9,141,041,30.97,pre_event,false,landsat-c2l2-sr,https://landsatlook.usgs.gov/stac-server/,边缘相邻行覆盖候选
+LC08_L2SP_141040_20260701_20260706_02_T1_SR,2026-07-01,Landsat 8,141,040,39.64,pre_event,false,landsat-c2l2-sr,https://landsatlook.usgs.gov/stac-server/,备选
+LC08_L2SP_141041_20260701_20260706_02_T1_SR,2026-07-01,Landsat 8,141,041,48.57,pre_event,false,landsat-c2l2-sr,https://landsatlook.usgs.gov/stac-server/,备选
+LC09_L2SP_141041_20260725_20260726_02_T1_SR,2026-07-25,Landsat 9,141,041,50.34,pre_event,false,landsat-c2l2-sr,https://landsatlook.usgs.gov/stac-server/,备选
+LC09_L2SP_141040_20260810_20260811_02_T1_SR,2026-08-10,Landsat 9,141,040,49.41,pre_event,false,landsat-c2l2-sr,https://landsatlook.usgs.gov/stac-server/,备选
+LC09_L2SP_141040_20260826_20260827_02_T1_SR,2026-08-26,Landsat 9,141,040,47.54,event_or_post,true,landsat-c2l2-sr,https://landsatlook.usgs.gov/stac-server/,事件日产品仅验证用途
+LC08_L2SP_141040_20260903_20260908_02_T1_SR,2026-09-03,Landsat 8,141,040,50.58,post_event,true,landsat-c2l2-sr,https://landsatlook.usgs.gov/stac-server/,灾后验证候选
+LC09_L2SP_141040_20260911_20260912_02_T1_SR,2026-09-11,Landsat 9,141,040,63.86,post_event,true,landsat-c2l2-sr,https://landsatlook.usgs.gov/stac-server/,灾后验证候选
