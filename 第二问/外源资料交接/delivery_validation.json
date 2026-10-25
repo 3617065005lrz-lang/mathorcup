@@ -1,0 +1,327 @@
+{
+  "files": {
+    "download_manifest.csv": true,
+    "external_grd_inventory.csv": true,
+    "logs/grd_download.log": true,
+    "logs/grd_download_result.json": true,
+    "logs/verify_all.log": true,
+    "logs/verify_grd.log": true,
+    "original_file_inventory.csv": true,
+    "original_validation_report.json": true,
+    "P0-4_Sentinel-1/catalog/official_cdse_odata_documentation.html": true,
+    "P0-4_Sentinel-1/catalog/official_sentinel1_documentation.html": true,
+    "P0-4_Sentinel-1/catalog/sentinel1_catalog.csv": true,
+    "P0-4_Sentinel-1/catalog/sentinel1_catalog_raw.json": true,
+    "P0-4_Sentinel-1/catalog/sentinel1_grd_first_batch.csv": true,
+    "P0-4_Sentinel-1/catalog/sentinel1_grd_verified.csv": true,
+    "P0-4_Sentinel-1/catalog/sentinel1_grd_verified.json": true,
+    "P0-4_Sentinel-1/catalog/sentinel1_insar_candidate_pairs.csv": true,
+    "P0-4_Sentinel-1/catalog/sentinel1_precise_orbit_catalog.csv": true,
+    "P0-4_Sentinel-1/catalog/sentinel1_summary.json": true,
+    "P0-5_GFS/analysis_ready/analysis_qa.json": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082200_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082206_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082212_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082218_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082300_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082306_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082312_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082318_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082400_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082406_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082412_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082418_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082500_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082506_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082512_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082518_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082600_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082606_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082612_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/analysis_ready/gfs_2026082618_f000-f120_gyirong_interval_aware.nc": true,
+    "P0-5_GFS/catalog/gfs_download_results_2026082200_2026082300.json": true,
+    "P0-5_GFS/catalog/gfs_download_results_2026082306_2026082406.json": true,
+    "P0-5_GFS/catalog/gfs_download_results_2026082412_2026082512.json": true,
+    "P0-5_GFS/catalog/gfs_download_results_2026082518_2026082618.json": true,
+    "P0-5_GFS/catalog/gfs_inventory_summary.json": true,
+    "P0-5_GFS/catalog/gfs_official_inventory.csv": true,
+    "P0-5_GFS/catalog/GFS_降水与辐射逐时效统计区间.csv": true,
+    "P0-5_GFS/catalog/official_ncei_gfs_page.html": true,
+    "P0-5_GFS/data/gfs_2026082200_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082200_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082206_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082206_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082212_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082212_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082218_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082218_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082300_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082300_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082306_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082306_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082312_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082312_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082318_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082318_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082400_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082400_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082406_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082406_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082412_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082412_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082418_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082418_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082500_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082500_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082506_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082506_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082512_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082512_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082518_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082518_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082600_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082600_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082606_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082606_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082612_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082612_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/data/gfs_2026082618_f000-f120_gyirong.nc": true,
+    "P0-5_GFS/data/gfs_2026082618_f000-f120_gyirong_provenance.csv": true,
+    "P0-5_GFS/pressure_supplement/download_summary.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082200_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082200_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082206_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082206_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082212_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082212_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082218_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082218_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082300_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082300_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082306_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082306_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082312_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082312_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082318_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082318_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082400_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082400_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082406_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082406_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082412_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082412_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082418_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082418_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082500_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082500_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082506_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082506_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082512_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082512_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082518_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082518_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082600_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082600_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082606_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082606_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082612_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082612_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082618_f000-f120_gyirong_levels_400_450_550.nc": true,
+    "P0-5_GFS/pressure_supplement/gfs_2026082618_f000-f120_gyirong_levels_400_450_550.provenance.json": true,
+    "P0-6_Copernicus_DEM_GLO-30/catalog/cop_dem_catalog_summary.json": true,
+    "P0-6_Copernicus_DEM_GLO-30/catalog/cop_dem_glo30_cdse_catalog.csv": true,
+    "P0-6_Copernicus_DEM_GLO-30/catalog/official_cop_dem_documentation.html": true,
+    "P0-6_Copernicus_DEM_GLO-30/tiles/Copernicus_DSM_COG_10_N28_00_E085_00_DEM/AUXFILES/Copernicus_DSM_10_N28_00_E085_00_ACM.kml": true,
+    "P0-6_Copernicus_DEM_GLO-30/tiles/Copernicus_DSM_COG_10_N28_00_E085_00_DEM/AUXFILES/Copernicus_DSM_COG_10_N28_00_E085_00_EDM.tif": true,
+    "P0-6_Copernicus_DEM_GLO-30/tiles/Copernicus_DSM_COG_10_N28_00_E085_00_DEM/AUXFILES/Copernicus_DSM_COG_10_N28_00_E085_00_FLM.tif": true,
+    "P0-6_Copernicus_DEM_GLO-30/tiles/Copernicus_DSM_COG_10_N28_00_E085_00_DEM/AUXFILES/Copernicus_DSM_COG_10_N28_00_E085_00_HEM.tif": true,
+    "P0-6_Copernicus_DEM_GLO-30/tiles/Copernicus_DSM_COG_10_N28_00_E085_00_DEM/AUXFILES/Copernicus_DSM_COG_10_N28_00_E085_00_WBM.tif": true,
+    "P0-6_Copernicus_DEM_GLO-30/tiles/Copernicus_DSM_COG_10_N28_00_E085_00_DEM/Copernicus_DSM_10_N28_00_E085_00.xml": true,
+    "P0-6_Copernicus_DEM_GLO-30/tiles/Copernicus_DSM_COG_10_N28_00_E085_00_DEM/Copernicus_DSM_COG_10_N28_00_E085_00_DEM.tif": true,
+    "P0-6_Copernicus_DEM_GLO-30/tiles/Copernicus_DSM_COG_10_N28_00_E085_00_DEM/INFO/eula_F.pdf": true,
+    "README.md": true,
+    "requirements.txt": true,
+    "scripts/cdp.py": true,
+    "scripts/download_dem_tile.py": true,
+    "scripts/download_gfs_levels.py": true,
+    "scripts/download_gfs_subset.py": true,
+    "scripts/download_s1_grd.py": true,
+    "scripts/grd_parts.py": true,
+    "scripts/prepare_gfs_analysis.py": true,
+    "scripts/query_dem_catalog.py": true,
+    "scripts/query_gfs_inventory.py": true,
+    "scripts/query_sentinel1_catalog.py": true,
+    "scripts/rebuild_inventory.py": true,
+    "scripts/verify_and_manifest.py": true,
+    "scripts/verify_delivery.py": true,
+    "scripts/verify_grd_batch.py": true,
+    "任务完成与用途对照.csv": true,
+    "分卷独立校验.json": true,
+    "原始下载说明.md": true,
+    "完善前核查记录.md": true,
+    "完善版验收摘要.md": true,
+    "待补任务.csv": true,
+    "数据独立核查.json": true,
+    "题目附件7_DEM独立核查.json": true,
+    "验收.bat": true
+  },
+  "gfs": [
+    {
+      "file": "gfs_2026082200_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082206_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082212_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082218_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082300_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082306_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082312_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082318_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082400_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082406_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082412_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082418_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082500_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082506_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082512_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082518_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082600_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082606_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082612_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    },
+    {
+      "file": "gfs_2026082618_f000-f120_gyirong_interval_aware.nc",
+      "time_and_interval_checks": true
+    }
+  ],
+  "dem": [
+    {
+      "file": "Copernicus_DSM_COG_10_N28_00_E085_00_DEM.tif",
+      "read_ok": true
+    },
+    {
+      "file": "Copernicus_DSM_COG_10_N28_00_E085_00_EDM.tif",
+      "read_ok": true
+    },
+    {
+      "file": "Copernicus_DSM_COG_10_N28_00_E085_00_FLM.tif",
+      "read_ok": true
+    },
+    {
+      "file": "Copernicus_DSM_COG_10_N28_00_E085_00_HEM.tif",
+      "read_ok": true
+    },
+    {
+      "file": "Copernicus_DSM_COG_10_N28_00_E085_00_WBM.tif",
+      "read_ok": true
+    }
+  ],
+  "grd": {
+    "parts": [
+      {
+        "name": "帮助_GRD_分卷.zip.001",
+        "ok": true
+      },
+      {
+        "name": "帮助_GRD_分卷.zip.002",
+        "ok": true
+      },
+      {
+        "name": "帮助_GRD_分卷.zip.003",
+        "ok": true
+      },
+      {
+        "name": "帮助_GRD_分卷.zip.004",
+        "ok": true
+      },
+      {
+        "name": "帮助_GRD_分卷.zip.005",
+        "ok": true
+      },
+      {
+        "name": "帮助_GRD_分卷.zip.006",
+        "ok": true
+      },
+      {
+        "name": "帮助_GRD_分卷.zip.007",
+        "ok": true
+      }
+    ],
+    "archives": [
+      {
+        "name": "S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_C3AB.SAFE.zip",
+        "sha256_ok": true
+      },
+      {
+        "name": "S1D_IW_GRDH_1SDV_20260819T001036_20260819T001101_004187_007ABD_DC16.SAFE.zip",
+        "sha256_ok": true
+      },
+      {
+        "name": "S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_01B4.SAFE.zip",
+        "sha256_ok": true
+      },
+      {
+        "name": "S1D_IW_GRDH_1SDV_20260831T001037_20260831T001102_004362_0080EC_2C5B.SAFE.zip",
+        "sha256_ok": true
+      }
+    ],
+    "merged_sha256_ok": true,
+    "passed": true
+  },
+  "errors": [],
+  "local_package_passed": true,
+  "complete_delivery_passed": true
+}

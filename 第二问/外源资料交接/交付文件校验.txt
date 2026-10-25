@@ -1,0 +1,9 @@
+交付文件：帮助_交接包_完善版.zip
+大小（字节）：83538529
+大小（MiB）：79.67
+SHA-256：fbf1b4690bb7ccd1554e2699ff530de1358b8f6f5acb42bf8197e0c5bbe6b947
+
+配套资料：原 帮助_GRD_分卷.zip.001 至 .007，保持原文件不变，不必重发。
+ZIP本身CRC、压缩包内164个清单文件SHA-256均已验证。
+小包和7片整体校验：complete_delivery_passed=true，errors=[]。
+新版解压后先读 README.md；完善说明见 完善版验收摘要.md。
