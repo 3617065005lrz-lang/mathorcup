@@ -1,0 +1,5 @@
+﻿file,official_url,bytes,sha256,status
+NCEI_GFS_product_page.html,https://www.ncei.noaa.gov/products/weather-climate-models/global-forecast,49102,f5a43c3540584a34bcf2e1396075fe0895623ec25ca571c9477fdf4df914225a,downloaded
+NCEP_GFS_implementations.html,https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gfs/implementations.php,145713,dd39586d075880d3b48bcbf6a84c213282e096002982c031ba6ea3bce2e982c9,downloaded
+GFSv16_4_proposed_upgrade_PNS25-23.pdf,https://www.weather.gov/media/notification/pdf_2025/pns25-23_Comments_GFSv16.4.0.pdf,48370,5304063f192be262e40afbbd3b76e1fc5691df510716c802e67fd5c82e0852b3,downloaded
+GFSv17_proposed_upgrade_PNS26-29.pdf,https://www.weather.gov/media/notification/pdf_2026/pns26-29_Science_for_GFSv17.pdf,55573,57ec2a92a2dcea8ea7bf0db37e2291eb589b0e56690e0962380d464e9e6efbf3,downloaded

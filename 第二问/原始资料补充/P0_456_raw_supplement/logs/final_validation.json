@@ -1,0 +1,66 @@
+{
+  "checked_utc": "2026-10-25T14:16:55.715835+00:00",
+  "original_handoff_zip": {
+    "bytes": 83538529,
+    "sha256": "fbf1b4690bb7ccd1554e2699ff530de1358b8f6f5acb42bf8197e0c5bbe6b947",
+    "after_sha256": "fbf1b4690bb7ccd1554e2699ff530de1358b8f6f5acb42bf8197e0c5bbe6b947",
+    "unchanged": true,
+    "specified_prompt_path_exists": false,
+    "path_note": "本机工作区中的原始 ZIP，绝对路径已省略"
+  },
+  "grd_parts": {
+    "count": 7,
+    "status": "verified_existing",
+    "verification_file": "P0-4_Sentinel-1_raw/catalog/existing_verified_locations.csv"
+  },
+  "orbit_scenes": {
+    "count": 4,
+    "status": "verified_existing_in_supplement_at_audit_start",
+    "checks": "EOF SHA-256 matches mapping; parsed AUX_POEORB validity spans cover each full acquisition"
+  },
+  "gfs": {
+    "files": 820,
+    "messages": 3240,
+    "bytes": 566701759,
+    "failures": []
+  },
+  "dem": {
+    "files": 8,
+    "tiffs_readable": 5,
+    "crs": "EPSG:4326",
+    "resolution_arc_seconds": 1,
+    "vertical_datum_from_XML": "WGS 84 Geoid EGM08 / EGM2008",
+    "status": "verified_existing"
+  },
+  "prohibited_processing": "None performed; GRIB fields preserved as raw messages; DEM files not transformed.",
+  "gfs_content_integrity": {
+    "inventory_files": 820,
+    "selected_message_records": 3240,
+    "raw_grib2_files": 820,
+    "provenance_files": 820,
+    "messages_rechecked": 3240,
+    "actual_raw_bytes": 566701759,
+    "planned_raw_bytes": 566701759,
+    "message_boundaries_GRIB_7777": true,
+    "per_message_sha256": true,
+    "failures": 0,
+    "availability_by_variable": {
+      "ALBDO": 800,
+      "SNOD": 820,
+      "WEASD": 820,
+      "DLWRF": 800,
+      "SNOC_or_SNOWC": 0
+    }
+  },
+  "release_metadata_review": {
+    "gfs_cycle_frequency": "00/06/12/18 UTC from official EMC documentation",
+    "exact_august_2026_minor_version": "unresolved",
+    "business_first_available_time": "unresolved; Last-Modified retained as archive header only"
+  },
+  "no_transformations": [
+    "No NetCDF output",
+    "No field values decoded or modified",
+    "No DEM reprojection, mosaic, slope, or terrain calculations",
+    "No SAR calibration, change detection, or InSAR"
+  ]
+}

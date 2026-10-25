@@ -1,0 +1,18 @@
+{
+  "completed_utc": "2026-10-25T14:16:55.715835+00:00",
+  "gfs_download": {
+    "files": 820,
+    "messages": 3240,
+    "bytes": 566701759,
+    "failures": []
+  },
+  "new_gfs_raw_files_this_pass": 770,
+  "previously_existing_verified_gfs_raw_files_reused": 50,
+  "new_gfs_raw_bytes_this_pass": 532509344,
+  "official_document_files_downloaded": 4,
+  "additional_background_grd_downloaded": 0,
+  "slc_downloaded": 0,
+  "dem_tiles_downloaded": 0,
+  "credentials_saved": false,
+  "failures": []
+}

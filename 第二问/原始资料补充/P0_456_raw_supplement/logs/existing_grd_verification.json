@@ -1,0 +1,52 @@
+{
+  "parts": [
+    {
+      "name": "帮助_GRD_分卷.zip.001",
+      "ok": true
+    },
+    {
+      "name": "帮助_GRD_分卷.zip.002",
+      "ok": true
+    },
+    {
+      "name": "帮助_GRD_分卷.zip.003",
+      "ok": true
+    },
+    {
+      "name": "帮助_GRD_分卷.zip.004",
+      "ok": true
+    },
+    {
+      "name": "帮助_GRD_分卷.zip.005",
+      "ok": true
+    },
+    {
+      "name": "帮助_GRD_分卷.zip.006",
+      "ok": true
+    },
+    {
+      "name": "帮助_GRD_分卷.zip.007",
+      "ok": true
+    }
+  ],
+  "archives": [
+    {
+      "name": "S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_C3AB.SAFE.zip",
+      "sha256_ok": true
+    },
+    {
+      "name": "S1D_IW_GRDH_1SDV_20260819T001036_20260819T001101_004187_007ABD_DC16.SAFE.zip",
+      "sha256_ok": true
+    },
+    {
+      "name": "S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_01B4.SAFE.zip",
+      "sha256_ok": true
+    },
+    {
+      "name": "S1D_IW_GRDH_1SDV_20260831T001037_20260831T001102_004362_0080EC_2C5B.SAFE.zip",
+      "sha256_ok": true
+    }
+  ],
+  "merged_sha256_ok": true,
+  "passed": true
+}

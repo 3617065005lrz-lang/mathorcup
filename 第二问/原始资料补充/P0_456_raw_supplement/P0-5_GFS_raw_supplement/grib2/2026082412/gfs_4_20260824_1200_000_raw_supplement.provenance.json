@@ -1,0 +1,105 @@
+{
+  "file": "P0-5_GFS_raw_supplement/grib2/2026082412/gfs_4_20260824_1200_000_raw_supplement.grib2",
+  "bytes": 228825,
+  "file_sha256": "ee086fdb9a1e4299e4e929802398a49870ced4118b6fad93027c5bba3a4a8075",
+  "message_count": 2,
+  "processing": "Exact official GRIB2 messages concatenated without re-encoding, cropping, or value transformation",
+  "messages": [
+    {
+      "variable_requested": "snow_water_equivalent",
+      "original_short_name": "WEASD",
+      "original_level": "surface",
+      "forecast_reference_time_utc": "20260824T12:00:00Z",
+      "lead_hours": 0,
+      "valid_time_utc": "2026-08-24T12:00:00Z",
+      "source_url": "https://www.ncei.noaa.gov/oa/prod-model/global-forecast-system/access/grid-004-0.5-degree/forecast/202608/20260824/gfs_4_20260824_1200_000.grb2",
+      "inventory_url": "https://www.ncei.noaa.gov/oa/prod-model/global-forecast-system/access/grid-004-0.5-degree/forecast/202608/20260824/gfs_4_20260824_1200_000.grb2.inv",
+      "inventory_line": "577:119634865:d=2026082412:WEASD:surface:anl:",
+      "source_byte_start": 119634865,
+      "source_byte_end": 119748082,
+      "local_byte_start": 0,
+      "local_byte_end": 113217,
+      "message_sha256": "3ac267c75821d6d3d81773164f451d9d28a191e82b40b642aacd4511becb024e",
+      "grib_metadata": {
+        "name": "Water equivalent of accumulated snow depth (deprecated)",
+        "shortName": "sdwe",
+        "units": "kg m**-2",
+        "typeOfLevel": "surface",
+        "level": 0,
+        "dataDate": 20260824,
+        "dataTime": 1200,
+        "forecastTime": 0,
+        "stepType": "instant",
+        "startStep": 0,
+        "endStep": 0,
+        "stepUnits": 1,
+        "edition": 2,
+        "centre": "kwbc",
+        "generatingProcessIdentifier": 81,
+        "productionStatusOfProcessedData": 0
+      },
+      "http_metadata": {
+        "url": "https://www.ncei.noaa.gov/oa/prod-model/global-forecast-system/access/grid-004-0.5-degree/forecast/202608/20260824/gfs_4_20260824_1200_000.grb2",
+        "retrieved_utc": "2026-10-25T14:11:14.807915+00:00",
+        "status": 206,
+        "headers": {
+          "Last-Modified": "Thu, 27 Aug 2026 22:04:54 GMT",
+          "ETag": "\"fdea87b06abe8bef840dfb718d8025d3\"",
+          "Content-Length": "113218",
+          "Content-Range": "bytes 119634865-119748082/146093290",
+          "Date": "Sun, 25 Oct 2026 14:11:13 GMT"
+        },
+        "information_available_time": null,
+        "information_available_time_status": "unresolved_not_inferred_from_archive_headers"
+      }
+    },
+    {
+      "variable_requested": "snow_depth",
+      "original_short_name": "SNOD",
+      "original_level": "surface",
+      "forecast_reference_time_utc": "20260824T12:00:00Z",
+      "lead_hours": 0,
+      "valid_time_utc": "2026-08-24T12:00:00Z",
+      "source_url": "https://www.ncei.noaa.gov/oa/prod-model/global-forecast-system/access/grid-004-0.5-degree/forecast/202608/20260824/gfs_4_20260824_1200_000.grb2",
+      "inventory_url": "https://www.ncei.noaa.gov/oa/prod-model/global-forecast-system/access/grid-004-0.5-degree/forecast/202608/20260824/gfs_4_20260824_1200_000.grb2.inv",
+      "inventory_line": "578:119748083:d=2026082412:SNOD:surface:anl:",
+      "source_byte_start": 119748083,
+      "source_byte_end": 119863689,
+      "local_byte_start": 113218,
+      "local_byte_end": 228824,
+      "message_sha256": "ccf7bf96bfde2b224300531587269178205e2ba0aa4b2a9b99e4ce7a48a49e79",
+      "grib_metadata": {
+        "name": "Snow depth",
+        "shortName": "sde",
+        "units": "m",
+        "typeOfLevel": "surface",
+        "level": 0,
+        "dataDate": 20260824,
+        "dataTime": 1200,
+        "forecastTime": 0,
+        "stepType": "instant",
+        "startStep": 0,
+        "endStep": 0,
+        "stepUnits": 1,
+        "edition": 2,
+        "centre": "kwbc",
+        "generatingProcessIdentifier": 81,
+        "productionStatusOfProcessedData": 0
+      },
+      "http_metadata": {
+        "url": "https://www.ncei.noaa.gov/oa/prod-model/global-forecast-system/access/grid-004-0.5-degree/forecast/202608/20260824/gfs_4_20260824_1200_000.grb2",
+        "retrieved_utc": "2026-10-25T14:11:16.459627+00:00",
+        "status": 206,
+        "headers": {
+          "Last-Modified": "Thu, 27 Aug 2026 22:04:54 GMT",
+          "ETag": "\"fdea87b06abe8bef840dfb718d8025d3\"",
+          "Content-Length": "115607",
+          "Content-Range": "bytes 119748083-119863689/146093290",
+          "Date": "Sun, 25 Oct 2026 14:11:15 GMT"
+        },
+        "information_available_time": null,
+        "information_available_time_status": "unresolved_not_inferred_from_archive_headers"
+      }
+    }
+  ]
+}

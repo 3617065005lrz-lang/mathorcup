@@ -1,0 +1,13 @@
+{
+  "inventory_count": 820,
+  "selected_message_count": 3240,
+  "estimated_raw_download_bytes": 566701759,
+  "estimated_GiB": 0.5277821412310004,
+  "by_variable": {
+    "albedo": 800,
+    "snow_cover": 0,
+    "snow_depth": 820,
+    "snow_water_equivalent": 820,
+    "downward_longwave": 800
+  }
+}

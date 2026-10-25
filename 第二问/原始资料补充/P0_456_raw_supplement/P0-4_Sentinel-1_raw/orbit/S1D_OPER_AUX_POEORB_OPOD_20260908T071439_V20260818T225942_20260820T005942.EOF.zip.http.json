@@ -1,0 +1,10 @@
+{
+  "url": "https://step.esa.int/auxdata/orbits/Sentinel-1/POEORB/S1D/2026/08/S1D_OPER_AUX_POEORB_OPOD_20260908T071439_V20260818T225942_20260820T005942.EOF.zip",
+  "headers": {
+    "Last-Modified": "Tue, 08 Sep 2026 10:02:52 GMT",
+    "ETag": "\"6a9fdd4c-9188b\"",
+    "Content-Length": "596107",
+    "Date": "Sun, 25 Oct 2026 14:01:52 GMT"
+  },
+  "retrieved_utc": "2026-10-25T14:01:54.230166+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "url": "https://www.ncei.noaa.gov/oa/prod-model/global-forecast-system/access/grid-004-0.5-degree/forecast/202608/20260826/gfs_4_20260826_0000_012.grb2.inv",
+  "retrieved_utc": "2026-10-25T14:00:35.875429+00:00",
+  "status": 200,
+  "headers": {
+    "Last-Modified": "Fri, 28 Aug 2026 10:01:30 GMT",
+    "ETag": "\"4fa4bc3443e86883f8ba6addfb5f8101\"",
+    "Content-Length": "40859",
+    "Content-Range": null,
+    "Date": "Sun, 25 Oct 2026 14:00:35 GMT"
+  },
+  "information_available_time": null,
+  "information_available_time_status": "unresolved_not_inferred_from_archive_headers"
+}
