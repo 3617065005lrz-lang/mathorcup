@@ -1,0 +1,36 @@
+{
+  "event_time_beijing": "2026-08-26 10:52:00",
+  "event_last_complete_hour_beijing": "2026-08-26 10:00:00",
+  "background_years": [2021, 2022, 2023, 2024],
+  "excluded_years": [2025],
+  "source_aoi_wgs84": {
+    "west": 85.512,
+    "south": 28.269,
+    "east": 85.533,
+    "north": 28.293
+  },
+  "source_reference_point_wgs84": {
+    "longitude": 85.52515,
+    "latitude": 28.28532
+  },
+  "source_target_elevation_m": 4991.0,
+  "time_windows_hours": [24, 48, 72, 120, 168],
+  "eti_model": {
+    "temperature_threshold_c": 1.0,
+    "temperature_factor_mm_h_c": 0.05,
+    "shortwave_factor_mm_h_wm2": 0.0094,
+    "parameter_role": "literature-informed central values; not locally calibrated melt coefficients",
+    "monte_carlo_draws": 1000,
+    "temperature_factor_range": [0.02, 0.1],
+    "shortwave_factor_range": [0.0047, 0.0141],
+    "temperature_threshold_range_c": [0.0, 1.5]
+  },
+  "modis": {
+    "tile": "h25v06",
+    "strict_basic_qa_max": 1,
+    "snow_ndsi_threshold_percent": 40,
+    "same_day_observation_allowed_for_event": false,
+    "past_fill_window_days": 7
+  }
+}
+

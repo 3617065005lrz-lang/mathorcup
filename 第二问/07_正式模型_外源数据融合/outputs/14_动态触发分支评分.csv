@@ -1,0 +1,6 @@
+﻿branch,score_0_1,definition
+thermal_cryosphere,0.6209677419354839,ETI 72h historical percentile
+short_rainfall,0.10161290322580646,median of ERA5-Land/IMERG 72h rainfall percentiles
+antecedent_moisture,0.32661290322580644,median of CHIRPS P15/SMAP root-zone percentiles
+rain_moisture,0.18217597351951645,"geometric mean(short rainfall, antecedent moisture)"
+dynamic_trigger_union,0.6900183125436876,1-(1-thermal)*(1-rain_moisture)
