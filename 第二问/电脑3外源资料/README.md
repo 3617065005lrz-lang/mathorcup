@@ -4,12 +4,16 @@
 
 ## 当前交付
 
-- **P1-7 WorldCover：已下载** ESA WorldCover 2020 v100 和 2021 v200 的官方 N27E084 瓦片。两份文件均为 36,000 × 36,000 像元、EPSG:4326、约 10 m，覆盖吉隆研究区；源文件放在 `D:\MathorCup_Data\External_Gyirong\P1-7_WorldCover\raw_official`，不进入 Git。SHA-256、字节数和来源见 `download_manifest.csv`。
-- **P0-3 Sentinel-2：部分完成** 已查 CDSE STAC，检出55个 2026-06-01 至 2026-09-15、覆盖 AOI 邻近范围的 L2A 场景；仓库内保存候选目录。产品为整景 SAFE，需 CDSE 账户/授权，未下载整景。优先检查灾前 2026-08-24 R076 和灾后 2026-08-27 R119；灾后影像仅作独立验证，且整景云量高，必须用 AOI 内 SCL 再判断可用性。
+- **P1-7 WorldCover：已下载** ESA WorldCover 2020 v100 和 2021 v200 的官方 N27E084 瓦片。两份文件均为 36,000 × 36,000 像元、EPSG:4326、约 10 m，覆盖吉隆研究区；本地源文件放在 `D:\MathorCup_Data\External_Gyirong\P1-7_WorldCover\raw_official`，仓库副本位于 `data/worldcover/` 并由 Git LFS 管理。SHA-256、字节数和来源见 `download_manifest.csv`。
+- **P0-3 Sentinel-2：部分完成** 已查 CDSE STAC，检出55个候选；已下载六个灾前 SAFE 产品（2026-06-03、2026-06-05、2026-06-15、2026-08-12，以及 2026-08-24 的 Sentinel-2B R076 和 Sentinel-2A R119），另有三景灾后独立验证产品（2026-08-27 Sentinel-2B R119、2026-09-03 Sentinel-2B R076、2026-09-08 Sentinel-2C R076），共 9 景，实际合计 7,692,647,053 bytes，均通过 ZIP CRC 与 SHA-256 校验，且包含 B02/B03/B04/B08/B11/B12 与 SCL。本地原始文件保存在 D 盘；仓库副本位于 `data/sentinel2/` 并由 Git LFS 管理。逐景哈希见 `download_manifest.csv`。六景灾前产品整景云量分别约36.11%、27.47%、18.42%、18.75%、38.57%、50.97%；三景灾后验证产品云量分别为78.47%、69.48%、62.75%。这些整景云量不能代替 AOI 内云量；解压后仍需检查 AOI SCL 有效像元。灾后影像仅独立验证。
 - **P1-3 Landsat：部分完成** USGS LandsatLook C2 L2 SR 检出26个候选。仅作为 Sentinel-2 云/时间缺口的备份，不应不加筛选批量下载。目录内保留优先候选。灾后日期仅作验证；Landsat 温度波段是地表温度产品，不等同于2米气温。
 - **P2-4 BIPAD：失败/待重试** 官方事件 API 在本次运行中超时，未获得或验证记录。附查询脚本和接口地址；网络恢复后重跑。不得据此声称“没有事件”。一般洪水、滑坡、雪崩记录不能自动标成泥石流。
 
 GitHub 检索未找到可确认对应 2026 年 MathorCup 赛道B第二问的公开仓库，因此这里不引用未核实的他人代码/结论。
+
+## 文件包
+
+`data/sentinel2/` 包含已核验的 9 个 SAFE ZIP，`data/worldcover/` 包含 2020 与 2021 两个官方 GeoTIFF。原始栅格与影像通过 Git LFS 提交；仅拉取普通 Git 仓库不会下载这些大文件，需安装 Git LFS 并执行 `git lfs pull`。
 
 ## 目录
 

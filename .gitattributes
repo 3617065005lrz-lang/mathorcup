@@ -1,0 +1,2 @@
+第二问/电脑3外源资料/data/sentinel2/*.zip filter=lfs diff=lfs merge=lfs -text
+第二问/电脑3外源资料/data/worldcover/*.tif filter=lfs diff=lfs merge=lfs -text
