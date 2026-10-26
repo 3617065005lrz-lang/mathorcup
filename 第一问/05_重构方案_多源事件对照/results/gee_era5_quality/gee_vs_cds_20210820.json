@@ -1,0 +1,112 @@
+[
+  {
+    "variable": "snow_cover",
+    "cells": 1944,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "max_abs_error": 0.0,
+    "correlation": 1.0,
+    "gee_mean": 4.995171440972222,
+    "cds_mean": 4.995171440972222
+  },
+  {
+    "variable": "snow_depth",
+    "cells": 1944,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "max_abs_error": 0.0,
+    "correlation": 1.0,
+    "gee_mean": 1.378442081404321,
+    "cds_mean": 1.378442081404321
+  },
+  {
+    "variable": "snow_depth_water_equivalent",
+    "cells": 1944,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "max_abs_error": 0.0,
+    "correlation": 0.9999999999999999,
+    "gee_mean": 0.41342622556804137,
+    "cds_mean": 0.41342622556804137
+  },
+  {
+    "variable": "snowfall",
+    "cells": 1944,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "max_abs_error": 0.0,
+    "correlation": 0.9999999999999998,
+    "gee_mean": 6.839931954978486e-05,
+    "cds_mean": 6.839931954978486e-05
+  },
+  {
+    "variable": "snowmelt",
+    "cells": 1944,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "max_abs_error": 0.0,
+    "correlation": 1.0,
+    "gee_mean": 0.00037375593475552865,
+    "cds_mean": 0.00037375593475552865
+  },
+  {
+    "variable": "soil_temperature_level_2",
+    "cells": 1944,
+    "mae": 0.0001220703125,
+    "rmse": 0.000139849111784541,
+    "max_abs_error": 0.000244140625,
+    "correlation": 0.9999999999171151,
+    "gee_mean": 284.25433324492025,
+    "cds_mean": 284.25421117460775
+  },
+  {
+    "variable": "soil_temperature_level_3",
+    "cells": 1944,
+    "mae": 0.00011444091796875,
+    "rmse": 0.00013845476876644082,
+    "max_abs_error": 0.000244140625,
+    "correlation": 0.9999999999043736,
+    "gee_mean": 282.97629754337265,
+    "cds_mean": 282.9761831024547
+  },
+  {
+    "variable": "soil_temperature_level_4",
+    "cells": 1944,
+    "mae": 0.000110626220703125,
+    "rmse": 0.00013229173587687128,
+    "max_abs_error": 0.000244140625,
+    "correlation": 0.9999999999393745,
+    "gee_mean": 279.92000009984145,
+    "cds_mean": 279.91988947362074
+  },
+  {
+    "variable": "volumetric_soil_water_layer_2",
+    "cells": 1944,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "max_abs_error": 0.0,
+    "correlation": 1.0,
+    "gee_mean": 0.4108005413793242,
+    "cds_mean": 0.4108005413793242
+  },
+  {
+    "variable": "volumetric_soil_water_layer_3",
+    "cells": 1944,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "max_abs_error": 0.0,
+    "correlation": 1.0,
+    "gee_mean": 0.40430792663323045,
+    "cds_mean": 0.40430792663323045
+  },
+  {
+    "variable": "volumetric_soil_water_layer_4",
+    "cells": 1944,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "max_abs_error": 0.0,
+    "correlation": 1.0,
+    "gee_mean": 0.41669311837404355,
+    "cds_mean": 0.41669311837404355
+  }
+]

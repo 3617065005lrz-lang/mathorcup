@@ -1,0 +1,7 @@
+﻿资源,存在,大小字节,起始时间,结束时间,记录数
+daily_series.csv,True,890259,2016-01-02 00:00:00,2026-08-26 00:00:00,3890
+event_window_hourly.csv,True,7142,2026-08-23 00:00:00,2026-08-28 07:00:00,128
+climatology.csv,True,29190,,,366
+event_hour_diagnostics.json,True,742,,,
+grid_elevation.nc,True,9419,,,
+polygon_weights.nc,True,9419,,,

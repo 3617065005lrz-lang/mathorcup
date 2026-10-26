@@ -1,0 +1,41 @@
+{
+  "dataset": "reanalysis-era5-land",
+  "dataset_doi": "10.24381/cds.e2161bac",
+  "data_root": "D:\\MathorCup_Data\\ERA5_Land_Gyirong",
+  "raw_subdir": "raw_official\\q1_history_mapped",
+  "area_nwse": [28.7, 85.1, 27.9, 85.9],
+  "years": {"start": 2021, "end": 2024},
+  "months": ["06", "07", "08", "09"],
+  "data_format": "grib",
+  "download_format": "unarchived",
+  "file_extension": ".grib",
+  "hours": [
+    "00:00", "01:00", "02:00", "03:00", "04:00", "05:00",
+    "06:00", "07:00", "08:00", "09:00", "10:00", "11:00",
+    "12:00", "13:00", "14:00", "15:00", "16:00", "17:00",
+    "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
+  ],
+  "variable_groups": {
+    "q1_attachment_mapped": [
+      "2m_temperature",
+      "2m_dewpoint_temperature",
+      "surface_pressure",
+      "10m_u_component_of_wind",
+      "10m_v_component_of_wind",
+      "total_precipitation",
+      "surface_solar_radiation_downwards",
+      "surface_thermal_radiation_downwards",
+      "surface_net_solar_radiation",
+      "surface_net_thermal_radiation",
+      "surface_sensible_heat_flux",
+      "surface_latent_heat_flux",
+      "forecast_albedo",
+      "skin_temperature",
+      "soil_temperature_level_1",
+      "volumetric_soil_water_layer_1"
+    ]
+  },
+  "main_baseline_years": [2021, 2022, 2023, 2024],
+  "excluded_from_baseline": [2025],
+  "design_note": "只下载能够对应题目MET、RADM、SOIL、FLUX物理指标的16项源区变量。用于源区交叉核验，不让外源独有变量进入第一问前五因素竞争。"
+}

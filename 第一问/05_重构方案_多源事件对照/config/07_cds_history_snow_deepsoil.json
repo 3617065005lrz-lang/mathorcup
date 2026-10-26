@@ -1,0 +1,36 @@
+{
+  "dataset": "reanalysis-era5-land",
+  "dataset_doi": "10.24381/cds.e2161bac",
+  "data_root": "D:\\MathorCup_Data\\ERA5_Land_Gyirong",
+  "raw_subdir": "raw_official\\q1_history_snow_deepsoil",
+  "area_nwse": [28.7, 85.1, 27.9, 85.9],
+  "years": {"start": 2021, "end": 2024},
+  "months": ["06", "07", "08", "09"],
+  "data_format": "grib",
+  "download_format": "unarchived",
+  "file_extension": ".grib",
+  "hours": [
+    "00:00", "01:00", "02:00", "03:00", "04:00", "05:00",
+    "06:00", "07:00", "08:00", "09:00", "10:00", "11:00",
+    "12:00", "13:00", "14:00", "15:00", "16:00", "17:00",
+    "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
+  ],
+  "variable_groups": {
+    "snow_deepsoil_supplement": [
+      "snow_cover",
+      "snow_depth",
+      "snow_depth_water_equivalent",
+      "snowfall",
+      "snowmelt",
+      "soil_temperature_level_2",
+      "soil_temperature_level_3",
+      "soil_temperature_level_4",
+      "volumetric_soil_water_layer_2",
+      "volumetric_soil_water_layer_3",
+      "volumetric_soil_water_layer_4"
+    ]
+  },
+  "main_baseline_years": [2021, 2022, 2023, 2024],
+  "excluded_from_baseline": [2025],
+  "design_note": "Q1 historical snow, snowmelt, and deep-soil supplement."
+}

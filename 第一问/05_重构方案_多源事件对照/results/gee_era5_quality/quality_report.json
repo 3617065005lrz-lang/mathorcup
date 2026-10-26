@@ -1,0 +1,200 @@
+{
+  "root": "D:\\MathorCup_Data\\ERA5_Land_Gyirong\\earth_engine_nativegrid_2021_2026",
+  "expected_files": 732,
+  "actual_files": 732,
+  "valid_files": 732,
+  "missing_dates": [],
+  "extra_dates": [],
+  "filename_errors": [],
+  "unreadable": [],
+  "reference_profile": {
+    "width": 9,
+    "height": 9,
+    "count": 312,
+    "crs": "EPSG:4326",
+    "transform": [
+      0.1,
+      0.0,
+      85.05000000000001,
+      0.0,
+      -0.1,
+      28.749999999999993,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "bounds": [
+      85.05000000000001,
+      27.849999999999994,
+      85.95000000000002,
+      28.749999999999993
+    ],
+    "dtype": "float32",
+    "nodata": -Infinity
+  },
+  "profile_mismatches": [],
+  "variables": [
+    "snow_cover",
+    "snow_depth",
+    "snow_depth_water_equivalent",
+    "snowfall",
+    "snowmelt",
+    "snowfall_hourly",
+    "snowmelt_hourly",
+    "soil_temperature_level_2",
+    "soil_temperature_level_3",
+    "soil_temperature_level_4",
+    "volumetric_soil_water_layer_2",
+    "volumetric_soil_water_layer_3",
+    "volumetric_soil_water_layer_4"
+  ],
+  "variable_statistics": [
+    {
+      "variable": "snow_cover",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": 0.0,
+      "max": 100.0,
+      "mean": 12.313426082120147,
+      "negative_cells": 0
+    },
+    {
+      "variable": "snow_depth",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": -7.3453647229951e-24,
+      "max": 31.1044921875,
+      "mean": 1.4096322671158998,
+      "negative_cells": 768694
+    },
+    {
+      "variable": "snow_depth_water_equivalent",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": -7.345364920210326e-25,
+      "max": 9.324509620666504,
+      "mean": 0.4227823984002635,
+      "negative_cells": 431615
+    },
+    {
+      "variable": "snowfall",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": 0.0,
+      "max": 0.07916151732206345,
+      "mean": 0.0004164773641081413,
+      "negative_cells": 0
+    },
+    {
+      "variable": "snowmelt",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": 0.0,
+      "max": 0.02505190297961235,
+      "mean": 0.0009857241652420285,
+      "negative_cells": 0
+    },
+    {
+      "variable": "snowfall_hourly",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": -1.4901161193847656e-08,
+      "max": 0.007878035306930542,
+      "mean": 3.5191059016409126e-05,
+      "negative_cells": 12457
+    },
+    {
+      "variable": "snowmelt_hourly",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": -7.450580596923828e-09,
+      "max": 0.003669973462820053,
+      "mean": 5.55969475429206e-05,
+      "negative_cells": 9860
+    },
+    {
+      "variable": "soil_temperature_level_2",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": 260.174072265625,
+      "max": 298.98486328125,
+      "mean": 283.5385740253516,
+      "negative_cells": 0
+    },
+    {
+      "variable": "soil_temperature_level_3",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": 259.57342529296875,
+      "max": 296.419921875,
+      "mean": 282.0932897925122,
+      "negative_cells": 0
+    },
+    {
+      "variable": "soil_temperature_level_4",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": 258.42156982421875,
+      "max": 295.38519287109375,
+      "mean": 279.13855434910033,
+      "negative_cells": 0
+    },
+    {
+      "variable": "volumetric_soil_water_layer_2",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": 0.1764068603515625,
+      "max": 0.437469482421875,
+      "mean": 0.39872208571063544,
+      "negative_cells": 0
+    },
+    {
+      "variable": "volumetric_soil_water_layer_3",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": 0.1640777587890625,
+      "max": 0.437347412109375,
+      "mean": 0.3937089218079257,
+      "negative_cells": 0
+    },
+    {
+      "variable": "volumetric_soil_water_layer_4",
+      "total_cells": 1423008,
+      "finite_cells": 1423008,
+      "missing_cells": 0,
+      "missing_fraction": 0.0,
+      "min": 0.257354736328125,
+      "max": 0.43731689453125,
+      "mean": 0.40296656573560513,
+      "negative_cells": 0
+    }
+  ],
+  "range_violations": [],
+  "band_descriptions_embedded": false,
+  "band_schema_file": "C:\\Users\\刘润洲\\Documents\\Codex\\2026-10-23\\we-j\\MathorCup赛道B建模\\第一问\\05_重构方案_多源事件对照\\results\\gee_era5_quality\\band_schema.csv",
+  "quality_pass": true
+}

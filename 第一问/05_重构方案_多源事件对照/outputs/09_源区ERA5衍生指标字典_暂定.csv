@@ -1,0 +1,41 @@
+﻿衍生指标,因素组ID,物理因素,指标中文名,对应原始字段,透明定义,窗口小时,单位,数据层
+src_tmean_24h,TH01,空气温度与热量累积,源区24小时平均气温,t_source,截止日前1个完整北京时间日的源区订正气温均值,24,degC,源区局地（ERA5-Land派生）
+src_tmax_24h,TH01,空气温度与热量累积,源区24小时最高气温,t_source_max,截止日前1个完整北京时间日的源区订正最高气温,24,degC,源区局地（ERA5-Land派生）
+src_pdd_24h,TH01,空气温度与热量累积,源区24小时近似正积温,t_source,"截止日前1个完整日max(日均温,0)之和",24,degC d,源区局地（ERA5-Land派生）
+src_warm_days_24h,TH01,空气温度与热量累积,源区24小时正温日数,t_source,窗口内日均订正气温高于0摄氏度的日数,24,d,源区局地（ERA5-Land派生）
+src_temp_anomaly_mean_24h,TH01,空气温度与热量累积,源区24小时气温距平,t_source_anom,相对逐日气候态的源区订正气温距平均值,24,degC,源区局地（ERA5-Land派生）
+src_precip_sum_24h,PR01,降水与液态水输入,源区区域24小时累计降水,precip,分析网格截止日前1个完整日平均降水之和,24,mm,源区局地（ERA5-Land派生）
+src_freezing_level_mean_24h,TH01,空气温度与热量累积,源区区域24小时0摄氏度层平均高度,freezing_level,温度—高程回归得到的0摄氏度等温线高度均值,24,m,源区局地（ERA5-Land派生）
+src_lapse_rate_mean_24h,TH01,空气温度与热量累积,源区区域24小时气温垂直递减率,lapse_slope,逐日空间温度—高程回归斜率均值,24,K km-1,源区局地（ERA5-Land派生）
+src_tmean_48h,TH01,空气温度与热量累积,源区48小时平均气温,t_source,截止日前2个完整北京时间日的源区订正气温均值,48,degC,源区局地（ERA5-Land派生）
+src_tmax_48h,TH01,空气温度与热量累积,源区48小时最高气温,t_source_max,截止日前2个完整北京时间日的源区订正最高气温,48,degC,源区局地（ERA5-Land派生）
+src_pdd_48h,TH01,空气温度与热量累积,源区48小时近似正积温,t_source,"截止日前2个完整日max(日均温,0)之和",48,degC d,源区局地（ERA5-Land派生）
+src_warm_days_48h,TH01,空气温度与热量累积,源区48小时正温日数,t_source,窗口内日均订正气温高于0摄氏度的日数,48,d,源区局地（ERA5-Land派生）
+src_temp_anomaly_mean_48h,TH01,空气温度与热量累积,源区48小时气温距平,t_source_anom,相对逐日气候态的源区订正气温距平均值,48,degC,源区局地（ERA5-Land派生）
+src_precip_sum_48h,PR01,降水与液态水输入,源区区域48小时累计降水,precip,分析网格截止日前2个完整日平均降水之和,48,mm,源区局地（ERA5-Land派生）
+src_freezing_level_mean_48h,TH01,空气温度与热量累积,源区区域48小时0摄氏度层平均高度,freezing_level,温度—高程回归得到的0摄氏度等温线高度均值,48,m,源区局地（ERA5-Land派生）
+src_lapse_rate_mean_48h,TH01,空气温度与热量累积,源区区域48小时气温垂直递减率,lapse_slope,逐日空间温度—高程回归斜率均值,48,K km-1,源区局地（ERA5-Land派生）
+src_tmean_72h,TH01,空气温度与热量累积,源区72小时平均气温,t_source,截止日前3个完整北京时间日的源区订正气温均值,72,degC,源区局地（ERA5-Land派生）
+src_tmax_72h,TH01,空气温度与热量累积,源区72小时最高气温,t_source_max,截止日前3个完整北京时间日的源区订正最高气温,72,degC,源区局地（ERA5-Land派生）
+src_pdd_72h,TH01,空气温度与热量累积,源区72小时近似正积温,t_source,"截止日前3个完整日max(日均温,0)之和",72,degC d,源区局地（ERA5-Land派生）
+src_warm_days_72h,TH01,空气温度与热量累积,源区72小时正温日数,t_source,窗口内日均订正气温高于0摄氏度的日数,72,d,源区局地（ERA5-Land派生）
+src_temp_anomaly_mean_72h,TH01,空气温度与热量累积,源区72小时气温距平,t_source_anom,相对逐日气候态的源区订正气温距平均值,72,degC,源区局地（ERA5-Land派生）
+src_precip_sum_72h,PR01,降水与液态水输入,源区区域72小时累计降水,precip,分析网格截止日前3个完整日平均降水之和,72,mm,源区局地（ERA5-Land派生）
+src_freezing_level_mean_72h,TH01,空气温度与热量累积,源区区域72小时0摄氏度层平均高度,freezing_level,温度—高程回归得到的0摄氏度等温线高度均值,72,m,源区局地（ERA5-Land派生）
+src_lapse_rate_mean_72h,TH01,空气温度与热量累积,源区区域72小时气温垂直递减率,lapse_slope,逐日空间温度—高程回归斜率均值,72,K km-1,源区局地（ERA5-Land派生）
+src_tmean_120h,TH01,空气温度与热量累积,源区120小时平均气温,t_source,截止日前5个完整北京时间日的源区订正气温均值,120,degC,源区局地（ERA5-Land派生）
+src_tmax_120h,TH01,空气温度与热量累积,源区120小时最高气温,t_source_max,截止日前5个完整北京时间日的源区订正最高气温,120,degC,源区局地（ERA5-Land派生）
+src_pdd_120h,TH01,空气温度与热量累积,源区120小时近似正积温,t_source,"截止日前5个完整日max(日均温,0)之和",120,degC d,源区局地（ERA5-Land派生）
+src_warm_days_120h,TH01,空气温度与热量累积,源区120小时正温日数,t_source,窗口内日均订正气温高于0摄氏度的日数,120,d,源区局地（ERA5-Land派生）
+src_temp_anomaly_mean_120h,TH01,空气温度与热量累积,源区120小时气温距平,t_source_anom,相对逐日气候态的源区订正气温距平均值,120,degC,源区局地（ERA5-Land派生）
+src_precip_sum_120h,PR01,降水与液态水输入,源区区域120小时累计降水,precip,分析网格截止日前5个完整日平均降水之和,120,mm,源区局地（ERA5-Land派生）
+src_freezing_level_mean_120h,TH01,空气温度与热量累积,源区区域120小时0摄氏度层平均高度,freezing_level,温度—高程回归得到的0摄氏度等温线高度均值,120,m,源区局地（ERA5-Land派生）
+src_lapse_rate_mean_120h,TH01,空气温度与热量累积,源区区域120小时气温垂直递减率,lapse_slope,逐日空间温度—高程回归斜率均值,120,K km-1,源区局地（ERA5-Land派生）
+src_tmean_168h,TH01,空气温度与热量累积,源区168小时平均气温,t_source,截止日前7个完整北京时间日的源区订正气温均值,168,degC,源区局地（ERA5-Land派生）
+src_tmax_168h,TH01,空气温度与热量累积,源区168小时最高气温,t_source_max,截止日前7个完整北京时间日的源区订正最高气温,168,degC,源区局地（ERA5-Land派生）
+src_pdd_168h,TH01,空气温度与热量累积,源区168小时近似正积温,t_source,"截止日前7个完整日max(日均温,0)之和",168,degC d,源区局地（ERA5-Land派生）
+src_warm_days_168h,TH01,空气温度与热量累积,源区168小时正温日数,t_source,窗口内日均订正气温高于0摄氏度的日数,168,d,源区局地（ERA5-Land派生）
+src_temp_anomaly_mean_168h,TH01,空气温度与热量累积,源区168小时气温距平,t_source_anom,相对逐日气候态的源区订正气温距平均值,168,degC,源区局地（ERA5-Land派生）
+src_precip_sum_168h,PR01,降水与液态水输入,源区区域168小时累计降水,precip,分析网格截止日前7个完整日平均降水之和,168,mm,源区局地（ERA5-Land派生）
+src_freezing_level_mean_168h,TH01,空气温度与热量累积,源区区域168小时0摄氏度层平均高度,freezing_level,温度—高程回归得到的0摄氏度等温线高度均值,168,m,源区局地（ERA5-Land派生）
+src_lapse_rate_mean_168h,TH01,空气温度与热量累积,源区区域168小时气温垂直递减率,lapse_slope,逐日空间温度—高程回归斜率均值,168,K km-1,源区局地（ERA5-Land派生）

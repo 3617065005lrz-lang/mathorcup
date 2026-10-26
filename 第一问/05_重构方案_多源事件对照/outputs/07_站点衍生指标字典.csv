@@ -1,0 +1,451 @@
+﻿清洗版本,衍生指标,因素组ID,物理因素,指标中文名,对应原始字段,基础变量定义,窗口统计,窗口小时,单位,优先级
+strict,sta_tmean_24h,TH01,空气温度与热量累积,24小时2米气温均值,Ta_2m(degree C),原始2米气温,均值,24,degC,A
+strict,sta_tmax_24h,TH01,空气温度与热量累积,24小时2米气温最大值,Ta_2m(degree C),原始2米气温,最大值,24,degC,A
+strict,sta_pdd_24h,TH01,空气温度与热量累积,24小时正温度正积温,Ta_2m(degree C),"max(Ta_2m,0)",正积温,24,degC d,A
+strict,sta_temp_change_24h,TH01,空气温度与热量累积,24小时2米气温首末变化,Ta_2m(degree C),原始2米气温,首末变化,24,degC,A
+strict,sta_precip_sum_24h,PR01,降水与液态水输入,24小时小时降水累计,Precip(mm),非负小时降水,累计,24,mm,A
+strict,sta_precip_max1h_24h,PR01,降水与液态水输入,24小时小时降水窗口内最大1小时,Precip(mm),非负小时降水,窗口内最大1小时,24,mm,A
+strict,sta_precip_max3h_24h,PR01,降水与液态水输入,24小时小时降水窗口内最大3小时累计,Precip(mm),非负小时降水,窗口内最大3小时累计,24,mm,A
+strict,sta_precip_max6h_24h,PR01,降水与液态水输入,24小时小时降水窗口内最大6小时累计,Precip(mm),非负小时降水,窗口内最大6小时累计,24,mm,A
+strict,sta_netrad_mean_24h,RD01,辐射与地表能量,24小时净辐射均值,Rsd+Rsu+Rld+Rlu,Rsd-Rsu+Rld-Rlu,均值,24,W m-2,A
+strict,sta_positive_netrad_24h,RD01,辐射与地表能量,24小时正净辐射累计,Rsd+Rsu+Rld+Rlu,"max(Rn,0)",累计,24,kWh m-2,A
+strict,sta_swdown_24h,RD01,辐射与地表能量,24小时下行短波辐射累计,Rsd(W/m2),原始下行短波辐射,累计,24,kWh m-2,B
+strict,sta_albedo_24h,RD01,辐射与地表能量,24小时白天短波反照率白天中位数,Rsu(W/m2)+Rsd(W/m2),Rsu/Rsd；仅Rsd>=50且0<=比值<=1.2,白天中位数,24,1,B
+strict,sta_H_median_24h,SF01,地表湍流热交换,24小时感热通量中位数,H(W/m2),原始感热通量,中位数,24,W m-2,A
+strict,sta_H_positive_24h,SF01,地表湍流热交换,24小时感热通量正值累计,H(W/m2),原始感热通量,正值累计,24,kWh m-2,A
+strict,sta_LE_median_24h,SF01,地表湍流热交换,24小时潜热通量中位数,LE(W/m2),原始潜热通量,中位数,24,W m-2,A
+strict,sta_LE_positive_24h,SF01,地表湍流热交换,24小时潜热通量正值累计,LE(W/m2),原始潜热通量,正值累计,24,kWh m-2,A
+strict,sta_bowen_median_24h,SF01,地表湍流热交换,24小时波文比中位数,H(W/m2)+LE(W/m2),H/LE；仅|LE|>=10 W m-2,中位数,24,1,B
+strict,sta_theta_gradient_mean_24h,BL01,边界层稳定结构,24小时1—20米位温梯度均值,Ta_1m+Ta_20m+Pressure,[theta(20m)-theta(1m)]/19m,均值,24,K m-1,A
+strict,sta_vector_shear_mean_24h,BL01,边界层稳定结构,24小时1—20米风矢量切变均值,WS/WD_1m+WS/WD_20m,sqrt((du)^2+(dv)^2)/19m,均值,24,s-1,B
+strict,sta_bulk_ri_median_24h,BL01,边界层稳定结构,24小时体积Richardson数中位数,Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,中位数,24,1,A
+strict,sta_unstable_fraction_24h,BL01,边界层稳定结构,24小时体积Richardson数不稳定时数比例(Ri<0),Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,不稳定时数比例(Ri<0),24,1,A
+strict,sta_TKE_median_24h,TB01,湍流强度,24小时湍动能中位数,TKE(m2/s2),原始湍动能,中位数,24,m2 s-2,A
+strict,sta_TKE_p90_24h,TB01,湍流强度,24小时湍动能90%分位数,TKE(m2/s2),原始湍动能,90%分位数,24,m2 s-2,A
+strict,sta_ustar_median_24h,TB01,湍流强度,24小时摩擦速度中位数,USTAR(m/s),原始摩擦速度,中位数,24,m s-1,A
+strict,sta_ustar_p90_24h,TB01,湍流强度,24小时摩擦速度90%分位数,USTAR(m/s),原始摩擦速度,90%分位数,24,m s-1,A
+strict,sta_tau_median_24h,TB01,湍流强度,24小时动量通量中位数,TAU(kg/m*s2),原始动量通量,中位数,24,kg m-1 s-2,B
+strict,sta_tau_p90_24h,TB01,湍流强度,24小时动量通量90%分位数,TAU(kg/m*s2),原始动量通量,90%分位数,24,kg m-1 s-2,B
+strict,sta_RH_mean_24h,HM01,大气湿度与干湿状态,24小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,24,%,B
+strict,sta_VPD_mean_24h,HM01,大气湿度与干湿状态,24小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,24,hPa,A
+strict,sta_VPD_p90_24h,HM01,大气湿度与干湿状态,24小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,24,hPa,A
+strict,sta_soilT_shallow_mean_24h,ST01,土壤温度与冻融,24小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,24,degC,B
+strict,sta_soilT_profile_mean_24h,ST01,土壤温度与冻融,24小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,24,degC,B
+strict,sta_soilT_change_24h,ST01,土壤温度与冻融,24小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,24,degC,B
+strict,sta_soilT_gradient_mean_24h,ST01,土壤温度与冻融,24小时深浅层土温梯度均值,soilT_0.1m+soilT_1.6m,(T1.6m-T0.1m)/1.5m,均值,24,K m-1,B
+strict,sta_freeze_thaw_count_24h,ST01,土壤温度与冻融,24小时浅层冻融过零次数,soilT_0.1m(degree C),相邻小时是否跨越0摄氏度,次数,24,count,B
+strict,sta_VWC_profile_mean_24h,SM01,土壤湿润状态,24小时剖面平均体积含水量均值,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,均值,24,m3 m-3,B
+strict,sta_VWC_shallow_mean_24h,SM01,土壤湿润状态,24小时0.1米体积含水量均值,VWC_0.1m(m3/m3),原始浅层体积含水量,均值,24,m3 m-3,B
+strict,sta_VWC_change_24h,SM01,土壤湿润状态,24小时剖面平均体积含水量首末变化,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,首末变化,24,m3 m-3,B
+strict,sta_VWC_gradient_mean_24h,SM01,土壤湿润状态,24小时深浅层含水量梯度均值,VWC_0.1m+VWC_1.6m,(VWC1.6m-VWC0.1m)/1.5m,均值,24,m3 m-4,B
+strict,sta_pressure_mean_24h,PS01,气压与天气过程,24小时气压均值,Pressure(hPa),原始站点气压,均值,24,hPa,B
+strict,sta_pressure_change_24h,PS01,气压与天气过程,24小时气压首末变化,Pressure(hPa),原始站点气压,首末变化,24,hPa,B
+strict,sta_pressure_range_24h,PS01,气压与天气过程,24小时气压极差,Pressure(hPa),原始站点气压,极差,24,hPa,B
+strict,sta_wind10_mean_24h,WN01,风场与通风条件,24小时10米风速均值,WS_10m(m/s),原始10米风速,均值,24,m s-1,B
+strict,sta_wind10_p90_24h,WN01,风场与通风条件,24小时10米风速90%分位数,WS_10m(m/s),原始10米风速,90%分位数,24,m s-1,B
+strict,sta_wind_direction_variance_24h,WN01,风场与通风条件,24小时10米风向正弦分量圆方差,WD_10m(degree),sin(WD10),圆方差,24,1,B
+strict,sta_tmean_48h,TH01,空气温度与热量累积,48小时2米气温均值,Ta_2m(degree C),原始2米气温,均值,48,degC,A
+strict,sta_tmax_48h,TH01,空气温度与热量累积,48小时2米气温最大值,Ta_2m(degree C),原始2米气温,最大值,48,degC,A
+strict,sta_pdd_48h,TH01,空气温度与热量累积,48小时正温度正积温,Ta_2m(degree C),"max(Ta_2m,0)",正积温,48,degC d,A
+strict,sta_temp_change_48h,TH01,空气温度与热量累积,48小时2米气温首末变化,Ta_2m(degree C),原始2米气温,首末变化,48,degC,A
+strict,sta_precip_sum_48h,PR01,降水与液态水输入,48小时小时降水累计,Precip(mm),非负小时降水,累计,48,mm,A
+strict,sta_precip_max1h_48h,PR01,降水与液态水输入,48小时小时降水窗口内最大1小时,Precip(mm),非负小时降水,窗口内最大1小时,48,mm,A
+strict,sta_precip_max3h_48h,PR01,降水与液态水输入,48小时小时降水窗口内最大3小时累计,Precip(mm),非负小时降水,窗口内最大3小时累计,48,mm,A
+strict,sta_precip_max6h_48h,PR01,降水与液态水输入,48小时小时降水窗口内最大6小时累计,Precip(mm),非负小时降水,窗口内最大6小时累计,48,mm,A
+strict,sta_netrad_mean_48h,RD01,辐射与地表能量,48小时净辐射均值,Rsd+Rsu+Rld+Rlu,Rsd-Rsu+Rld-Rlu,均值,48,W m-2,A
+strict,sta_positive_netrad_48h,RD01,辐射与地表能量,48小时正净辐射累计,Rsd+Rsu+Rld+Rlu,"max(Rn,0)",累计,48,kWh m-2,A
+strict,sta_swdown_48h,RD01,辐射与地表能量,48小时下行短波辐射累计,Rsd(W/m2),原始下行短波辐射,累计,48,kWh m-2,B
+strict,sta_albedo_48h,RD01,辐射与地表能量,48小时白天短波反照率白天中位数,Rsu(W/m2)+Rsd(W/m2),Rsu/Rsd；仅Rsd>=50且0<=比值<=1.2,白天中位数,48,1,B
+strict,sta_H_median_48h,SF01,地表湍流热交换,48小时感热通量中位数,H(W/m2),原始感热通量,中位数,48,W m-2,A
+strict,sta_H_positive_48h,SF01,地表湍流热交换,48小时感热通量正值累计,H(W/m2),原始感热通量,正值累计,48,kWh m-2,A
+strict,sta_LE_median_48h,SF01,地表湍流热交换,48小时潜热通量中位数,LE(W/m2),原始潜热通量,中位数,48,W m-2,A
+strict,sta_LE_positive_48h,SF01,地表湍流热交换,48小时潜热通量正值累计,LE(W/m2),原始潜热通量,正值累计,48,kWh m-2,A
+strict,sta_bowen_median_48h,SF01,地表湍流热交换,48小时波文比中位数,H(W/m2)+LE(W/m2),H/LE；仅|LE|>=10 W m-2,中位数,48,1,B
+strict,sta_theta_gradient_mean_48h,BL01,边界层稳定结构,48小时1—20米位温梯度均值,Ta_1m+Ta_20m+Pressure,[theta(20m)-theta(1m)]/19m,均值,48,K m-1,A
+strict,sta_vector_shear_mean_48h,BL01,边界层稳定结构,48小时1—20米风矢量切变均值,WS/WD_1m+WS/WD_20m,sqrt((du)^2+(dv)^2)/19m,均值,48,s-1,B
+strict,sta_bulk_ri_median_48h,BL01,边界层稳定结构,48小时体积Richardson数中位数,Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,中位数,48,1,A
+strict,sta_unstable_fraction_48h,BL01,边界层稳定结构,48小时体积Richardson数不稳定时数比例(Ri<0),Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,不稳定时数比例(Ri<0),48,1,A
+strict,sta_TKE_median_48h,TB01,湍流强度,48小时湍动能中位数,TKE(m2/s2),原始湍动能,中位数,48,m2 s-2,A
+strict,sta_TKE_p90_48h,TB01,湍流强度,48小时湍动能90%分位数,TKE(m2/s2),原始湍动能,90%分位数,48,m2 s-2,A
+strict,sta_ustar_median_48h,TB01,湍流强度,48小时摩擦速度中位数,USTAR(m/s),原始摩擦速度,中位数,48,m s-1,A
+strict,sta_ustar_p90_48h,TB01,湍流强度,48小时摩擦速度90%分位数,USTAR(m/s),原始摩擦速度,90%分位数,48,m s-1,A
+strict,sta_tau_median_48h,TB01,湍流强度,48小时动量通量中位数,TAU(kg/m*s2),原始动量通量,中位数,48,kg m-1 s-2,B
+strict,sta_tau_p90_48h,TB01,湍流强度,48小时动量通量90%分位数,TAU(kg/m*s2),原始动量通量,90%分位数,48,kg m-1 s-2,B
+strict,sta_RH_mean_48h,HM01,大气湿度与干湿状态,48小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,48,%,B
+strict,sta_VPD_mean_48h,HM01,大气湿度与干湿状态,48小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,48,hPa,A
+strict,sta_VPD_p90_48h,HM01,大气湿度与干湿状态,48小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,48,hPa,A
+strict,sta_soilT_shallow_mean_48h,ST01,土壤温度与冻融,48小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,48,degC,B
+strict,sta_soilT_profile_mean_48h,ST01,土壤温度与冻融,48小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,48,degC,B
+strict,sta_soilT_change_48h,ST01,土壤温度与冻融,48小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,48,degC,B
+strict,sta_soilT_gradient_mean_48h,ST01,土壤温度与冻融,48小时深浅层土温梯度均值,soilT_0.1m+soilT_1.6m,(T1.6m-T0.1m)/1.5m,均值,48,K m-1,B
+strict,sta_freeze_thaw_count_48h,ST01,土壤温度与冻融,48小时浅层冻融过零次数,soilT_0.1m(degree C),相邻小时是否跨越0摄氏度,次数,48,count,B
+strict,sta_VWC_profile_mean_48h,SM01,土壤湿润状态,48小时剖面平均体积含水量均值,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,均值,48,m3 m-3,B
+strict,sta_VWC_shallow_mean_48h,SM01,土壤湿润状态,48小时0.1米体积含水量均值,VWC_0.1m(m3/m3),原始浅层体积含水量,均值,48,m3 m-3,B
+strict,sta_VWC_change_48h,SM01,土壤湿润状态,48小时剖面平均体积含水量首末变化,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,首末变化,48,m3 m-3,B
+strict,sta_VWC_gradient_mean_48h,SM01,土壤湿润状态,48小时深浅层含水量梯度均值,VWC_0.1m+VWC_1.6m,(VWC1.6m-VWC0.1m)/1.5m,均值,48,m3 m-4,B
+strict,sta_pressure_mean_48h,PS01,气压与天气过程,48小时气压均值,Pressure(hPa),原始站点气压,均值,48,hPa,B
+strict,sta_pressure_change_48h,PS01,气压与天气过程,48小时气压首末变化,Pressure(hPa),原始站点气压,首末变化,48,hPa,B
+strict,sta_pressure_range_48h,PS01,气压与天气过程,48小时气压极差,Pressure(hPa),原始站点气压,极差,48,hPa,B
+strict,sta_wind10_mean_48h,WN01,风场与通风条件,48小时10米风速均值,WS_10m(m/s),原始10米风速,均值,48,m s-1,B
+strict,sta_wind10_p90_48h,WN01,风场与通风条件,48小时10米风速90%分位数,WS_10m(m/s),原始10米风速,90%分位数,48,m s-1,B
+strict,sta_wind_direction_variance_48h,WN01,风场与通风条件,48小时10米风向正弦分量圆方差,WD_10m(degree),sin(WD10),圆方差,48,1,B
+strict,sta_tmean_72h,TH01,空气温度与热量累积,72小时2米气温均值,Ta_2m(degree C),原始2米气温,均值,72,degC,A
+strict,sta_tmax_72h,TH01,空气温度与热量累积,72小时2米气温最大值,Ta_2m(degree C),原始2米气温,最大值,72,degC,A
+strict,sta_pdd_72h,TH01,空气温度与热量累积,72小时正温度正积温,Ta_2m(degree C),"max(Ta_2m,0)",正积温,72,degC d,A
+strict,sta_temp_change_72h,TH01,空气温度与热量累积,72小时2米气温首末变化,Ta_2m(degree C),原始2米气温,首末变化,72,degC,A
+strict,sta_precip_sum_72h,PR01,降水与液态水输入,72小时小时降水累计,Precip(mm),非负小时降水,累计,72,mm,A
+strict,sta_precip_max1h_72h,PR01,降水与液态水输入,72小时小时降水窗口内最大1小时,Precip(mm),非负小时降水,窗口内最大1小时,72,mm,A
+strict,sta_precip_max3h_72h,PR01,降水与液态水输入,72小时小时降水窗口内最大3小时累计,Precip(mm),非负小时降水,窗口内最大3小时累计,72,mm,A
+strict,sta_precip_max6h_72h,PR01,降水与液态水输入,72小时小时降水窗口内最大6小时累计,Precip(mm),非负小时降水,窗口内最大6小时累计,72,mm,A
+strict,sta_netrad_mean_72h,RD01,辐射与地表能量,72小时净辐射均值,Rsd+Rsu+Rld+Rlu,Rsd-Rsu+Rld-Rlu,均值,72,W m-2,A
+strict,sta_positive_netrad_72h,RD01,辐射与地表能量,72小时正净辐射累计,Rsd+Rsu+Rld+Rlu,"max(Rn,0)",累计,72,kWh m-2,A
+strict,sta_swdown_72h,RD01,辐射与地表能量,72小时下行短波辐射累计,Rsd(W/m2),原始下行短波辐射,累计,72,kWh m-2,B
+strict,sta_albedo_72h,RD01,辐射与地表能量,72小时白天短波反照率白天中位数,Rsu(W/m2)+Rsd(W/m2),Rsu/Rsd；仅Rsd>=50且0<=比值<=1.2,白天中位数,72,1,B
+strict,sta_H_median_72h,SF01,地表湍流热交换,72小时感热通量中位数,H(W/m2),原始感热通量,中位数,72,W m-2,A
+strict,sta_H_positive_72h,SF01,地表湍流热交换,72小时感热通量正值累计,H(W/m2),原始感热通量,正值累计,72,kWh m-2,A
+strict,sta_LE_median_72h,SF01,地表湍流热交换,72小时潜热通量中位数,LE(W/m2),原始潜热通量,中位数,72,W m-2,A
+strict,sta_LE_positive_72h,SF01,地表湍流热交换,72小时潜热通量正值累计,LE(W/m2),原始潜热通量,正值累计,72,kWh m-2,A
+strict,sta_bowen_median_72h,SF01,地表湍流热交换,72小时波文比中位数,H(W/m2)+LE(W/m2),H/LE；仅|LE|>=10 W m-2,中位数,72,1,B
+strict,sta_theta_gradient_mean_72h,BL01,边界层稳定结构,72小时1—20米位温梯度均值,Ta_1m+Ta_20m+Pressure,[theta(20m)-theta(1m)]/19m,均值,72,K m-1,A
+strict,sta_vector_shear_mean_72h,BL01,边界层稳定结构,72小时1—20米风矢量切变均值,WS/WD_1m+WS/WD_20m,sqrt((du)^2+(dv)^2)/19m,均值,72,s-1,B
+strict,sta_bulk_ri_median_72h,BL01,边界层稳定结构,72小时体积Richardson数中位数,Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,中位数,72,1,A
+strict,sta_unstable_fraction_72h,BL01,边界层稳定结构,72小时体积Richardson数不稳定时数比例(Ri<0),Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,不稳定时数比例(Ri<0),72,1,A
+strict,sta_TKE_median_72h,TB01,湍流强度,72小时湍动能中位数,TKE(m2/s2),原始湍动能,中位数,72,m2 s-2,A
+strict,sta_TKE_p90_72h,TB01,湍流强度,72小时湍动能90%分位数,TKE(m2/s2),原始湍动能,90%分位数,72,m2 s-2,A
+strict,sta_ustar_median_72h,TB01,湍流强度,72小时摩擦速度中位数,USTAR(m/s),原始摩擦速度,中位数,72,m s-1,A
+strict,sta_ustar_p90_72h,TB01,湍流强度,72小时摩擦速度90%分位数,USTAR(m/s),原始摩擦速度,90%分位数,72,m s-1,A
+strict,sta_tau_median_72h,TB01,湍流强度,72小时动量通量中位数,TAU(kg/m*s2),原始动量通量,中位数,72,kg m-1 s-2,B
+strict,sta_tau_p90_72h,TB01,湍流强度,72小时动量通量90%分位数,TAU(kg/m*s2),原始动量通量,90%分位数,72,kg m-1 s-2,B
+strict,sta_RH_mean_72h,HM01,大气湿度与干湿状态,72小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,72,%,B
+strict,sta_VPD_mean_72h,HM01,大气湿度与干湿状态,72小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,72,hPa,A
+strict,sta_VPD_p90_72h,HM01,大气湿度与干湿状态,72小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,72,hPa,A
+strict,sta_soilT_shallow_mean_72h,ST01,土壤温度与冻融,72小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,72,degC,B
+strict,sta_soilT_profile_mean_72h,ST01,土壤温度与冻融,72小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,72,degC,B
+strict,sta_soilT_change_72h,ST01,土壤温度与冻融,72小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,72,degC,B
+strict,sta_soilT_gradient_mean_72h,ST01,土壤温度与冻融,72小时深浅层土温梯度均值,soilT_0.1m+soilT_1.6m,(T1.6m-T0.1m)/1.5m,均值,72,K m-1,B
+strict,sta_freeze_thaw_count_72h,ST01,土壤温度与冻融,72小时浅层冻融过零次数,soilT_0.1m(degree C),相邻小时是否跨越0摄氏度,次数,72,count,B
+strict,sta_VWC_profile_mean_72h,SM01,土壤湿润状态,72小时剖面平均体积含水量均值,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,均值,72,m3 m-3,B
+strict,sta_VWC_shallow_mean_72h,SM01,土壤湿润状态,72小时0.1米体积含水量均值,VWC_0.1m(m3/m3),原始浅层体积含水量,均值,72,m3 m-3,B
+strict,sta_VWC_change_72h,SM01,土壤湿润状态,72小时剖面平均体积含水量首末变化,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,首末变化,72,m3 m-3,B
+strict,sta_VWC_gradient_mean_72h,SM01,土壤湿润状态,72小时深浅层含水量梯度均值,VWC_0.1m+VWC_1.6m,(VWC1.6m-VWC0.1m)/1.5m,均值,72,m3 m-4,B
+strict,sta_pressure_mean_72h,PS01,气压与天气过程,72小时气压均值,Pressure(hPa),原始站点气压,均值,72,hPa,B
+strict,sta_pressure_change_72h,PS01,气压与天气过程,72小时气压首末变化,Pressure(hPa),原始站点气压,首末变化,72,hPa,B
+strict,sta_pressure_range_72h,PS01,气压与天气过程,72小时气压极差,Pressure(hPa),原始站点气压,极差,72,hPa,B
+strict,sta_wind10_mean_72h,WN01,风场与通风条件,72小时10米风速均值,WS_10m(m/s),原始10米风速,均值,72,m s-1,B
+strict,sta_wind10_p90_72h,WN01,风场与通风条件,72小时10米风速90%分位数,WS_10m(m/s),原始10米风速,90%分位数,72,m s-1,B
+strict,sta_wind_direction_variance_72h,WN01,风场与通风条件,72小时10米风向正弦分量圆方差,WD_10m(degree),sin(WD10),圆方差,72,1,B
+strict,sta_tmean_120h,TH01,空气温度与热量累积,120小时2米气温均值,Ta_2m(degree C),原始2米气温,均值,120,degC,A
+strict,sta_tmax_120h,TH01,空气温度与热量累积,120小时2米气温最大值,Ta_2m(degree C),原始2米气温,最大值,120,degC,A
+strict,sta_pdd_120h,TH01,空气温度与热量累积,120小时正温度正积温,Ta_2m(degree C),"max(Ta_2m,0)",正积温,120,degC d,A
+strict,sta_temp_change_120h,TH01,空气温度与热量累积,120小时2米气温首末变化,Ta_2m(degree C),原始2米气温,首末变化,120,degC,A
+strict,sta_precip_sum_120h,PR01,降水与液态水输入,120小时小时降水累计,Precip(mm),非负小时降水,累计,120,mm,A
+strict,sta_precip_max1h_120h,PR01,降水与液态水输入,120小时小时降水窗口内最大1小时,Precip(mm),非负小时降水,窗口内最大1小时,120,mm,A
+strict,sta_precip_max3h_120h,PR01,降水与液态水输入,120小时小时降水窗口内最大3小时累计,Precip(mm),非负小时降水,窗口内最大3小时累计,120,mm,A
+strict,sta_precip_max6h_120h,PR01,降水与液态水输入,120小时小时降水窗口内最大6小时累计,Precip(mm),非负小时降水,窗口内最大6小时累计,120,mm,A
+strict,sta_netrad_mean_120h,RD01,辐射与地表能量,120小时净辐射均值,Rsd+Rsu+Rld+Rlu,Rsd-Rsu+Rld-Rlu,均值,120,W m-2,A
+strict,sta_positive_netrad_120h,RD01,辐射与地表能量,120小时正净辐射累计,Rsd+Rsu+Rld+Rlu,"max(Rn,0)",累计,120,kWh m-2,A
+strict,sta_swdown_120h,RD01,辐射与地表能量,120小时下行短波辐射累计,Rsd(W/m2),原始下行短波辐射,累计,120,kWh m-2,B
+strict,sta_albedo_120h,RD01,辐射与地表能量,120小时白天短波反照率白天中位数,Rsu(W/m2)+Rsd(W/m2),Rsu/Rsd；仅Rsd>=50且0<=比值<=1.2,白天中位数,120,1,B
+strict,sta_H_median_120h,SF01,地表湍流热交换,120小时感热通量中位数,H(W/m2),原始感热通量,中位数,120,W m-2,A
+strict,sta_H_positive_120h,SF01,地表湍流热交换,120小时感热通量正值累计,H(W/m2),原始感热通量,正值累计,120,kWh m-2,A
+strict,sta_LE_median_120h,SF01,地表湍流热交换,120小时潜热通量中位数,LE(W/m2),原始潜热通量,中位数,120,W m-2,A
+strict,sta_LE_positive_120h,SF01,地表湍流热交换,120小时潜热通量正值累计,LE(W/m2),原始潜热通量,正值累计,120,kWh m-2,A
+strict,sta_bowen_median_120h,SF01,地表湍流热交换,120小时波文比中位数,H(W/m2)+LE(W/m2),H/LE；仅|LE|>=10 W m-2,中位数,120,1,B
+strict,sta_theta_gradient_mean_120h,BL01,边界层稳定结构,120小时1—20米位温梯度均值,Ta_1m+Ta_20m+Pressure,[theta(20m)-theta(1m)]/19m,均值,120,K m-1,A
+strict,sta_vector_shear_mean_120h,BL01,边界层稳定结构,120小时1—20米风矢量切变均值,WS/WD_1m+WS/WD_20m,sqrt((du)^2+(dv)^2)/19m,均值,120,s-1,B
+strict,sta_bulk_ri_median_120h,BL01,边界层稳定结构,120小时体积Richardson数中位数,Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,中位数,120,1,A
+strict,sta_unstable_fraction_120h,BL01,边界层稳定结构,120小时体积Richardson数不稳定时数比例(Ri<0),Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,不稳定时数比例(Ri<0),120,1,A
+strict,sta_TKE_median_120h,TB01,湍流强度,120小时湍动能中位数,TKE(m2/s2),原始湍动能,中位数,120,m2 s-2,A
+strict,sta_TKE_p90_120h,TB01,湍流强度,120小时湍动能90%分位数,TKE(m2/s2),原始湍动能,90%分位数,120,m2 s-2,A
+strict,sta_ustar_median_120h,TB01,湍流强度,120小时摩擦速度中位数,USTAR(m/s),原始摩擦速度,中位数,120,m s-1,A
+strict,sta_ustar_p90_120h,TB01,湍流强度,120小时摩擦速度90%分位数,USTAR(m/s),原始摩擦速度,90%分位数,120,m s-1,A
+strict,sta_tau_median_120h,TB01,湍流强度,120小时动量通量中位数,TAU(kg/m*s2),原始动量通量,中位数,120,kg m-1 s-2,B
+strict,sta_tau_p90_120h,TB01,湍流强度,120小时动量通量90%分位数,TAU(kg/m*s2),原始动量通量,90%分位数,120,kg m-1 s-2,B
+strict,sta_RH_mean_120h,HM01,大气湿度与干湿状态,120小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,120,%,B
+strict,sta_VPD_mean_120h,HM01,大气湿度与干湿状态,120小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,120,hPa,A
+strict,sta_VPD_p90_120h,HM01,大气湿度与干湿状态,120小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,120,hPa,A
+strict,sta_soilT_shallow_mean_120h,ST01,土壤温度与冻融,120小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,120,degC,B
+strict,sta_soilT_profile_mean_120h,ST01,土壤温度与冻融,120小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,120,degC,B
+strict,sta_soilT_change_120h,ST01,土壤温度与冻融,120小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,120,degC,B
+strict,sta_soilT_gradient_mean_120h,ST01,土壤温度与冻融,120小时深浅层土温梯度均值,soilT_0.1m+soilT_1.6m,(T1.6m-T0.1m)/1.5m,均值,120,K m-1,B
+strict,sta_freeze_thaw_count_120h,ST01,土壤温度与冻融,120小时浅层冻融过零次数,soilT_0.1m(degree C),相邻小时是否跨越0摄氏度,次数,120,count,B
+strict,sta_VWC_profile_mean_120h,SM01,土壤湿润状态,120小时剖面平均体积含水量均值,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,均值,120,m3 m-3,B
+strict,sta_VWC_shallow_mean_120h,SM01,土壤湿润状态,120小时0.1米体积含水量均值,VWC_0.1m(m3/m3),原始浅层体积含水量,均值,120,m3 m-3,B
+strict,sta_VWC_change_120h,SM01,土壤湿润状态,120小时剖面平均体积含水量首末变化,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,首末变化,120,m3 m-3,B
+strict,sta_VWC_gradient_mean_120h,SM01,土壤湿润状态,120小时深浅层含水量梯度均值,VWC_0.1m+VWC_1.6m,(VWC1.6m-VWC0.1m)/1.5m,均值,120,m3 m-4,B
+strict,sta_pressure_mean_120h,PS01,气压与天气过程,120小时气压均值,Pressure(hPa),原始站点气压,均值,120,hPa,B
+strict,sta_pressure_change_120h,PS01,气压与天气过程,120小时气压首末变化,Pressure(hPa),原始站点气压,首末变化,120,hPa,B
+strict,sta_pressure_range_120h,PS01,气压与天气过程,120小时气压极差,Pressure(hPa),原始站点气压,极差,120,hPa,B
+strict,sta_wind10_mean_120h,WN01,风场与通风条件,120小时10米风速均值,WS_10m(m/s),原始10米风速,均值,120,m s-1,B
+strict,sta_wind10_p90_120h,WN01,风场与通风条件,120小时10米风速90%分位数,WS_10m(m/s),原始10米风速,90%分位数,120,m s-1,B
+strict,sta_wind_direction_variance_120h,WN01,风场与通风条件,120小时10米风向正弦分量圆方差,WD_10m(degree),sin(WD10),圆方差,120,1,B
+strict,sta_tmean_168h,TH01,空气温度与热量累积,168小时2米气温均值,Ta_2m(degree C),原始2米气温,均值,168,degC,A
+strict,sta_tmax_168h,TH01,空气温度与热量累积,168小时2米气温最大值,Ta_2m(degree C),原始2米气温,最大值,168,degC,A
+strict,sta_pdd_168h,TH01,空气温度与热量累积,168小时正温度正积温,Ta_2m(degree C),"max(Ta_2m,0)",正积温,168,degC d,A
+strict,sta_temp_change_168h,TH01,空气温度与热量累积,168小时2米气温首末变化,Ta_2m(degree C),原始2米气温,首末变化,168,degC,A
+strict,sta_precip_sum_168h,PR01,降水与液态水输入,168小时小时降水累计,Precip(mm),非负小时降水,累计,168,mm,A
+strict,sta_precip_max1h_168h,PR01,降水与液态水输入,168小时小时降水窗口内最大1小时,Precip(mm),非负小时降水,窗口内最大1小时,168,mm,A
+strict,sta_precip_max3h_168h,PR01,降水与液态水输入,168小时小时降水窗口内最大3小时累计,Precip(mm),非负小时降水,窗口内最大3小时累计,168,mm,A
+strict,sta_precip_max6h_168h,PR01,降水与液态水输入,168小时小时降水窗口内最大6小时累计,Precip(mm),非负小时降水,窗口内最大6小时累计,168,mm,A
+strict,sta_netrad_mean_168h,RD01,辐射与地表能量,168小时净辐射均值,Rsd+Rsu+Rld+Rlu,Rsd-Rsu+Rld-Rlu,均值,168,W m-2,A
+strict,sta_positive_netrad_168h,RD01,辐射与地表能量,168小时正净辐射累计,Rsd+Rsu+Rld+Rlu,"max(Rn,0)",累计,168,kWh m-2,A
+strict,sta_swdown_168h,RD01,辐射与地表能量,168小时下行短波辐射累计,Rsd(W/m2),原始下行短波辐射,累计,168,kWh m-2,B
+strict,sta_albedo_168h,RD01,辐射与地表能量,168小时白天短波反照率白天中位数,Rsu(W/m2)+Rsd(W/m2),Rsu/Rsd；仅Rsd>=50且0<=比值<=1.2,白天中位数,168,1,B
+strict,sta_H_median_168h,SF01,地表湍流热交换,168小时感热通量中位数,H(W/m2),原始感热通量,中位数,168,W m-2,A
+strict,sta_H_positive_168h,SF01,地表湍流热交换,168小时感热通量正值累计,H(W/m2),原始感热通量,正值累计,168,kWh m-2,A
+strict,sta_LE_median_168h,SF01,地表湍流热交换,168小时潜热通量中位数,LE(W/m2),原始潜热通量,中位数,168,W m-2,A
+strict,sta_LE_positive_168h,SF01,地表湍流热交换,168小时潜热通量正值累计,LE(W/m2),原始潜热通量,正值累计,168,kWh m-2,A
+strict,sta_bowen_median_168h,SF01,地表湍流热交换,168小时波文比中位数,H(W/m2)+LE(W/m2),H/LE；仅|LE|>=10 W m-2,中位数,168,1,B
+strict,sta_theta_gradient_mean_168h,BL01,边界层稳定结构,168小时1—20米位温梯度均值,Ta_1m+Ta_20m+Pressure,[theta(20m)-theta(1m)]/19m,均值,168,K m-1,A
+strict,sta_vector_shear_mean_168h,BL01,边界层稳定结构,168小时1—20米风矢量切变均值,WS/WD_1m+WS/WD_20m,sqrt((du)^2+(dv)^2)/19m,均值,168,s-1,B
+strict,sta_bulk_ri_median_168h,BL01,边界层稳定结构,168小时体积Richardson数中位数,Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,中位数,168,1,A
+strict,sta_unstable_fraction_168h,BL01,边界层稳定结构,168小时体积Richardson数不稳定时数比例(Ri<0),Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,不稳定时数比例(Ri<0),168,1,A
+strict,sta_TKE_median_168h,TB01,湍流强度,168小时湍动能中位数,TKE(m2/s2),原始湍动能,中位数,168,m2 s-2,A
+strict,sta_TKE_p90_168h,TB01,湍流强度,168小时湍动能90%分位数,TKE(m2/s2),原始湍动能,90%分位数,168,m2 s-2,A
+strict,sta_ustar_median_168h,TB01,湍流强度,168小时摩擦速度中位数,USTAR(m/s),原始摩擦速度,中位数,168,m s-1,A
+strict,sta_ustar_p90_168h,TB01,湍流强度,168小时摩擦速度90%分位数,USTAR(m/s),原始摩擦速度,90%分位数,168,m s-1,A
+strict,sta_tau_median_168h,TB01,湍流强度,168小时动量通量中位数,TAU(kg/m*s2),原始动量通量,中位数,168,kg m-1 s-2,B
+strict,sta_tau_p90_168h,TB01,湍流强度,168小时动量通量90%分位数,TAU(kg/m*s2),原始动量通量,90%分位数,168,kg m-1 s-2,B
+strict,sta_RH_mean_168h,HM01,大气湿度与干湿状态,168小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,168,%,B
+strict,sta_VPD_mean_168h,HM01,大气湿度与干湿状态,168小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,168,hPa,A
+strict,sta_VPD_p90_168h,HM01,大气湿度与干湿状态,168小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,168,hPa,A
+strict,sta_soilT_shallow_mean_168h,ST01,土壤温度与冻融,168小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,168,degC,B
+strict,sta_soilT_profile_mean_168h,ST01,土壤温度与冻融,168小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,168,degC,B
+strict,sta_soilT_change_168h,ST01,土壤温度与冻融,168小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,168,degC,B
+strict,sta_soilT_gradient_mean_168h,ST01,土壤温度与冻融,168小时深浅层土温梯度均值,soilT_0.1m+soilT_1.6m,(T1.6m-T0.1m)/1.5m,均值,168,K m-1,B
+strict,sta_freeze_thaw_count_168h,ST01,土壤温度与冻融,168小时浅层冻融过零次数,soilT_0.1m(degree C),相邻小时是否跨越0摄氏度,次数,168,count,B
+strict,sta_VWC_profile_mean_168h,SM01,土壤湿润状态,168小时剖面平均体积含水量均值,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,均值,168,m3 m-3,B
+strict,sta_VWC_shallow_mean_168h,SM01,土壤湿润状态,168小时0.1米体积含水量均值,VWC_0.1m(m3/m3),原始浅层体积含水量,均值,168,m3 m-3,B
+strict,sta_VWC_change_168h,SM01,土壤湿润状态,168小时剖面平均体积含水量首末变化,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,首末变化,168,m3 m-3,B
+strict,sta_VWC_gradient_mean_168h,SM01,土壤湿润状态,168小时深浅层含水量梯度均值,VWC_0.1m+VWC_1.6m,(VWC1.6m-VWC0.1m)/1.5m,均值,168,m3 m-4,B
+strict,sta_pressure_mean_168h,PS01,气压与天气过程,168小时气压均值,Pressure(hPa),原始站点气压,均值,168,hPa,B
+strict,sta_pressure_change_168h,PS01,气压与天气过程,168小时气压首末变化,Pressure(hPa),原始站点气压,首末变化,168,hPa,B
+strict,sta_pressure_range_168h,PS01,气压与天气过程,168小时气压极差,Pressure(hPa),原始站点气压,极差,168,hPa,B
+strict,sta_wind10_mean_168h,WN01,风场与通风条件,168小时10米风速均值,WS_10m(m/s),原始10米风速,均值,168,m s-1,B
+strict,sta_wind10_p90_168h,WN01,风场与通风条件,168小时10米风速90%分位数,WS_10m(m/s),原始10米风速,90%分位数,168,m s-1,B
+strict,sta_wind_direction_variance_168h,WN01,风场与通风条件,168小时10米风向正弦分量圆方差,WD_10m(degree),sin(WD10),圆方差,168,1,B
+expanded,sta_tmean_24h,TH01,空气温度与热量累积,24小时2米气温均值,Ta_2m(degree C),原始2米气温,均值,24,degC,A
+expanded,sta_tmax_24h,TH01,空气温度与热量累积,24小时2米气温最大值,Ta_2m(degree C),原始2米气温,最大值,24,degC,A
+expanded,sta_pdd_24h,TH01,空气温度与热量累积,24小时正温度正积温,Ta_2m(degree C),"max(Ta_2m,0)",正积温,24,degC d,A
+expanded,sta_temp_change_24h,TH01,空气温度与热量累积,24小时2米气温首末变化,Ta_2m(degree C),原始2米气温,首末变化,24,degC,A
+expanded,sta_precip_sum_24h,PR01,降水与液态水输入,24小时小时降水累计,Precip(mm),非负小时降水,累计,24,mm,A
+expanded,sta_precip_max1h_24h,PR01,降水与液态水输入,24小时小时降水窗口内最大1小时,Precip(mm),非负小时降水,窗口内最大1小时,24,mm,A
+expanded,sta_precip_max3h_24h,PR01,降水与液态水输入,24小时小时降水窗口内最大3小时累计,Precip(mm),非负小时降水,窗口内最大3小时累计,24,mm,A
+expanded,sta_precip_max6h_24h,PR01,降水与液态水输入,24小时小时降水窗口内最大6小时累计,Precip(mm),非负小时降水,窗口内最大6小时累计,24,mm,A
+expanded,sta_netrad_mean_24h,RD01,辐射与地表能量,24小时净辐射均值,Rsd+Rsu+Rld+Rlu,Rsd-Rsu+Rld-Rlu,均值,24,W m-2,A
+expanded,sta_positive_netrad_24h,RD01,辐射与地表能量,24小时正净辐射累计,Rsd+Rsu+Rld+Rlu,"max(Rn,0)",累计,24,kWh m-2,A
+expanded,sta_swdown_24h,RD01,辐射与地表能量,24小时下行短波辐射累计,Rsd(W/m2),原始下行短波辐射,累计,24,kWh m-2,B
+expanded,sta_albedo_24h,RD01,辐射与地表能量,24小时白天短波反照率白天中位数,Rsu(W/m2)+Rsd(W/m2),Rsu/Rsd；仅Rsd>=50且0<=比值<=1.2,白天中位数,24,1,B
+expanded,sta_H_median_24h,SF01,地表湍流热交换,24小时感热通量中位数,H(W/m2),原始感热通量,中位数,24,W m-2,A
+expanded,sta_H_positive_24h,SF01,地表湍流热交换,24小时感热通量正值累计,H(W/m2),原始感热通量,正值累计,24,kWh m-2,A
+expanded,sta_LE_median_24h,SF01,地表湍流热交换,24小时潜热通量中位数,LE(W/m2),原始潜热通量,中位数,24,W m-2,A
+expanded,sta_LE_positive_24h,SF01,地表湍流热交换,24小时潜热通量正值累计,LE(W/m2),原始潜热通量,正值累计,24,kWh m-2,A
+expanded,sta_bowen_median_24h,SF01,地表湍流热交换,24小时波文比中位数,H(W/m2)+LE(W/m2),H/LE；仅|LE|>=10 W m-2,中位数,24,1,B
+expanded,sta_theta_gradient_mean_24h,BL01,边界层稳定结构,24小时1—20米位温梯度均值,Ta_1m+Ta_20m+Pressure,[theta(20m)-theta(1m)]/19m,均值,24,K m-1,A
+expanded,sta_vector_shear_mean_24h,BL01,边界层稳定结构,24小时1—20米风矢量切变均值,WS/WD_1m+WS/WD_20m,sqrt((du)^2+(dv)^2)/19m,均值,24,s-1,B
+expanded,sta_bulk_ri_median_24h,BL01,边界层稳定结构,24小时体积Richardson数中位数,Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,中位数,24,1,A
+expanded,sta_unstable_fraction_24h,BL01,边界层稳定结构,24小时体积Richardson数不稳定时数比例(Ri<0),Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,不稳定时数比例(Ri<0),24,1,A
+expanded,sta_TKE_median_24h,TB01,湍流强度,24小时湍动能中位数,TKE(m2/s2),原始湍动能,中位数,24,m2 s-2,A
+expanded,sta_TKE_p90_24h,TB01,湍流强度,24小时湍动能90%分位数,TKE(m2/s2),原始湍动能,90%分位数,24,m2 s-2,A
+expanded,sta_ustar_median_24h,TB01,湍流强度,24小时摩擦速度中位数,USTAR(m/s),原始摩擦速度,中位数,24,m s-1,A
+expanded,sta_ustar_p90_24h,TB01,湍流强度,24小时摩擦速度90%分位数,USTAR(m/s),原始摩擦速度,90%分位数,24,m s-1,A
+expanded,sta_tau_median_24h,TB01,湍流强度,24小时动量通量中位数,TAU(kg/m*s2),原始动量通量,中位数,24,kg m-1 s-2,B
+expanded,sta_tau_p90_24h,TB01,湍流强度,24小时动量通量90%分位数,TAU(kg/m*s2),原始动量通量,90%分位数,24,kg m-1 s-2,B
+expanded,sta_RH_mean_24h,HM01,大气湿度与干湿状态,24小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,24,%,B
+expanded,sta_VPD_mean_24h,HM01,大气湿度与干湿状态,24小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,24,hPa,A
+expanded,sta_VPD_p90_24h,HM01,大气湿度与干湿状态,24小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,24,hPa,A
+expanded,sta_soilT_shallow_mean_24h,ST01,土壤温度与冻融,24小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,24,degC,B
+expanded,sta_soilT_profile_mean_24h,ST01,土壤温度与冻融,24小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,24,degC,B
+expanded,sta_soilT_change_24h,ST01,土壤温度与冻融,24小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,24,degC,B
+expanded,sta_soilT_gradient_mean_24h,ST01,土壤温度与冻融,24小时深浅层土温梯度均值,soilT_0.1m+soilT_1.6m,(T1.6m-T0.1m)/1.5m,均值,24,K m-1,B
+expanded,sta_freeze_thaw_count_24h,ST01,土壤温度与冻融,24小时浅层冻融过零次数,soilT_0.1m(degree C),相邻小时是否跨越0摄氏度,次数,24,count,B
+expanded,sta_VWC_profile_mean_24h,SM01,土壤湿润状态,24小时剖面平均体积含水量均值,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,均值,24,m3 m-3,B
+expanded,sta_VWC_shallow_mean_24h,SM01,土壤湿润状态,24小时0.1米体积含水量均值,VWC_0.1m(m3/m3),原始浅层体积含水量,均值,24,m3 m-3,B
+expanded,sta_VWC_change_24h,SM01,土壤湿润状态,24小时剖面平均体积含水量首末变化,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,首末变化,24,m3 m-3,B
+expanded,sta_VWC_gradient_mean_24h,SM01,土壤湿润状态,24小时深浅层含水量梯度均值,VWC_0.1m+VWC_1.6m,(VWC1.6m-VWC0.1m)/1.5m,均值,24,m3 m-4,B
+expanded,sta_pressure_mean_24h,PS01,气压与天气过程,24小时气压均值,Pressure(hPa),原始站点气压,均值,24,hPa,B
+expanded,sta_pressure_change_24h,PS01,气压与天气过程,24小时气压首末变化,Pressure(hPa),原始站点气压,首末变化,24,hPa,B
+expanded,sta_pressure_range_24h,PS01,气压与天气过程,24小时气压极差,Pressure(hPa),原始站点气压,极差,24,hPa,B
+expanded,sta_wind10_mean_24h,WN01,风场与通风条件,24小时10米风速均值,WS_10m(m/s),原始10米风速,均值,24,m s-1,B
+expanded,sta_wind10_p90_24h,WN01,风场与通风条件,24小时10米风速90%分位数,WS_10m(m/s),原始10米风速,90%分位数,24,m s-1,B
+expanded,sta_wind_direction_variance_24h,WN01,风场与通风条件,24小时10米风向正弦分量圆方差,WD_10m(degree),sin(WD10),圆方差,24,1,B
+expanded,sta_tmean_48h,TH01,空气温度与热量累积,48小时2米气温均值,Ta_2m(degree C),原始2米气温,均值,48,degC,A
+expanded,sta_tmax_48h,TH01,空气温度与热量累积,48小时2米气温最大值,Ta_2m(degree C),原始2米气温,最大值,48,degC,A
+expanded,sta_pdd_48h,TH01,空气温度与热量累积,48小时正温度正积温,Ta_2m(degree C),"max(Ta_2m,0)",正积温,48,degC d,A
+expanded,sta_temp_change_48h,TH01,空气温度与热量累积,48小时2米气温首末变化,Ta_2m(degree C),原始2米气温,首末变化,48,degC,A
+expanded,sta_precip_sum_48h,PR01,降水与液态水输入,48小时小时降水累计,Precip(mm),非负小时降水,累计,48,mm,A
+expanded,sta_precip_max1h_48h,PR01,降水与液态水输入,48小时小时降水窗口内最大1小时,Precip(mm),非负小时降水,窗口内最大1小时,48,mm,A
+expanded,sta_precip_max3h_48h,PR01,降水与液态水输入,48小时小时降水窗口内最大3小时累计,Precip(mm),非负小时降水,窗口内最大3小时累计,48,mm,A
+expanded,sta_precip_max6h_48h,PR01,降水与液态水输入,48小时小时降水窗口内最大6小时累计,Precip(mm),非负小时降水,窗口内最大6小时累计,48,mm,A
+expanded,sta_netrad_mean_48h,RD01,辐射与地表能量,48小时净辐射均值,Rsd+Rsu+Rld+Rlu,Rsd-Rsu+Rld-Rlu,均值,48,W m-2,A
+expanded,sta_positive_netrad_48h,RD01,辐射与地表能量,48小时正净辐射累计,Rsd+Rsu+Rld+Rlu,"max(Rn,0)",累计,48,kWh m-2,A
+expanded,sta_swdown_48h,RD01,辐射与地表能量,48小时下行短波辐射累计,Rsd(W/m2),原始下行短波辐射,累计,48,kWh m-2,B
+expanded,sta_albedo_48h,RD01,辐射与地表能量,48小时白天短波反照率白天中位数,Rsu(W/m2)+Rsd(W/m2),Rsu/Rsd；仅Rsd>=50且0<=比值<=1.2,白天中位数,48,1,B
+expanded,sta_H_median_48h,SF01,地表湍流热交换,48小时感热通量中位数,H(W/m2),原始感热通量,中位数,48,W m-2,A
+expanded,sta_H_positive_48h,SF01,地表湍流热交换,48小时感热通量正值累计,H(W/m2),原始感热通量,正值累计,48,kWh m-2,A
+expanded,sta_LE_median_48h,SF01,地表湍流热交换,48小时潜热通量中位数,LE(W/m2),原始潜热通量,中位数,48,W m-2,A
+expanded,sta_LE_positive_48h,SF01,地表湍流热交换,48小时潜热通量正值累计,LE(W/m2),原始潜热通量,正值累计,48,kWh m-2,A
+expanded,sta_bowen_median_48h,SF01,地表湍流热交换,48小时波文比中位数,H(W/m2)+LE(W/m2),H/LE；仅|LE|>=10 W m-2,中位数,48,1,B
+expanded,sta_theta_gradient_mean_48h,BL01,边界层稳定结构,48小时1—20米位温梯度均值,Ta_1m+Ta_20m+Pressure,[theta(20m)-theta(1m)]/19m,均值,48,K m-1,A
+expanded,sta_vector_shear_mean_48h,BL01,边界层稳定结构,48小时1—20米风矢量切变均值,WS/WD_1m+WS/WD_20m,sqrt((du)^2+(dv)^2)/19m,均值,48,s-1,B
+expanded,sta_bulk_ri_median_48h,BL01,边界层稳定结构,48小时体积Richardson数中位数,Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,中位数,48,1,A
+expanded,sta_unstable_fraction_48h,BL01,边界层稳定结构,48小时体积Richardson数不稳定时数比例(Ri<0),Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,不稳定时数比例(Ri<0),48,1,A
+expanded,sta_TKE_median_48h,TB01,湍流强度,48小时湍动能中位数,TKE(m2/s2),原始湍动能,中位数,48,m2 s-2,A
+expanded,sta_TKE_p90_48h,TB01,湍流强度,48小时湍动能90%分位数,TKE(m2/s2),原始湍动能,90%分位数,48,m2 s-2,A
+expanded,sta_ustar_median_48h,TB01,湍流强度,48小时摩擦速度中位数,USTAR(m/s),原始摩擦速度,中位数,48,m s-1,A
+expanded,sta_ustar_p90_48h,TB01,湍流强度,48小时摩擦速度90%分位数,USTAR(m/s),原始摩擦速度,90%分位数,48,m s-1,A
+expanded,sta_tau_median_48h,TB01,湍流强度,48小时动量通量中位数,TAU(kg/m*s2),原始动量通量,中位数,48,kg m-1 s-2,B
+expanded,sta_tau_p90_48h,TB01,湍流强度,48小时动量通量90%分位数,TAU(kg/m*s2),原始动量通量,90%分位数,48,kg m-1 s-2,B
+expanded,sta_RH_mean_48h,HM01,大气湿度与干湿状态,48小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,48,%,B
+expanded,sta_VPD_mean_48h,HM01,大气湿度与干湿状态,48小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,48,hPa,A
+expanded,sta_VPD_p90_48h,HM01,大气湿度与干湿状态,48小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,48,hPa,A
+expanded,sta_soilT_shallow_mean_48h,ST01,土壤温度与冻融,48小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,48,degC,B
+expanded,sta_soilT_profile_mean_48h,ST01,土壤温度与冻融,48小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,48,degC,B
+expanded,sta_soilT_change_48h,ST01,土壤温度与冻融,48小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,48,degC,B
+expanded,sta_soilT_gradient_mean_48h,ST01,土壤温度与冻融,48小时深浅层土温梯度均值,soilT_0.1m+soilT_1.6m,(T1.6m-T0.1m)/1.5m,均值,48,K m-1,B
+expanded,sta_freeze_thaw_count_48h,ST01,土壤温度与冻融,48小时浅层冻融过零次数,soilT_0.1m(degree C),相邻小时是否跨越0摄氏度,次数,48,count,B
+expanded,sta_VWC_profile_mean_48h,SM01,土壤湿润状态,48小时剖面平均体积含水量均值,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,均值,48,m3 m-3,B
+expanded,sta_VWC_shallow_mean_48h,SM01,土壤湿润状态,48小时0.1米体积含水量均值,VWC_0.1m(m3/m3),原始浅层体积含水量,均值,48,m3 m-3,B
+expanded,sta_VWC_change_48h,SM01,土壤湿润状态,48小时剖面平均体积含水量首末变化,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,首末变化,48,m3 m-3,B
+expanded,sta_VWC_gradient_mean_48h,SM01,土壤湿润状态,48小时深浅层含水量梯度均值,VWC_0.1m+VWC_1.6m,(VWC1.6m-VWC0.1m)/1.5m,均值,48,m3 m-4,B
+expanded,sta_pressure_mean_48h,PS01,气压与天气过程,48小时气压均值,Pressure(hPa),原始站点气压,均值,48,hPa,B
+expanded,sta_pressure_change_48h,PS01,气压与天气过程,48小时气压首末变化,Pressure(hPa),原始站点气压,首末变化,48,hPa,B
+expanded,sta_pressure_range_48h,PS01,气压与天气过程,48小时气压极差,Pressure(hPa),原始站点气压,极差,48,hPa,B
+expanded,sta_wind10_mean_48h,WN01,风场与通风条件,48小时10米风速均值,WS_10m(m/s),原始10米风速,均值,48,m s-1,B
+expanded,sta_wind10_p90_48h,WN01,风场与通风条件,48小时10米风速90%分位数,WS_10m(m/s),原始10米风速,90%分位数,48,m s-1,B
+expanded,sta_wind_direction_variance_48h,WN01,风场与通风条件,48小时10米风向正弦分量圆方差,WD_10m(degree),sin(WD10),圆方差,48,1,B
+expanded,sta_tmean_72h,TH01,空气温度与热量累积,72小时2米气温均值,Ta_2m(degree C),原始2米气温,均值,72,degC,A
+expanded,sta_tmax_72h,TH01,空气温度与热量累积,72小时2米气温最大值,Ta_2m(degree C),原始2米气温,最大值,72,degC,A
+expanded,sta_pdd_72h,TH01,空气温度与热量累积,72小时正温度正积温,Ta_2m(degree C),"max(Ta_2m,0)",正积温,72,degC d,A
+expanded,sta_temp_change_72h,TH01,空气温度与热量累积,72小时2米气温首末变化,Ta_2m(degree C),原始2米气温,首末变化,72,degC,A
+expanded,sta_precip_sum_72h,PR01,降水与液态水输入,72小时小时降水累计,Precip(mm),非负小时降水,累计,72,mm,A
+expanded,sta_precip_max1h_72h,PR01,降水与液态水输入,72小时小时降水窗口内最大1小时,Precip(mm),非负小时降水,窗口内最大1小时,72,mm,A
+expanded,sta_precip_max3h_72h,PR01,降水与液态水输入,72小时小时降水窗口内最大3小时累计,Precip(mm),非负小时降水,窗口内最大3小时累计,72,mm,A
+expanded,sta_precip_max6h_72h,PR01,降水与液态水输入,72小时小时降水窗口内最大6小时累计,Precip(mm),非负小时降水,窗口内最大6小时累计,72,mm,A
+expanded,sta_netrad_mean_72h,RD01,辐射与地表能量,72小时净辐射均值,Rsd+Rsu+Rld+Rlu,Rsd-Rsu+Rld-Rlu,均值,72,W m-2,A
+expanded,sta_positive_netrad_72h,RD01,辐射与地表能量,72小时正净辐射累计,Rsd+Rsu+Rld+Rlu,"max(Rn,0)",累计,72,kWh m-2,A
+expanded,sta_swdown_72h,RD01,辐射与地表能量,72小时下行短波辐射累计,Rsd(W/m2),原始下行短波辐射,累计,72,kWh m-2,B
+expanded,sta_albedo_72h,RD01,辐射与地表能量,72小时白天短波反照率白天中位数,Rsu(W/m2)+Rsd(W/m2),Rsu/Rsd；仅Rsd>=50且0<=比值<=1.2,白天中位数,72,1,B
+expanded,sta_H_median_72h,SF01,地表湍流热交换,72小时感热通量中位数,H(W/m2),原始感热通量,中位数,72,W m-2,A
+expanded,sta_H_positive_72h,SF01,地表湍流热交换,72小时感热通量正值累计,H(W/m2),原始感热通量,正值累计,72,kWh m-2,A
+expanded,sta_LE_median_72h,SF01,地表湍流热交换,72小时潜热通量中位数,LE(W/m2),原始潜热通量,中位数,72,W m-2,A
+expanded,sta_LE_positive_72h,SF01,地表湍流热交换,72小时潜热通量正值累计,LE(W/m2),原始潜热通量,正值累计,72,kWh m-2,A
+expanded,sta_bowen_median_72h,SF01,地表湍流热交换,72小时波文比中位数,H(W/m2)+LE(W/m2),H/LE；仅|LE|>=10 W m-2,中位数,72,1,B
+expanded,sta_theta_gradient_mean_72h,BL01,边界层稳定结构,72小时1—20米位温梯度均值,Ta_1m+Ta_20m+Pressure,[theta(20m)-theta(1m)]/19m,均值,72,K m-1,A
+expanded,sta_vector_shear_mean_72h,BL01,边界层稳定结构,72小时1—20米风矢量切变均值,WS/WD_1m+WS/WD_20m,sqrt((du)^2+(dv)^2)/19m,均值,72,s-1,B
+expanded,sta_bulk_ri_median_72h,BL01,边界层稳定结构,72小时体积Richardson数中位数,Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,中位数,72,1,A
+expanded,sta_unstable_fraction_72h,BL01,边界层稳定结构,72小时体积Richardson数不稳定时数比例(Ri<0),Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,不稳定时数比例(Ri<0),72,1,A
+expanded,sta_TKE_median_72h,TB01,湍流强度,72小时湍动能中位数,TKE(m2/s2),原始湍动能,中位数,72,m2 s-2,A
+expanded,sta_TKE_p90_72h,TB01,湍流强度,72小时湍动能90%分位数,TKE(m2/s2),原始湍动能,90%分位数,72,m2 s-2,A
+expanded,sta_ustar_median_72h,TB01,湍流强度,72小时摩擦速度中位数,USTAR(m/s),原始摩擦速度,中位数,72,m s-1,A
+expanded,sta_ustar_p90_72h,TB01,湍流强度,72小时摩擦速度90%分位数,USTAR(m/s),原始摩擦速度,90%分位数,72,m s-1,A
+expanded,sta_tau_median_72h,TB01,湍流强度,72小时动量通量中位数,TAU(kg/m*s2),原始动量通量,中位数,72,kg m-1 s-2,B
+expanded,sta_tau_p90_72h,TB01,湍流强度,72小时动量通量90%分位数,TAU(kg/m*s2),原始动量通量,90%分位数,72,kg m-1 s-2,B
+expanded,sta_RH_mean_72h,HM01,大气湿度与干湿状态,72小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,72,%,B
+expanded,sta_VPD_mean_72h,HM01,大气湿度与干湿状态,72小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,72,hPa,A
+expanded,sta_VPD_p90_72h,HM01,大气湿度与干湿状态,72小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,72,hPa,A
+expanded,sta_soilT_shallow_mean_72h,ST01,土壤温度与冻融,72小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,72,degC,B
+expanded,sta_soilT_profile_mean_72h,ST01,土壤温度与冻融,72小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,72,degC,B
+expanded,sta_soilT_change_72h,ST01,土壤温度与冻融,72小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,72,degC,B
+expanded,sta_soilT_gradient_mean_72h,ST01,土壤温度与冻融,72小时深浅层土温梯度均值,soilT_0.1m+soilT_1.6m,(T1.6m-T0.1m)/1.5m,均值,72,K m-1,B
+expanded,sta_freeze_thaw_count_72h,ST01,土壤温度与冻融,72小时浅层冻融过零次数,soilT_0.1m(degree C),相邻小时是否跨越0摄氏度,次数,72,count,B
+expanded,sta_VWC_profile_mean_72h,SM01,土壤湿润状态,72小时剖面平均体积含水量均值,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,均值,72,m3 m-3,B
+expanded,sta_VWC_shallow_mean_72h,SM01,土壤湿润状态,72小时0.1米体积含水量均值,VWC_0.1m(m3/m3),原始浅层体积含水量,均值,72,m3 m-3,B
+expanded,sta_VWC_change_72h,SM01,土壤湿润状态,72小时剖面平均体积含水量首末变化,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,首末变化,72,m3 m-3,B
+expanded,sta_VWC_gradient_mean_72h,SM01,土壤湿润状态,72小时深浅层含水量梯度均值,VWC_0.1m+VWC_1.6m,(VWC1.6m-VWC0.1m)/1.5m,均值,72,m3 m-4,B
+expanded,sta_pressure_mean_72h,PS01,气压与天气过程,72小时气压均值,Pressure(hPa),原始站点气压,均值,72,hPa,B
+expanded,sta_pressure_change_72h,PS01,气压与天气过程,72小时气压首末变化,Pressure(hPa),原始站点气压,首末变化,72,hPa,B
+expanded,sta_pressure_range_72h,PS01,气压与天气过程,72小时气压极差,Pressure(hPa),原始站点气压,极差,72,hPa,B
+expanded,sta_wind10_mean_72h,WN01,风场与通风条件,72小时10米风速均值,WS_10m(m/s),原始10米风速,均值,72,m s-1,B
+expanded,sta_wind10_p90_72h,WN01,风场与通风条件,72小时10米风速90%分位数,WS_10m(m/s),原始10米风速,90%分位数,72,m s-1,B
+expanded,sta_wind_direction_variance_72h,WN01,风场与通风条件,72小时10米风向正弦分量圆方差,WD_10m(degree),sin(WD10),圆方差,72,1,B
+expanded,sta_tmean_120h,TH01,空气温度与热量累积,120小时2米气温均值,Ta_2m(degree C),原始2米气温,均值,120,degC,A
+expanded,sta_tmax_120h,TH01,空气温度与热量累积,120小时2米气温最大值,Ta_2m(degree C),原始2米气温,最大值,120,degC,A
+expanded,sta_pdd_120h,TH01,空气温度与热量累积,120小时正温度正积温,Ta_2m(degree C),"max(Ta_2m,0)",正积温,120,degC d,A
+expanded,sta_temp_change_120h,TH01,空气温度与热量累积,120小时2米气温首末变化,Ta_2m(degree C),原始2米气温,首末变化,120,degC,A
+expanded,sta_precip_sum_120h,PR01,降水与液态水输入,120小时小时降水累计,Precip(mm),非负小时降水,累计,120,mm,A
+expanded,sta_precip_max1h_120h,PR01,降水与液态水输入,120小时小时降水窗口内最大1小时,Precip(mm),非负小时降水,窗口内最大1小时,120,mm,A
+expanded,sta_precip_max3h_120h,PR01,降水与液态水输入,120小时小时降水窗口内最大3小时累计,Precip(mm),非负小时降水,窗口内最大3小时累计,120,mm,A
+expanded,sta_precip_max6h_120h,PR01,降水与液态水输入,120小时小时降水窗口内最大6小时累计,Precip(mm),非负小时降水,窗口内最大6小时累计,120,mm,A
+expanded,sta_netrad_mean_120h,RD01,辐射与地表能量,120小时净辐射均值,Rsd+Rsu+Rld+Rlu,Rsd-Rsu+Rld-Rlu,均值,120,W m-2,A
+expanded,sta_positive_netrad_120h,RD01,辐射与地表能量,120小时正净辐射累计,Rsd+Rsu+Rld+Rlu,"max(Rn,0)",累计,120,kWh m-2,A
+expanded,sta_swdown_120h,RD01,辐射与地表能量,120小时下行短波辐射累计,Rsd(W/m2),原始下行短波辐射,累计,120,kWh m-2,B
+expanded,sta_albedo_120h,RD01,辐射与地表能量,120小时白天短波反照率白天中位数,Rsu(W/m2)+Rsd(W/m2),Rsu/Rsd；仅Rsd>=50且0<=比值<=1.2,白天中位数,120,1,B
+expanded,sta_H_median_120h,SF01,地表湍流热交换,120小时感热通量中位数,H(W/m2),原始感热通量,中位数,120,W m-2,A
+expanded,sta_H_positive_120h,SF01,地表湍流热交换,120小时感热通量正值累计,H(W/m2),原始感热通量,正值累计,120,kWh m-2,A
+expanded,sta_LE_median_120h,SF01,地表湍流热交换,120小时潜热通量中位数,LE(W/m2),原始潜热通量,中位数,120,W m-2,A
+expanded,sta_LE_positive_120h,SF01,地表湍流热交换,120小时潜热通量正值累计,LE(W/m2),原始潜热通量,正值累计,120,kWh m-2,A
+expanded,sta_bowen_median_120h,SF01,地表湍流热交换,120小时波文比中位数,H(W/m2)+LE(W/m2),H/LE；仅|LE|>=10 W m-2,中位数,120,1,B
+expanded,sta_theta_gradient_mean_120h,BL01,边界层稳定结构,120小时1—20米位温梯度均值,Ta_1m+Ta_20m+Pressure,[theta(20m)-theta(1m)]/19m,均值,120,K m-1,A
+expanded,sta_vector_shear_mean_120h,BL01,边界层稳定结构,120小时1—20米风矢量切变均值,WS/WD_1m+WS/WD_20m,sqrt((du)^2+(dv)^2)/19m,均值,120,s-1,B
+expanded,sta_bulk_ri_median_120h,BL01,边界层稳定结构,120小时体积Richardson数中位数,Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,中位数,120,1,A
+expanded,sta_unstable_fraction_120h,BL01,边界层稳定结构,120小时体积Richardson数不稳定时数比例(Ri<0),Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,不稳定时数比例(Ri<0),120,1,A
+expanded,sta_TKE_median_120h,TB01,湍流强度,120小时湍动能中位数,TKE(m2/s2),原始湍动能,中位数,120,m2 s-2,A
+expanded,sta_TKE_p90_120h,TB01,湍流强度,120小时湍动能90%分位数,TKE(m2/s2),原始湍动能,90%分位数,120,m2 s-2,A
+expanded,sta_ustar_median_120h,TB01,湍流强度,120小时摩擦速度中位数,USTAR(m/s),原始摩擦速度,中位数,120,m s-1,A
+expanded,sta_ustar_p90_120h,TB01,湍流强度,120小时摩擦速度90%分位数,USTAR(m/s),原始摩擦速度,90%分位数,120,m s-1,A
+expanded,sta_tau_median_120h,TB01,湍流强度,120小时动量通量中位数,TAU(kg/m*s2),原始动量通量,中位数,120,kg m-1 s-2,B
+expanded,sta_tau_p90_120h,TB01,湍流强度,120小时动量通量90%分位数,TAU(kg/m*s2),原始动量通量,90%分位数,120,kg m-1 s-2,B
+expanded,sta_RH_mean_120h,HM01,大气湿度与干湿状态,120小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,120,%,B
+expanded,sta_VPD_mean_120h,HM01,大气湿度与干湿状态,120小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,120,hPa,A
+expanded,sta_VPD_p90_120h,HM01,大气湿度与干湿状态,120小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,120,hPa,A
+expanded,sta_soilT_shallow_mean_120h,ST01,土壤温度与冻融,120小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,120,degC,B
+expanded,sta_soilT_profile_mean_120h,ST01,土壤温度与冻融,120小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,120,degC,B
+expanded,sta_soilT_change_120h,ST01,土壤温度与冻融,120小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,120,degC,B
+expanded,sta_soilT_gradient_mean_120h,ST01,土壤温度与冻融,120小时深浅层土温梯度均值,soilT_0.1m+soilT_1.6m,(T1.6m-T0.1m)/1.5m,均值,120,K m-1,B
+expanded,sta_freeze_thaw_count_120h,ST01,土壤温度与冻融,120小时浅层冻融过零次数,soilT_0.1m(degree C),相邻小时是否跨越0摄氏度,次数,120,count,B
+expanded,sta_VWC_profile_mean_120h,SM01,土壤湿润状态,120小时剖面平均体积含水量均值,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,均值,120,m3 m-3,B
+expanded,sta_VWC_shallow_mean_120h,SM01,土壤湿润状态,120小时0.1米体积含水量均值,VWC_0.1m(m3/m3),原始浅层体积含水量,均值,120,m3 m-3,B
+expanded,sta_VWC_change_120h,SM01,土壤湿润状态,120小时剖面平均体积含水量首末变化,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,首末变化,120,m3 m-3,B
+expanded,sta_VWC_gradient_mean_120h,SM01,土壤湿润状态,120小时深浅层含水量梯度均值,VWC_0.1m+VWC_1.6m,(VWC1.6m-VWC0.1m)/1.5m,均值,120,m3 m-4,B
+expanded,sta_pressure_mean_120h,PS01,气压与天气过程,120小时气压均值,Pressure(hPa),原始站点气压,均值,120,hPa,B
+expanded,sta_pressure_change_120h,PS01,气压与天气过程,120小时气压首末变化,Pressure(hPa),原始站点气压,首末变化,120,hPa,B
+expanded,sta_pressure_range_120h,PS01,气压与天气过程,120小时气压极差,Pressure(hPa),原始站点气压,极差,120,hPa,B
+expanded,sta_wind10_mean_120h,WN01,风场与通风条件,120小时10米风速均值,WS_10m(m/s),原始10米风速,均值,120,m s-1,B
+expanded,sta_wind10_p90_120h,WN01,风场与通风条件,120小时10米风速90%分位数,WS_10m(m/s),原始10米风速,90%分位数,120,m s-1,B
+expanded,sta_wind_direction_variance_120h,WN01,风场与通风条件,120小时10米风向正弦分量圆方差,WD_10m(degree),sin(WD10),圆方差,120,1,B
+expanded,sta_tmean_168h,TH01,空气温度与热量累积,168小时2米气温均值,Ta_2m(degree C),原始2米气温,均值,168,degC,A
+expanded,sta_tmax_168h,TH01,空气温度与热量累积,168小时2米气温最大值,Ta_2m(degree C),原始2米气温,最大值,168,degC,A
+expanded,sta_pdd_168h,TH01,空气温度与热量累积,168小时正温度正积温,Ta_2m(degree C),"max(Ta_2m,0)",正积温,168,degC d,A
+expanded,sta_temp_change_168h,TH01,空气温度与热量累积,168小时2米气温首末变化,Ta_2m(degree C),原始2米气温,首末变化,168,degC,A
+expanded,sta_precip_sum_168h,PR01,降水与液态水输入,168小时小时降水累计,Precip(mm),非负小时降水,累计,168,mm,A
+expanded,sta_precip_max1h_168h,PR01,降水与液态水输入,168小时小时降水窗口内最大1小时,Precip(mm),非负小时降水,窗口内最大1小时,168,mm,A
+expanded,sta_precip_max3h_168h,PR01,降水与液态水输入,168小时小时降水窗口内最大3小时累计,Precip(mm),非负小时降水,窗口内最大3小时累计,168,mm,A
+expanded,sta_precip_max6h_168h,PR01,降水与液态水输入,168小时小时降水窗口内最大6小时累计,Precip(mm),非负小时降水,窗口内最大6小时累计,168,mm,A
+expanded,sta_netrad_mean_168h,RD01,辐射与地表能量,168小时净辐射均值,Rsd+Rsu+Rld+Rlu,Rsd-Rsu+Rld-Rlu,均值,168,W m-2,A
+expanded,sta_positive_netrad_168h,RD01,辐射与地表能量,168小时正净辐射累计,Rsd+Rsu+Rld+Rlu,"max(Rn,0)",累计,168,kWh m-2,A
+expanded,sta_swdown_168h,RD01,辐射与地表能量,168小时下行短波辐射累计,Rsd(W/m2),原始下行短波辐射,累计,168,kWh m-2,B
+expanded,sta_albedo_168h,RD01,辐射与地表能量,168小时白天短波反照率白天中位数,Rsu(W/m2)+Rsd(W/m2),Rsu/Rsd；仅Rsd>=50且0<=比值<=1.2,白天中位数,168,1,B
+expanded,sta_H_median_168h,SF01,地表湍流热交换,168小时感热通量中位数,H(W/m2),原始感热通量,中位数,168,W m-2,A
+expanded,sta_H_positive_168h,SF01,地表湍流热交换,168小时感热通量正值累计,H(W/m2),原始感热通量,正值累计,168,kWh m-2,A
+expanded,sta_LE_median_168h,SF01,地表湍流热交换,168小时潜热通量中位数,LE(W/m2),原始潜热通量,中位数,168,W m-2,A
+expanded,sta_LE_positive_168h,SF01,地表湍流热交换,168小时潜热通量正值累计,LE(W/m2),原始潜热通量,正值累计,168,kWh m-2,A
+expanded,sta_bowen_median_168h,SF01,地表湍流热交换,168小时波文比中位数,H(W/m2)+LE(W/m2),H/LE；仅|LE|>=10 W m-2,中位数,168,1,B
+expanded,sta_theta_gradient_mean_168h,BL01,边界层稳定结构,168小时1—20米位温梯度均值,Ta_1m+Ta_20m+Pressure,[theta(20m)-theta(1m)]/19m,均值,168,K m-1,A
+expanded,sta_vector_shear_mean_168h,BL01,边界层稳定结构,168小时1—20米风矢量切变均值,WS/WD_1m+WS/WD_20m,sqrt((du)^2+(dv)^2)/19m,均值,168,s-1,B
+expanded,sta_bulk_ri_median_168h,BL01,边界层稳定结构,168小时体积Richardson数中位数,Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,中位数,168,1,A
+expanded,sta_unstable_fraction_168h,BL01,边界层稳定结构,168小时体积Richardson数不稳定时数比例(Ri<0),Ta/WS/WD_1m和20m+Pressure,(g/theta_bar)*delta_theta*delta_z/(delta_u^2+delta_v^2)；风矢量差平方>=0.25,不稳定时数比例(Ri<0),168,1,A
+expanded,sta_TKE_median_168h,TB01,湍流强度,168小时湍动能中位数,TKE(m2/s2),原始湍动能,中位数,168,m2 s-2,A
+expanded,sta_TKE_p90_168h,TB01,湍流强度,168小时湍动能90%分位数,TKE(m2/s2),原始湍动能,90%分位数,168,m2 s-2,A
+expanded,sta_ustar_median_168h,TB01,湍流强度,168小时摩擦速度中位数,USTAR(m/s),原始摩擦速度,中位数,168,m s-1,A
+expanded,sta_ustar_p90_168h,TB01,湍流强度,168小时摩擦速度90%分位数,USTAR(m/s),原始摩擦速度,90%分位数,168,m s-1,A
+expanded,sta_tau_median_168h,TB01,湍流强度,168小时动量通量中位数,TAU(kg/m*s2),原始动量通量,中位数,168,kg m-1 s-2,B
+expanded,sta_tau_p90_168h,TB01,湍流强度,168小时动量通量90%分位数,TAU(kg/m*s2),原始动量通量,90%分位数,168,kg m-1 s-2,B
+expanded,sta_RH_mean_168h,HM01,大气湿度与干湿状态,168小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,168,%,B
+expanded,sta_VPD_mean_168h,HM01,大气湿度与干湿状态,168小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,168,hPa,A
+expanded,sta_VPD_p90_168h,HM01,大气湿度与干湿状态,168小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,168,hPa,A
+expanded,sta_soilT_shallow_mean_168h,ST01,土壤温度与冻融,168小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,168,degC,B
+expanded,sta_soilT_profile_mean_168h,ST01,土壤温度与冻融,168小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,168,degC,B
+expanded,sta_soilT_change_168h,ST01,土壤温度与冻融,168小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,168,degC,B
+expanded,sta_soilT_gradient_mean_168h,ST01,土壤温度与冻融,168小时深浅层土温梯度均值,soilT_0.1m+soilT_1.6m,(T1.6m-T0.1m)/1.5m,均值,168,K m-1,B
+expanded,sta_freeze_thaw_count_168h,ST01,土壤温度与冻融,168小时浅层冻融过零次数,soilT_0.1m(degree C),相邻小时是否跨越0摄氏度,次数,168,count,B
+expanded,sta_VWC_profile_mean_168h,SM01,土壤湿润状态,168小时剖面平均体积含水量均值,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,均值,168,m3 m-3,B
+expanded,sta_VWC_shallow_mean_168h,SM01,土壤湿润状态,168小时0.1米体积含水量均值,VWC_0.1m(m3/m3),原始浅层体积含水量,均值,168,m3 m-3,B
+expanded,sta_VWC_change_168h,SM01,土壤湿润状态,168小时剖面平均体积含水量首末变化,VWC_0.1m(m3/m3)+VWC_0.2m(m3/m3)+VWC_0.4m(m3/m3)+VWC_0.8m(m3/m3)+VWC_1.6m(m3/m3),五层VWC同时有效时的算术平均,首末变化,168,m3 m-3,B
+expanded,sta_VWC_gradient_mean_168h,SM01,土壤湿润状态,168小时深浅层含水量梯度均值,VWC_0.1m+VWC_1.6m,(VWC1.6m-VWC0.1m)/1.5m,均值,168,m3 m-4,B
+expanded,sta_pressure_mean_168h,PS01,气压与天气过程,168小时气压均值,Pressure(hPa),原始站点气压,均值,168,hPa,B
+expanded,sta_pressure_change_168h,PS01,气压与天气过程,168小时气压首末变化,Pressure(hPa),原始站点气压,首末变化,168,hPa,B
+expanded,sta_pressure_range_168h,PS01,气压与天气过程,168小时气压极差,Pressure(hPa),原始站点气压,极差,168,hPa,B
+expanded,sta_wind10_mean_168h,WN01,风场与通风条件,168小时10米风速均值,WS_10m(m/s),原始10米风速,均值,168,m s-1,B
+expanded,sta_wind10_p90_168h,WN01,风场与通风条件,168小时10米风速90%分位数,WS_10m(m/s),原始10米风速,90%分位数,168,m s-1,B
+expanded,sta_wind_direction_variance_168h,WN01,风场与通风条件,168小时10米风向正弦分量圆方差,WD_10m(degree),sin(WD10),圆方差,168,1,B

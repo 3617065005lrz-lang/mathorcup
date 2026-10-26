@@ -1,0 +1,22 @@
+{
+  "hourly_start_beijing": "2021-06-01 08:00:00",
+  "hourly_end_beijing": "2026-10-01 07:00:00",
+  "hourly_rows": 14640,
+  "endpoint_rows_by_year": {
+    "2021": 122,
+    "2022": 122,
+    "2023": 122,
+    "2024": 122,
+    "2026": 122
+  },
+  "feature_count": 145,
+  "unique_features": 145,
+  "event_endpoint_present": true,
+  "event_feature_missing": 0,
+  "source_grid_center": {
+    "longitude": 85.5,
+    "latitude": 28.3
+  },
+  "target_elevation_m": 4991.0,
+  "lapse_fallback_k_per_km": -6.5
+}

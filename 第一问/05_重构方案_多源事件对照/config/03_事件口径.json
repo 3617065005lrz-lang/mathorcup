@@ -1,0 +1,47 @@
+{
+  "event_name": "2026-08-26吉隆冰岩崩-泥石流灾害链",
+  "timezone": "Asia/Shanghai",
+  "source_onset_reference": "2026-08-26 10:52:07",
+  "hourly_feature_cutoff": "2026-08-26 10:00:00",
+  "port_arrival_approx": "2026-08-26 10:59:00",
+  "primary_source_aoi": {
+    "west": 85.512,
+    "east": 85.533,
+    "south": 28.269,
+    "north": 28.293,
+    "purpose": "覆盖公开源点和源区山坡；不是精确崩塌疤痕边界"
+  },
+  "reference_points_for_sensitivity": [
+    {
+      "label": "公开ERA5项目路径起点",
+      "latitude": 28.27088,
+      "longitude": 85.51499,
+      "target_elevation_m": 5300
+    },
+    {
+      "label": "开放重建优选源区中心附近",
+      "latitude": 28.289,
+      "longitude": 85.53,
+      "target_elevation_m": 4991
+    },
+    {
+      "label": "USGS质量运动信号位置",
+      "latitude": 28.271,
+      "longitude": 85.515,
+      "target_elevation_m": null
+    }
+  ],
+  "station": {
+    "latitude": 28.86,
+    "longitude": 85.29,
+    "elevation_m": 4140,
+    "role": "区域天气、边界层和陆面交换背景；不作为源区局地实测"
+  },
+  "control_split": {
+    "station_primary": [2021, 2022, 2023, 2024],
+    "year_2025": "保留；不进入主排名；正常时段只用于敏感性",
+    "external_primary": "优先2001-2024",
+    "target": 2026
+  }
+}
+
