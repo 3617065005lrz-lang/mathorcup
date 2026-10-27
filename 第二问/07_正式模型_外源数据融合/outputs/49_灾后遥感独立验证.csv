@@ -1,0 +1,18 @@
+﻿sensor,metric,pre,post,post_minus_pre,usable,role
+Sentinel-2,ndsi_mean,-0.0061591784841325,0.0338179241962997,0.0399771026804322,True,post-event validation only
+Sentinel-2,snow_fraction_ndsi_ge_0p4,0.2167438116321191,0.1051459122298953,-0.11159789940222378,True,post-event validation only
+Sentinel-2,ndvi_mean,0.1124221037231955,0.0186657778554967,-0.0937563258676988,True,post-event validation only
+Sentinel-2,bare_soil_index_mean,-0.0049498008661377,-0.0090140457089476,-0.004064244842809901,True,post-event validation only
+Landsat,ndsi_mean,-0.2961143560403219,-0.3110532238015577,-0.014938867761235819,False,discard if cloud-valid fraction is insufficient
+Landsat,snow_fraction_ndsi_ge_0p4,0.008871989860583,0.0,-0.008871989860583,False,discard if cloud-valid fraction is insufficient
+Landsat,ndvi_mean,0.3016087904043271,0.4273360031182023,0.1257272127138752,False,discard if cloud-valid fraction is insufficient
+Landsat,bare_soil_index_mean,0.0936028659813674,0.0439033027643521,-0.0496995632170153,False,discard if cloud-valid fraction is insufficient
+Sentinel-1 121_DESCENDING,vv_db_median,-21.31390953063965,-21.17390918731689,0.14000034332275746,True,same-track GRD post-event validation; not InSAR
+Sentinel-1 121_DESCENDING,vh_db_median,-27.229317665100098,-26.89387321472168,0.33544445037841797,True,same-track GRD post-event validation; not InSAR
+Sentinel-1 121_DESCENDING,vv_minus_vh_db,6.860743522644043,6.836763858795166,-0.023979663848876953,True,same-track GRD post-event validation; not InSAR
+Sentinel-1 19_DESCENDING,vv_db_median,-18.26663112640381,-18.25289821624756,0.01373291015625,True,same-track GRD post-event validation; not InSAR
+Sentinel-1 19_DESCENDING,vh_db_median,-25.93767642974853,-25.896788597106934,0.04088783264159801,True,same-track GRD post-event validation; not InSAR
+Sentinel-1 19_DESCENDING,vv_minus_vh_db,7.419251441955566,7.596083641052246,0.1768321990966797,True,same-track GRD post-event validation; not InSAR
+Sentinel-1 85_ASCENDING,vv_db_median,-3.4676198959350586,-4.802304744720459,-1.3346848487854004,True,same-track GRD post-event validation; not InSAR
+Sentinel-1 85_ASCENDING,vh_db_median,-12.510779857635498,-13.643434047698976,-1.1326541900634783,True,same-track GRD post-event validation; not InSAR
+Sentinel-1 85_ASCENDING,vv_minus_vh_db,9.457872867584229,9.24470555782318,-0.21316730976104914,True,same-track GRD post-event validation; not InSAR

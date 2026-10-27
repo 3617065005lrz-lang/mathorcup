@@ -1,0 +1,4 @@
+﻿candidate,status,same_mechanism,use
+2026-08-26,verified main event,True,main target; no fitting label
+2025-07-08,verified flood/debris-flow event,False,excluded from background; qualitative external contrast only
+other screenshot dates,not verified by the current official evidence package,False,not used as positive labels

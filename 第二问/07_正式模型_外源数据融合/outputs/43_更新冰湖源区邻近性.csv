@@ -1,0 +1,4 @@
+﻿inventory,n_global,nearest_distance_km,nearest_lake_area_original_unit,nearest_lake_elevation_m,count_within_5km,count_within_10km,count_within_20km,total_area_within_10km_original_unit
+Glacial_Lake_2022,31698,7.5203560937690925,26263.4,5028.0,0,5,50,275917.82
+Glacial_lakes_2016_2017_median,28043,7.517767601234166,25381.09,5028.0,0,5,47,273243.51
+Glacial_lakes_2022_2024_median,31434,7.518440260919588,25529.66,5028.0,0,6,49,281976.34

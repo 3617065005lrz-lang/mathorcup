@@ -17,6 +17,9 @@
 - `run_preprocessing.py`：重建 MODIS、CHIRPS、SMAP 和多源逐小时缓存；仅在原始数据或参数改变时运行。
 - `run_models.py`：读取缓存，重跑时间阈值、空间模型、统一风险、GFS 核查和背景审计。
 - `scripts/10_plot_results.py`：只读取既有结果并输出 PNG，不会重跑缓存或模型，也不生成流程图。
+- `run_supplements.py`：重跑新下载的 MCD43、Sentinel-1/2、Landsat、MERIT、JRC、WorldCover 和新冰湖目录补充实验；不下载数据。
 
-当前正式结果已全部生成。先读`论文交接README.md`；实际运行命令见`运行说明.md`。
+当前正式结果与补充实验均已生成。先读`论文交接README.md`；补充实验的综合结论见`outputs/51_第二问补充实验总结.md`，MCD43 向统一风险传递的结果见`outputs/54_MCD43升级统一风险报告.md`；实际运行命令见`运行说明.md`。
+
+参考论文截图对比后的累计改动见`交接文件/07_第二问参考论文对比后累计改动说明.md`；后续制图候选库见`交接文件/05_第二问可视化候选图清单.md`。
 

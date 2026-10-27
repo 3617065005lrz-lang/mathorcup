@@ -1,0 +1,4 @@
+﻿indicator,n,pearson_r,spearman_rho,mean_source_minus_station,rmse_source_vs_station,model_use_boundary
+daily_mean_temperature,487,0.793901256476436,0.7726854383099142,-7.378091089057317,7.464826552818851,temperature can be transferred after elevation correction
+daily_precipitation,487,0.2691199910674518,0.4450098878392941,10.995814666121754,14.673620869060056,weak correlation means station rain cannot replace source rain
+daily_shortwave,458,0.6288766894108624,0.6227295571065261,10.74319056251179,11.415807440242828,"radiation is regional support, not source observation"
