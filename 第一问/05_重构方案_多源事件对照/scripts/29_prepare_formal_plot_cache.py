@@ -142,6 +142,13 @@ def main() -> None:
         CACHE / "fig06_前五因素灾前演化.csv", index=False, encoding="utf-8-sig"
     )
 
+    # Figure 6: 40-day weather-regime evolution.  Script 32 creates this
+    # supplementary result without changing the formal ranking.
+    weather_sequence = read("34_2026灾前40天天气型演变.csv")
+    weather_sequence.to_csv(
+        CACHE / "fig07_灾前40天天气型演变.csv", index=False, encoding="utf-8-sig"
+    )
+
     print(f"plot cache prepared: {CACHE}")
     print(f"tables: {len(list(CACHE.glob('*.csv')))}")
 

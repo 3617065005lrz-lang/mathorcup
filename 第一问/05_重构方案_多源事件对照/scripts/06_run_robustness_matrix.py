@@ -42,6 +42,7 @@ SOURCE_OPTIONS = {
 def main() -> None:
     station_dictionary = pd.read_csv(OUTPUT_DIR / "07_站点衍生指标字典.csv")
     station_dictionary = station_dictionary.drop_duplicates(["清洗版本", "衍生指标"])
+    station_dictionary = ranking.formal_station_dictionary(station_dictionary)
     source_dictionary = pd.read_csv(OUTPUT_DIR / "23_源区ERA5正式衍生指标字典.csv")
 
     scenario_rows = []

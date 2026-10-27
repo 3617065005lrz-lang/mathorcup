@@ -155,6 +155,7 @@ def evaluate_prepared(prepared: list[dict[str, object]], sampled: np.ndarray) ->
 def main() -> None:
     station_dictionary = pd.read_csv(OUTPUT_DIR / "07_站点衍生指标字典.csv")
     station_dictionary = station_dictionary.drop_duplicates(["清洗版本", "衍生指标"])
+    station_dictionary = ranking.formal_station_dictionary(station_dictionary)
     source_dictionary = pd.read_csv(OUTPUT_DIR / "23_源区ERA5正式衍生指标字典.csv")
     station = pd.read_parquet(CACHE_DIR / "station_daily_10h_features_strict.parquet")
     source = pd.read_parquet(CACHE_DIR / "source_daily_features_official.parquet")

@@ -41,7 +41,10 @@
 - [x] 完成648场景空间、递减率、窗口、天气型和权重稳健性矩阵。
 - [x] 完成GMM随机初值稳定性检查。
 - [x] 完成1000次历史年份整块重采样，给出排名区间和进入前五概率。
-- [x] 生成论文图表缓存和独立绘图脚本（绘图脚本尚未运行，按要求由使用者自行出图）。
+- [x] 完成LCL旁路敏感性核查；LCL不进入正式排序，避免重复气温/湿度信息改变因素权重。
+- [x] 完成2026事件前40天天气型演变分析。
+- [x] 完成2025事件事后跨机理方向核查；2025仍不参与主模型。
+- [x] 生成论文图表缓存、独立绘图脚本和6张正式PNG图片。
 
 ## 目录说明
 
@@ -77,6 +80,7 @@ python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scr
 python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\26_validate_imerg_precipitation.py
 python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\27_check_gmm_stability.py
 python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\28_year_block_bootstrap.py
+python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\32_run_supplementary_checks.py
 python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\29_prepare_formal_plot_cache.py
 ```
 

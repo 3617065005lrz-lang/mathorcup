@@ -29,6 +29,8 @@ strict,sta_tau_p90_24h,TB01,湍流强度,24小时动量通量90%分位数,TAU(kg
 strict,sta_RH_mean_24h,HM01,大气湿度与干湿状态,24小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,24,%,B
 strict,sta_VPD_mean_24h,HM01,大气湿度与干湿状态,24小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,24,hPa,A
 strict,sta_VPD_p90_24h,HM01,大气湿度与干湿状态,24小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,24,hPa,A
+strict,sta_lcl_mean_24h,HM01,大气湿度与干湿状态,24小时近似抬升凝结高度均值,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),均值,24,m,B
+strict,sta_lcl_p90_24h,HM01,大气湿度与干湿状态,24小时近似抬升凝结高度90%分位数,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),90%分位数,24,m,B
 strict,sta_soilT_shallow_mean_24h,ST01,土壤温度与冻融,24小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,24,degC,B
 strict,sta_soilT_profile_mean_24h,ST01,土壤温度与冻融,24小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,24,degC,B
 strict,sta_soilT_change_24h,ST01,土壤温度与冻融,24小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,24,degC,B
@@ -74,6 +76,8 @@ strict,sta_tau_p90_48h,TB01,湍流强度,48小时动量通量90%分位数,TAU(kg
 strict,sta_RH_mean_48h,HM01,大气湿度与干湿状态,48小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,48,%,B
 strict,sta_VPD_mean_48h,HM01,大气湿度与干湿状态,48小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,48,hPa,A
 strict,sta_VPD_p90_48h,HM01,大气湿度与干湿状态,48小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,48,hPa,A
+strict,sta_lcl_mean_48h,HM01,大气湿度与干湿状态,48小时近似抬升凝结高度均值,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),均值,48,m,B
+strict,sta_lcl_p90_48h,HM01,大气湿度与干湿状态,48小时近似抬升凝结高度90%分位数,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),90%分位数,48,m,B
 strict,sta_soilT_shallow_mean_48h,ST01,土壤温度与冻融,48小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,48,degC,B
 strict,sta_soilT_profile_mean_48h,ST01,土壤温度与冻融,48小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,48,degC,B
 strict,sta_soilT_change_48h,ST01,土壤温度与冻融,48小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,48,degC,B
@@ -119,6 +123,8 @@ strict,sta_tau_p90_72h,TB01,湍流强度,72小时动量通量90%分位数,TAU(kg
 strict,sta_RH_mean_72h,HM01,大气湿度与干湿状态,72小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,72,%,B
 strict,sta_VPD_mean_72h,HM01,大气湿度与干湿状态,72小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,72,hPa,A
 strict,sta_VPD_p90_72h,HM01,大气湿度与干湿状态,72小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,72,hPa,A
+strict,sta_lcl_mean_72h,HM01,大气湿度与干湿状态,72小时近似抬升凝结高度均值,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),均值,72,m,B
+strict,sta_lcl_p90_72h,HM01,大气湿度与干湿状态,72小时近似抬升凝结高度90%分位数,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),90%分位数,72,m,B
 strict,sta_soilT_shallow_mean_72h,ST01,土壤温度与冻融,72小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,72,degC,B
 strict,sta_soilT_profile_mean_72h,ST01,土壤温度与冻融,72小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,72,degC,B
 strict,sta_soilT_change_72h,ST01,土壤温度与冻融,72小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,72,degC,B
@@ -164,6 +170,8 @@ strict,sta_tau_p90_120h,TB01,湍流强度,120小时动量通量90%分位数,TAU(
 strict,sta_RH_mean_120h,HM01,大气湿度与干湿状态,120小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,120,%,B
 strict,sta_VPD_mean_120h,HM01,大气湿度与干湿状态,120小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,120,hPa,A
 strict,sta_VPD_p90_120h,HM01,大气湿度与干湿状态,120小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,120,hPa,A
+strict,sta_lcl_mean_120h,HM01,大气湿度与干湿状态,120小时近似抬升凝结高度均值,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),均值,120,m,B
+strict,sta_lcl_p90_120h,HM01,大气湿度与干湿状态,120小时近似抬升凝结高度90%分位数,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),90%分位数,120,m,B
 strict,sta_soilT_shallow_mean_120h,ST01,土壤温度与冻融,120小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,120,degC,B
 strict,sta_soilT_profile_mean_120h,ST01,土壤温度与冻融,120小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,120,degC,B
 strict,sta_soilT_change_120h,ST01,土壤温度与冻融,120小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,120,degC,B
@@ -209,6 +217,8 @@ strict,sta_tau_p90_168h,TB01,湍流强度,168小时动量通量90%分位数,TAU(
 strict,sta_RH_mean_168h,HM01,大气湿度与干湿状态,168小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,168,%,B
 strict,sta_VPD_mean_168h,HM01,大气湿度与干湿状态,168小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,168,hPa,A
 strict,sta_VPD_p90_168h,HM01,大气湿度与干湿状态,168小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,168,hPa,A
+strict,sta_lcl_mean_168h,HM01,大气湿度与干湿状态,168小时近似抬升凝结高度均值,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),均值,168,m,B
+strict,sta_lcl_p90_168h,HM01,大气湿度与干湿状态,168小时近似抬升凝结高度90%分位数,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),90%分位数,168,m,B
 strict,sta_soilT_shallow_mean_168h,ST01,土壤温度与冻融,168小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,168,degC,B
 strict,sta_soilT_profile_mean_168h,ST01,土壤温度与冻融,168小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,168,degC,B
 strict,sta_soilT_change_168h,ST01,土壤温度与冻融,168小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,168,degC,B
@@ -254,6 +264,8 @@ expanded,sta_tau_p90_24h,TB01,湍流强度,24小时动量通量90%分位数,TAU(
 expanded,sta_RH_mean_24h,HM01,大气湿度与干湿状态,24小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,24,%,B
 expanded,sta_VPD_mean_24h,HM01,大气湿度与干湿状态,24小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,24,hPa,A
 expanded,sta_VPD_p90_24h,HM01,大气湿度与干湿状态,24小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,24,hPa,A
+expanded,sta_lcl_mean_24h,HM01,大气湿度与干湿状态,24小时近似抬升凝结高度均值,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),均值,24,m,B
+expanded,sta_lcl_p90_24h,HM01,大气湿度与干湿状态,24小时近似抬升凝结高度90%分位数,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),90%分位数,24,m,B
 expanded,sta_soilT_shallow_mean_24h,ST01,土壤温度与冻融,24小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,24,degC,B
 expanded,sta_soilT_profile_mean_24h,ST01,土壤温度与冻融,24小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,24,degC,B
 expanded,sta_soilT_change_24h,ST01,土壤温度与冻融,24小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,24,degC,B
@@ -299,6 +311,8 @@ expanded,sta_tau_p90_48h,TB01,湍流强度,48小时动量通量90%分位数,TAU(
 expanded,sta_RH_mean_48h,HM01,大气湿度与干湿状态,48小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,48,%,B
 expanded,sta_VPD_mean_48h,HM01,大气湿度与干湿状态,48小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,48,hPa,A
 expanded,sta_VPD_p90_48h,HM01,大气湿度与干湿状态,48小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,48,hPa,A
+expanded,sta_lcl_mean_48h,HM01,大气湿度与干湿状态,48小时近似抬升凝结高度均值,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),均值,48,m,B
+expanded,sta_lcl_p90_48h,HM01,大气湿度与干湿状态,48小时近似抬升凝结高度90%分位数,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),90%分位数,48,m,B
 expanded,sta_soilT_shallow_mean_48h,ST01,土壤温度与冻融,48小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,48,degC,B
 expanded,sta_soilT_profile_mean_48h,ST01,土壤温度与冻融,48小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,48,degC,B
 expanded,sta_soilT_change_48h,ST01,土壤温度与冻融,48小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,48,degC,B
@@ -344,6 +358,8 @@ expanded,sta_tau_p90_72h,TB01,湍流强度,72小时动量通量90%分位数,TAU(
 expanded,sta_RH_mean_72h,HM01,大气湿度与干湿状态,72小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,72,%,B
 expanded,sta_VPD_mean_72h,HM01,大气湿度与干湿状态,72小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,72,hPa,A
 expanded,sta_VPD_p90_72h,HM01,大气湿度与干湿状态,72小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,72,hPa,A
+expanded,sta_lcl_mean_72h,HM01,大气湿度与干湿状态,72小时近似抬升凝结高度均值,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),均值,72,m,B
+expanded,sta_lcl_p90_72h,HM01,大气湿度与干湿状态,72小时近似抬升凝结高度90%分位数,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),90%分位数,72,m,B
 expanded,sta_soilT_shallow_mean_72h,ST01,土壤温度与冻融,72小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,72,degC,B
 expanded,sta_soilT_profile_mean_72h,ST01,土壤温度与冻融,72小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,72,degC,B
 expanded,sta_soilT_change_72h,ST01,土壤温度与冻融,72小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,72,degC,B
@@ -389,6 +405,8 @@ expanded,sta_tau_p90_120h,TB01,湍流强度,120小时动量通量90%分位数,TA
 expanded,sta_RH_mean_120h,HM01,大气湿度与干湿状态,120小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,120,%,B
 expanded,sta_VPD_mean_120h,HM01,大气湿度与干湿状态,120小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,120,hPa,A
 expanded,sta_VPD_p90_120h,HM01,大气湿度与干湿状态,120小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,120,hPa,A
+expanded,sta_lcl_mean_120h,HM01,大气湿度与干湿状态,120小时近似抬升凝结高度均值,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),均值,120,m,B
+expanded,sta_lcl_p90_120h,HM01,大气湿度与干湿状态,120小时近似抬升凝结高度90%分位数,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),90%分位数,120,m,B
 expanded,sta_soilT_shallow_mean_120h,ST01,土壤温度与冻融,120小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,120,degC,B
 expanded,sta_soilT_profile_mean_120h,ST01,土壤温度与冻融,120小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,120,degC,B
 expanded,sta_soilT_change_120h,ST01,土壤温度与冻融,120小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,120,degC,B
@@ -434,6 +452,8 @@ expanded,sta_tau_p90_168h,TB01,湍流强度,168小时动量通量90%分位数,TA
 expanded,sta_RH_mean_168h,HM01,大气湿度与干湿状态,168小时2米相对湿度均值,RH_2m(%),原始2米相对湿度,均值,168,%,B
 expanded,sta_VPD_mean_168h,HM01,大气湿度与干湿状态,168小时计算水汽压亏缺均值,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,均值,168,hPa,A
 expanded,sta_VPD_p90_168h,HM01,大气湿度与干湿状态,168小时计算水汽压亏缺90%分位数,Ta_2m(degree C)+RH_2m(%),es(Ta)*(1-RH/100)，Magnus饱和水汽压公式,90%分位数,168,hPa,A
+expanded,sta_lcl_mean_168h,HM01,大气湿度与干湿状态,168小时近似抬升凝结高度均值,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),均值,168,m,B
+expanded,sta_lcl_p90_168h,HM01,大气湿度与干湿状态,168小时近似抬升凝结高度90%分位数,Ta_2m(degree C)+RH_2m(%),先由Magnus公式反算露点Td，再计算LCL=125*(T-Td),90%分位数,168,m,B
 expanded,sta_soilT_shallow_mean_168h,ST01,土壤温度与冻融,168小时0.1米土壤温度均值,soilT_0.1m(degree C),原始浅层土壤温度,均值,168,degC,B
 expanded,sta_soilT_profile_mean_168h,ST01,土壤温度与冻融,168小时土壤剖面平均温度均值,soilT_0.1m(degree C)+soilT_0.2m(degree C)+soilT_0.4m(degree C)+soilT_0.8m(degree C)+soilT_1.6m(degree C),五层土温同时有效时的算术平均,均值,168,degC,B
 expanded,sta_soilT_change_168h,ST01,土壤温度与冻融,168小时0.1米土壤温度首末变化,soilT_0.1m(degree C),原始浅层土壤温度,首末变化,168,degC,B

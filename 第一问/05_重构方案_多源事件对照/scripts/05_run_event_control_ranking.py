@@ -55,6 +55,17 @@ CRITERIA = [
 ]
 
 
+def formal_station_dictionary(dictionary: pd.DataFrame) -> pd.DataFrame:
+    """Remove explicitly supplementary indicators from the formal ranking.
+
+    LCL shares temperature/humidity information with RH and VPD.  It is kept
+    in the feature cache and evaluated by script 32, but allowing it into the
+    formal pool would change group scores merely by duplicating evidence.
+    """
+    supplemental = dictionary["衍生指标"].astype(str).str.startswith("sta_lcl_")
+    return dictionary.loc[~supplemental].copy()
+
+
 def calendar_distance_days(timestamp: pd.Timestamp, target: pd.Timestamp) -> int:
     anchor = pd.Timestamp(2000, target.month, target.day)
     current = pd.Timestamp(2000, timestamp.month, timestamp.day)
@@ -111,8 +122,10 @@ def fit_weather_types(
     classified["最大后验概率"] = np.nan
     classified.loc[classifiable, "最大后验概率"] = probabilities.max(axis=1)
 
-    state = station.loc[classifiable, WEATHER_FEATURES].copy()
-    state["天气型编号"] = labels + 1
+    # 天气型解释中心只由2021—2024训练背景计算。2025与2026均只投影，
+    # 不得反向改变类别名称或历史中心。
+    state = station.loc[train_mask, WEATHER_FEATURES].copy()
+    state["天气型编号"] = model.predict(z_train) + 1
     centers = state.groupby("天气型编号")[WEATHER_FEATURES].median()
     global_median = station.loc[train_mask, WEATHER_FEATURES].median()
     global_iqr = station.loc[train_mask, WEATHER_FEATURES].quantile(0.75) - station.loc[train_mask, WEATHER_FEATURES].quantile(0.25)
@@ -497,6 +510,7 @@ def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     station_dictionary = pd.read_csv(OUTPUT_DIR / "07_站点衍生指标字典.csv")
     station_dictionary = station_dictionary.drop_duplicates(["清洗版本", "衍生指标"])
+    station_dictionary = formal_station_dictionary(station_dictionary)
     source_dictionary = pd.read_csv(OUTPUT_DIR / "23_源区ERA5正式衍生指标字典.csv")
     source = pd.read_parquet(CACHE_DIR / "source_daily_features_official.parquet")
 

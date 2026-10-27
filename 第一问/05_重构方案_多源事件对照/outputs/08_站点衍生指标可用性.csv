@@ -29,6 +29,8 @@ strict,sta_tau_p90_24h,887,0.6071184120465435,True
 strict,sta_RH_mean_24h,1341,0.917864476386037,True
 strict,sta_VPD_mean_24h,1341,0.917864476386037,True
 strict,sta_VPD_p90_24h,1341,0.917864476386037,True
+strict,sta_lcl_mean_24h,1341,0.917864476386037,True
+strict,sta_lcl_p90_24h,1341,0.917864476386037,True
 strict,sta_soilT_shallow_mean_24h,1341,0.917864476386037,True
 strict,sta_soilT_profile_mean_24h,1341,0.917864476386037,True
 strict,sta_soilT_change_24h,1341,0.917864476386037,True
@@ -74,6 +76,8 @@ strict,sta_tau_p90_48h,905,0.6194387405886379,True
 strict,sta_RH_mean_48h,1338,0.9158110882956879,True
 strict,sta_VPD_mean_48h,1338,0.9158110882956879,True
 strict,sta_VPD_p90_48h,1338,0.9158110882956879,True
+strict,sta_lcl_mean_48h,1338,0.9158110882956879,True
+strict,sta_lcl_p90_48h,1338,0.9158110882956879,True
 strict,sta_soilT_shallow_mean_48h,1338,0.9158110882956879,True
 strict,sta_soilT_profile_mean_48h,1338,0.9158110882956879,True
 strict,sta_soilT_change_48h,1337,0.9151266255989049,True
@@ -119,6 +123,8 @@ strict,sta_tau_p90_72h,910,0.6228610540725531,True
 strict,sta_RH_mean_72h,1337,0.9151266255989049,True
 strict,sta_VPD_mean_72h,1337,0.9151266255989049,True
 strict,sta_VPD_p90_72h,1337,0.9151266255989049,True
+strict,sta_lcl_mean_72h,1337,0.9151266255989049,True
+strict,sta_lcl_p90_72h,1337,0.9151266255989049,True
 strict,sta_soilT_shallow_mean_72h,1337,0.9151266255989049,True
 strict,sta_soilT_profile_mean_72h,1337,0.9151266255989049,True
 strict,sta_soilT_change_72h,1333,0.9123887748117727,True
@@ -164,6 +170,8 @@ strict,sta_tau_p90_120h,909,0.62217659137577,True
 strict,sta_RH_mean_120h,1329,0.9096509240246407,True
 strict,sta_VPD_mean_120h,1329,0.9096509240246407,True
 strict,sta_VPD_p90_120h,1329,0.9096509240246407,True
+strict,sta_lcl_mean_120h,1329,0.9096509240246407,True
+strict,sta_lcl_p90_120h,1329,0.9096509240246407,True
 strict,sta_soilT_shallow_mean_120h,1329,0.9096509240246407,True
 strict,sta_soilT_profile_mean_120h,1329,0.9096509240246407,True
 strict,sta_soilT_change_120h,1326,0.9075975359342916,True
@@ -209,6 +217,8 @@ strict,sta_tau_p90_168h,902,0.6173853524982889,True
 strict,sta_RH_mean_168h,1322,0.9048596851471595,True
 strict,sta_VPD_mean_168h,1322,0.9048596851471595,True
 strict,sta_VPD_p90_168h,1322,0.9048596851471595,True
+strict,sta_lcl_mean_168h,1322,0.9048596851471595,True
+strict,sta_lcl_p90_168h,1322,0.9048596851471595,True
 strict,sta_soilT_shallow_mean_168h,1322,0.9048596851471595,True
 strict,sta_soilT_profile_mean_168h,1322,0.9048596851471595,True
 strict,sta_soilT_change_168h,1318,0.9021218343600274,True
@@ -254,6 +264,8 @@ expanded,sta_tau_p90_24h,887,0.6071184120465435,True
 expanded,sta_RH_mean_24h,1341,0.917864476386037,True
 expanded,sta_VPD_mean_24h,1341,0.917864476386037,True
 expanded,sta_VPD_p90_24h,1341,0.917864476386037,True
+expanded,sta_lcl_mean_24h,1341,0.917864476386037,True
+expanded,sta_lcl_p90_24h,1341,0.917864476386037,True
 expanded,sta_soilT_shallow_mean_24h,1341,0.917864476386037,True
 expanded,sta_soilT_profile_mean_24h,1341,0.917864476386037,True
 expanded,sta_soilT_change_24h,1341,0.917864476386037,True
@@ -299,6 +311,8 @@ expanded,sta_tau_p90_48h,905,0.6194387405886379,True
 expanded,sta_RH_mean_48h,1338,0.9158110882956879,True
 expanded,sta_VPD_mean_48h,1338,0.9158110882956879,True
 expanded,sta_VPD_p90_48h,1338,0.9158110882956879,True
+expanded,sta_lcl_mean_48h,1338,0.9158110882956879,True
+expanded,sta_lcl_p90_48h,1338,0.9158110882956879,True
 expanded,sta_soilT_shallow_mean_48h,1338,0.9158110882956879,True
 expanded,sta_soilT_profile_mean_48h,1338,0.9158110882956879,True
 expanded,sta_soilT_change_48h,1337,0.9151266255989049,True
@@ -344,6 +358,8 @@ expanded,sta_tau_p90_72h,910,0.6228610540725531,True
 expanded,sta_RH_mean_72h,1337,0.9151266255989049,True
 expanded,sta_VPD_mean_72h,1337,0.9151266255989049,True
 expanded,sta_VPD_p90_72h,1337,0.9151266255989049,True
+expanded,sta_lcl_mean_72h,1337,0.9151266255989049,True
+expanded,sta_lcl_p90_72h,1337,0.9151266255989049,True
 expanded,sta_soilT_shallow_mean_72h,1337,0.9151266255989049,True
 expanded,sta_soilT_profile_mean_72h,1337,0.9151266255989049,True
 expanded,sta_soilT_change_72h,1333,0.9123887748117727,True
@@ -389,6 +405,8 @@ expanded,sta_tau_p90_120h,909,0.62217659137577,True
 expanded,sta_RH_mean_120h,1329,0.9096509240246407,True
 expanded,sta_VPD_mean_120h,1329,0.9096509240246407,True
 expanded,sta_VPD_p90_120h,1329,0.9096509240246407,True
+expanded,sta_lcl_mean_120h,1329,0.9096509240246407,True
+expanded,sta_lcl_p90_120h,1329,0.9096509240246407,True
 expanded,sta_soilT_shallow_mean_120h,1329,0.9096509240246407,True
 expanded,sta_soilT_profile_mean_120h,1329,0.9096509240246407,True
 expanded,sta_soilT_change_120h,1326,0.9075975359342916,True
@@ -434,6 +452,8 @@ expanded,sta_tau_p90_168h,902,0.6173853524982889,True
 expanded,sta_RH_mean_168h,1322,0.9048596851471595,True
 expanded,sta_VPD_mean_168h,1322,0.9048596851471595,True
 expanded,sta_VPD_p90_168h,1322,0.9048596851471595,True
+expanded,sta_lcl_mean_168h,1322,0.9048596851471595,True
+expanded,sta_lcl_p90_168h,1322,0.9048596851471595,True
 expanded,sta_soilT_shallow_mean_168h,1322,0.9048596851471595,True
 expanded,sta_soilT_profile_mean_168h,1322,0.9048596851471595,True
 expanded,sta_soilT_change_168h,1318,0.9021218343600274,True

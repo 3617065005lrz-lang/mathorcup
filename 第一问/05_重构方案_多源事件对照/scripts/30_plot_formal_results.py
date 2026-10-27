@@ -125,16 +125,57 @@ def plot_precursor_trajectory() -> None:
     save(fig, "图5_前五因素灾前演化.png")
 
 
+def plot_weather_sequence() -> None:
+    data = pd.read_csv(CACHE / "fig07_灾前40天天气型演变.csv")
+    data = data.sort_values("距事件截止日_天")
+    types = sorted(data["天气型编号"].dropna().astype(int).unique())
+    palette = plt.get_cmap("tab10")
+    color_map = {weather_type: palette((weather_type - 1) % 10) for weather_type in types}
+
+    fig, axes = plt.subplots(
+        2, 1, figsize=(10.2, 6.3), sharex=True,
+        gridspec_kw={"height_ratios": [1.0, 2.1], "hspace": 0.10},
+    )
+    x = data["距事件截止日_天"].to_numpy()
+    for weather_type in types:
+        group = data[data["天气型编号"].eq(weather_type)]
+        description = str(group["解释性名称"].iloc[0])
+        axes[0].scatter(
+            group["距事件截止日_天"], np.zeros(len(group)), marker="s", s=88,
+            color=color_map[weather_type], label=f"{weather_type}: {description}",
+        )
+    axes[0].set_yticks([])
+    axes[0].set_ylim(-0.6, 0.6)
+    axes[0].set_title("2026年事件前40天天气型演变（GMM仅用于背景分类）")
+    axes[0].legend(frameon=False, ncol=2, fontsize=7, loc="upper left", bbox_to_anchor=(0, 1.03))
+
+    axes[1].plot(x, data["24小时平均气温_C"], color=COLORS["red"], linewidth=1.8, label="24 h平均气温")
+    axes[1].set_ylabel("气温（°C）", color=COLORS["red"])
+    axes[1].tick_params(axis="y", labelcolor=COLORS["red"])
+    rain_ax = axes[1].twinx()
+    rain_ax.bar(x, data["24小时累计降水_mm"], color=COLORS["blue"], alpha=0.28, label="24 h累计降水")
+    rain_ax.set_ylabel("降水（mm）", color=COLORS["blue"])
+    rain_ax.tick_params(axis="y", labelcolor=COLORS["blue"])
+    axes[1].axvline(0, color="black", linestyle="--", linewidth=1)
+    axes[1].set_xlabel("距2026年8月26日10:00的天数")
+    axes[1].grid(axis="y", alpha=0.18)
+    lines1, labels1 = axes[1].get_legend_handles_labels()
+    lines2, labels2 = rain_ax.get_legend_handles_labels()
+    axes[1].legend(lines1 + lines2, labels1 + labels2, frameon=False, loc="upper left")
+    save(fig, "图6_灾前40天天气型演变.png")
+
+
 def main() -> None:
     setup()
     required = list(CACHE.glob("fig*.csv"))
-    if len(required) < 5:
+    if len(required) < 6:
         raise FileNotFoundError("绘图缓存不完整，请先运行 scripts/29_prepare_formal_plot_cache.py")
     plot_main_ranking()
     plot_stability()
     plot_imerg()
     plot_gmm()
     plot_precursor_trajectory()
+    plot_weather_sequence()
     print(f"PNG figures written to: {FIGURES}")
 
 

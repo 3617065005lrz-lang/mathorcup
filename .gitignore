@@ -5,6 +5,7 @@
 /第一问/05_重构方案_多源事件对照/external/
 /第一问/05_重构方案_多源事件对照/scripts/__pycache__/
 /第一问/05_重构方案_多源事件对照/results/*.log
+/第一问/01_数据预处理/processed/
 
 # Local editor settings
 /.vscode/

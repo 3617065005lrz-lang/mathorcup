@@ -5,7 +5,7 @@ from __future__ import annotations
 设计原则：
 1. 每个衍生量都能追溯到题目原始字段；
 2. 只做有明确物理含义的统计或经典诊断量；
-3. 滚动窗口逐年计算，防止跨年和被隔离的2025年污染窗口；
+3. 滚动窗口逐年计算，防止跨年；2025仅保留给事后跨机理核查；
 4. 排名用每日10:00端点，另存2026事件前逐小时轨迹供画图；
 5. 本脚本只生成缓存，不进行排名，也不生成图片。
 """
@@ -25,7 +25,7 @@ OUTPUT_DIR = WORK_DIR / "outputs"
 
 EVENT_CUTOFF = pd.Timestamp("2026-08-26 10:00:00")
 WINDOWS = [24, 48, 72, 120, 168]
-ANALYSIS_YEARS = [2021, 2022, 2023, 2024, 2026]
+ANALYSIS_YEARS = [2021, 2022, 2023, 2024, 2025, 2026]
 ROLLING_MIN_COVERAGE = 0.80
 DAYLIGHT_RSD_THRESHOLD = 50.0
 MIN_VECTOR_SHEAR_SQ = 0.25
@@ -148,8 +148,22 @@ def base_hourly_variables(raw: pd.DataFrame) -> tuple[pd.DataFrame, list[dict[st
     rh = raw["RH_2m(%)"]
     vpd = saturation_vapor_pressure_hpa(temp) * (1 - rh / 100.0)
     vpd = vpd.where(rh.between(0, 100)).clip(lower=0)
+    valid_rh = rh.where(rh.gt(0) & rh.le(100))
+    gamma = np.log(valid_rh / 100.0) + 17.67 * temp / (temp + 243.5)
+    dewpoint = 243.5 * gamma / (17.67 - gamma)
+    lcl = (125.0 * (temp - dewpoint)).clip(lower=0)
     add("relative_humidity", rh, "HM01", "大气湿度与干湿状态", "2米相对湿度", "RH_2m(%)", "原始2米相对湿度", "%")
     add("vpd_derived", vpd, "HM01", "大气湿度与干湿状态", "计算水汽压亏缺", "Ta_2m(degree C)+RH_2m(%)", "es(Ta)*(1-RH/100)，Magnus饱和水汽压公式", "hPa", "A")
+    add(
+        "lcl_height",
+        lcl,
+        "HM01",
+        "大气湿度与干湿状态",
+        "近似抬升凝结高度",
+        "Ta_2m(degree C)+RH_2m(%)",
+        "先由Magnus公式反算露点Td，再计算LCL=125*(T-Td)",
+        "m",
+    )
 
     soil_t_cols = [f"soilT_{depth}m(degree C)" for depth in ["0.1", "0.2", "0.4", "0.8", "1.6"]]
     soil_temp_profile = raw[soil_t_cols].mean(axis=1, skipna=False)
@@ -245,6 +259,8 @@ def construct_window_features_one_year(base: pd.DataFrame, catalog: list[dict[st
         add_feature(f"sta_RH_mean{suffix}", roll(base["relative_humidity"], window, "mean"), "relative_humidity", "均值", window)
         add_feature(f"sta_VPD_mean{suffix}", roll(base["vpd_derived"], window, "mean"), "vpd_derived", "均值", window)
         add_feature(f"sta_VPD_p90{suffix}", base["vpd_derived"].rolling(window, min_periods=int(np.ceil(window * ROLLING_MIN_COVERAGE))).quantile(0.90), "vpd_derived", "90%分位数", window)
+        add_feature(f"sta_lcl_mean{suffix}", roll(base["lcl_height"], window, "mean"), "lcl_height", "均值", window)
+        add_feature(f"sta_lcl_p90{suffix}", base["lcl_height"].rolling(window, min_periods=int(np.ceil(window * ROLLING_MIN_COVERAGE))).quantile(0.90), "lcl_height", "90%分位数", window)
 
         add_feature(f"sta_soilT_shallow_mean{suffix}", roll(base["soil_temp_shallow"], window, "mean"), "soil_temp_shallow", "均值", window)
         add_feature(f"sta_soilT_profile_mean{suffix}", roll(base["soil_temp_profile"], window, "mean"), "soil_temp_profile", "均值", window)
@@ -269,7 +285,7 @@ def construct_window_features_one_year(base: pd.DataFrame, catalog: list[dict[st
     return pd.DataFrame(feature_values), definitions
 
 
-def build_mode(mode: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+def build_mode(mode: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     raw = load_station(mode)
     base, base_catalog = base_hourly_variables(raw)
     frames: list[pd.DataFrame] = []
@@ -281,13 +297,14 @@ def build_mode(mode: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
             definitions = current_definitions
     hourly = pd.concat(frames, ignore_index=True).sort_values("Timestamp").reset_index(drop=True)
     daily = hourly[hourly["Timestamp"].dt.hour.eq(10)].copy()
+    daily_05 = hourly[hourly["Timestamp"].dt.hour.eq(5)].copy()
     event = hourly[
         (hourly["Timestamp"] > EVENT_CUTOFF - pd.Timedelta(hours=168))
         & (hourly["Timestamp"] <= EVENT_CUTOFF)
     ].copy()
     dictionary = pd.DataFrame(definitions)
     dictionary.insert(0, "清洗版本", mode)
-    return daily, event, dictionary
+    return daily, daily_05, event, dictionary
 
 
 def quality_summary(daily: pd.DataFrame, mode: str) -> pd.DataFrame:
@@ -314,8 +331,11 @@ def main() -> None:
     dictionaries = []
     quality = []
     for mode in ["strict", "expanded"]:
-        daily, event, dictionary = build_mode(mode)
+        daily, daily_05, event, dictionary = build_mode(mode)
         daily.to_parquet(CACHE_DIR / f"station_daily_10h_features_{mode}.parquet", index=False)
+        # 2025事件公开技术资料给出的边境冲击时刻约为北京时间05:30；
+        # 05:00端点只用于排序完成后的跨机理方向核查，不进入主模型。
+        daily_05.to_parquet(CACHE_DIR / f"station_daily_05h_features_{mode}.parquet", index=False)
         event.to_parquet(CACHE_DIR / f"station_event_168h_trajectory_{mode}.parquet", index=False)
         dictionaries.append(dictionary)
         quality.append(quality_summary(daily, mode))
