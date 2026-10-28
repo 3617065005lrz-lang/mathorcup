@@ -133,14 +133,19 @@ def spatial_maps() -> None:
 
 
 def model_comparison() -> None:
-    table = pd.read_csv(OUTPUTS / "18_空间模型源区合理性检验.csv")
+    enhanced = OUTPUTS / "57_空间增强模型源区对照.csv"
+    table = pd.read_csv(enhanced if enhanced.exists() else OUTPUTS / "18_空间模型源区合理性检验.csv")
     labels = {
         "static_equal_indicator_baseline": "等指标基线",
         "static_mechanism_score": "机制约束主模型",
         "historical_logistic_probability": "历史灾点Logistic",
+        "historical_logistic": "历史灾点Logistic",
+        "historical_lightgbm": "历史灾点LightGBM",
+        "mechanism_main": "机制约束主模型",
     }
     fig, ax = plt.subplots(figsize=(7.5, 5))
-    for score, part in table.groupby("score"):
+    group_column = "model" if "model" in table.columns else "score"
+    for score, part in table.groupby(group_column):
         ax.plot(part["top_share"], part["source_aoi_coverage"], marker="o", label=labels.get(score, score))
     ax.set_xlabel("划为高值区的空间比例")
     ax.set_ylabel("源区AOI覆盖率")
@@ -148,6 +153,56 @@ def model_comparison() -> None:
     ax.legend(frameon=False)
     ax.grid(alpha=0.2)
     save(fig, "图5_空间基线与升级模型对照.png")
+
+
+def spatial_enhancement_diagnostics() -> None:
+    cv_path = OUTPUTS / "55_非线性空间基线重复分块CV.csv"
+    explain_path = OUTPUTS / "56_LightGBM空间模型解释.csv"
+    weight_path = OUTPUTS / "58_静态三模块权重敏感性.csv"
+    background_path = OUTPUTS / "59_背景抽样稳健性.csv"
+    if not all(path.exists() for path in [cv_path, explain_path, weight_path, background_path]):
+        return
+
+    cv = pd.read_csv(cv_path)
+    explanation = pd.read_csv(explain_path).sort_values("oof_shap_share")
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.8))
+    order = ["Logistic", "LightGBM"]
+    data = [cv.loc[cv.model.eq(name), "spatial_block_auc"].to_numpy() for name in order]
+    boxes = axes[0].boxplot(data, tick_labels=order, patch_artist=True, showfliers=False)
+    for patch, color in zip(boxes["boxes"], ["#4C78A8", "#F58518"]):
+        patch.set_facecolor(color)
+        patch.set_alpha(0.75)
+    axes[0].set_ylabel("空间分块AUC")
+    axes[0].set_title("10组分块×5折的历史空间泛化")
+    axes[0].grid(axis="y", alpha=0.2)
+
+    axes[1].barh(explanation.feature_cn, explanation.oof_shap_share, color="#F58518")
+    axes[1].set_xlabel("折外平均绝对贡献占比")
+    axes[1].set_title("LightGBM地形变量解释")
+    save(fig, "图8_非线性空间基线与贡献解释.png")
+
+    weights = pd.read_csv(weight_path)
+    weights = weights.loc[np.isclose(weights.top_share, 0.20)]
+    grid_weights = weights.loc[weights.scenario.ne("equal_main")]
+    main_coverage = float(weights.loc[weights.scenario.eq("equal_main"), "source_aoi_coverage"].iloc[0])
+    background = pd.read_csv(background_path)
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.8))
+    axes[0].hist(grid_weights.source_aoi_coverage, bins=14, color="#59A14F", alpha=0.82)
+    axes[0].axvline(main_coverage, color="#B2182B", ls="--", lw=1.8, label=f"等权主模型={main_coverage:.3f}")
+    axes[0].set_xlabel("前20%高值区对源区AOI覆盖率")
+    axes[0].set_ylabel("预设权重方案数")
+    axes[0].set_title("地形—物源—连通性权重敏感性")
+    axes[0].legend(frameon=False)
+
+    bg_data = [background.loc[background.model.eq(name), "source_aoi_coverage"].to_numpy() for name in order]
+    boxes = axes[1].boxplot(bg_data, tick_labels=order, patch_artist=True, showfliers=False)
+    for patch, color in zip(boxes["boxes"], ["#4C78A8", "#F58518"]):
+        patch.set_facecolor(color)
+        patch.set_alpha(0.75)
+    axes[1].set_ylabel("前20%高值区对源区AOI覆盖率")
+    axes[1].set_title("100次背景样本抽取稳健性")
+    axes[1].grid(axis="y", alpha=0.2)
+    save(fig, "图9_静态权重与背景抽样稳健性.png")
 
 
 def gfs_skill() -> None:
@@ -195,6 +250,7 @@ def main() -> None:
     model_comparison()
     gfs_skill()
     dynamic_branches()
+    spatial_enhancement_diagnostics()
     print(f"PNG figures saved to {FIGURES}")
 
 

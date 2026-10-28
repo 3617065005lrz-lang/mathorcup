@@ -10,3 +10,4 @@ xarray
 netCDF4
 pyhdf
 pyshp
+lightgbm

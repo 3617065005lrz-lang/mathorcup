@@ -14,6 +14,7 @@ SCRIPTS = [
     "13_run_static_context_supplements.py",
     "14_uncertainty_transfer_and_validation.py",
     "15_compare_mcd43_upgraded_joint_risk.py",
+    "16_spatial_model_enhancements.py",
 ]
 
 
