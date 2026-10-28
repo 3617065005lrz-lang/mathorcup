@@ -1,0 +1,28 @@
+{
+  "pdf_pages": 8,
+  "figure_groups": 4,
+  "tables": 3,
+  "latex_cross_references_resolved": true,
+  "overfull_boxes": 0,
+  "source_image_sha256": {
+    "q3_fig01.png": "b4d22a82c1d6b4e36b069bfbadcf4bb27d0aa80b938dc70d3d97709768fde859",
+    "q3_fig02.png": "ec701e86794fe1788fd69d4c80d31c10fe8c980992c068ae79269269a86abf0f",
+    "q3_fig03.png": "b2c6bd25745d0c78d93e0dc51f0adc873c791f7d02707a0bd1a90caf82613939",
+    "q3_fig04.png": "74e8a62d385dd6a75216c7006234ef8826f4e5978503595bbd44e9f5a93b492c",
+    "q3_fig05.png": "91e07036860ceab36b280134172ded216bbab074cdcc5f37123f34242e04b330",
+    "q3_fig06.png": "395ee2c3b939bce98ae05857a6161e45d1c4620f4c6afbc4f87e1ff03022dfab",
+    "q3_fig07.png": "4a023dd472315fd8b8d0e59c4a58884e146a6af1de75d6525ec8a9c0d5f0e65a",
+    "q3_fig08.png": "32df5b3f01257a94e70c57aee3eaebd94a0b58d26762417eb76fce2f99b62818"
+  },
+  "pdf_sha256": "f10aba7b4feec40347e9c2b2d2b41daa681f122caea277997749acdf607f4129",
+  "raw_interval_coverage_count": 4,
+  "rolling_issues": 5,
+  "visual_review": "8 final rendered pages visually checked; short continuation at coverage result repaired.",
+  "equations_and_tables_unchanged_from_first_draft": true,
+  "revision": "技能再润色版",
+  "equations_and_tables_unchanged_from_previous_revision": true,
+  "exemplar_papers_read": 5,
+  "archived_reference_pdfs": 16,
+  "numeric_value_set_unchanged": true,
+  "heading_hierarchy_unchanged": true
+}

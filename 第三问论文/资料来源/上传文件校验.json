@@ -1,0 +1,23 @@
+{
+  "branch": "lisiyuan",
+  "source_revision": "技能再润色版",
+  "files_sha256": {
+    "main.tex": "acdf39e0615ddf24b0f436b1f877a814bf7b14e23f2f674123114226accdd8e4",
+    "cumcmthesis.cls": "589cbe377c0f7309152211ea9a8cfe8c37275e456883a90582030454a88b4d31",
+    "ref.bib": "205df1a8eacc8e9f543c6174fa9d17ac2c9a06da7422756a5e3040a1d37312ab",
+    "gbt7714-numerical.bst": "5dc3120079d58b2544773d62db1fbc4a511e56728c2d69d34d016bee9a9d1b68",
+    "YaHei.Consolas.1.11b.ttf": "89f1d0174412aa8a881e1c6f3d3ecbb79318d6ab672631240df18a564e76b60b",
+    "Fira Code Retina Nerd Font Complete.otf": "96ff94a7abfd66b82395ae8dc9d10f756d707bb7d860e2743e6cfbdff0dd2a9b",
+    "fonts/SourceHanSerifCN-Regular.otf": "1ddaf8183212f81e5b9a5b8c87a24aab8b7d2ff8f05eb3f6eaab341a7a285e58",
+    "fonts/SourceHanSerifCN-Bold.otf": "90118f6c20e798e12ea9e5b476ce920de94de2f505fc83fe641989d32da38a65",
+    "sections/question3.tex": "206961229a2c6704e38a5600889c8ead7ba7029b1efaec1291081647d3910b42",
+    "资料来源/GitHub版本.json": "7c65b3d333fd2e3c773b2e2443d94dce38aea2bc5f1895a45579315c0d21ede6",
+    "资料来源/交付核验.json": "e6087ec6da5e4f3e8539d67cee2ad7ee85c6c0d2bc633b6e671be49f8e0ea158",
+    "figures/q3/q3_fig01.png": "b4d22a82c1d6b4e36b069bfbadcf4bb27d0aa80b938dc70d3d97709768fde859",
+    "figures/q3/q3_fig02.png": "ec701e86794fe1788fd69d4c80d31c10fe8c980992c068ae79269269a86abf0f",
+    "figures/q3/q3_fig04.png": "74e8a62d385dd6a75216c7006234ef8826f4e5978503595bbd44e9f5a93b492c",
+    "figures/q3/q3_fig06.png": "395ee2c3b939bce98ae05857a6161e45d1c4620f4c6afbc4f87e1ff03022dfab",
+    "figures/q3/q3_fig07.png": "4a023dd472315fd8b8d0e59c4a58884e146a6af1de75d6525ec8a9c0d5f0e65a",
+    "第三问正文.pdf": "f10aba7b4feec40347e9c2b2d2b41daa681f122caea277997749acdf607f4129"
+  }
+}

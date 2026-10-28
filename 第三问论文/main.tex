@@ -1,0 +1,85 @@
+%! Mode:: "TeX:UTF-8"
+%! TEX program = xelatex
+\PassOptionsToPackage{quiet}{xeCJK}
+\documentclass[withoutpreface,bwprint]{cumcmthesis}
+\usepackage{etoolbox}
+\usepackage{ctex}
+\BeforeBeginEnvironment{tabular}{\zihao{-5}}
+\usepackage[numbers,sort&compress]{natbib}  % 文献管理宏包
+\usepackage[framemethod=TikZ]{mdframed}  % 框架宏包
+\usepackage{url}  % 网页链接宏包
+\usepackage{subcaption}  % 子图宏包
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}\renewcommand{\textbf}[1]{{\song\bfseries #1}}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!20]
+\tikzstyle{process} = [rectangle, minimum width=3.5cm, minimum height=1cm, text centered, draw=black, fill=blue!20]
+\tikzstyle{decision} = [diamond, aspect=2, minimum width=3.5cm, minimum height=1cm, text centered, draw=black, fill=green!20]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+%% 队伍编号和赛道表格（对应官方 Word 模板首页表格，置于第一页顶部、论文标题上方）
+%% 填写处：MCB260XXXX 改为实际队伍编号，（A/B）改为实际赛道
+\makeatletter
+\let\mcm@orig@makeothertitle\makeothertitle
+\renewcommand{\makeothertitle}{%
+  \if@mcm@preface
+    \mcm@orig@makeothertitle
+  \else
+    \begin{center}
+      \renewcommand{\arraystretch}{1.5}
+      \begin{tabular}{|>{\centering\arraybackslash}p{3.9cm}|>{\centering\arraybackslash}p{3.9cm}|}
+        \hline
+        队伍编号 & MCB260XXXX \\
+        \hline
+        赛道 & （A/B） \\
+        \hline
+      \end{tabular}
+    \end{center}
+    \vskip2ex
+    \mcm@orig@makeothertitle
+  \fi
+}
+\makeatother
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\title{基于集成学习的洪水概率预测}  % 论文标题
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文
+
+% 独立预览保留总论文的章节序号；正式合并时只引入章节文件。
+\BeforeBeginEnvironment{tabularx}{\zihao{-5}}
+\setlength{\emergencystretch}{2em}
+\begin{document}
+\setcounter{section}{6}
+\setcounter{equation}{7}
+\setcounter{figure}{1}
+\setcounter{table}{5}
+\input{sections/question3}
+\end{document}
