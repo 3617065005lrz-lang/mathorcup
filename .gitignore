@@ -26,3 +26,8 @@
 # Keep scripts, configuration, compact cache, final CSV/Markdown outputs and PNG figures in Git.
 /第三问/外源资料/
 /第三问/processed/
+
+# Question 4 rebuildable numerical caches and per-scenario arrays.
+# Keep scripts, compact summaries, final rasters, extension results and PNG figures in Git.
+/第四问/cache/
+/第四问/outputs/scenarios_30m/

@@ -1,0 +1,4 @@
+__pycache__/
+cache/*.npz
+outputs/scenarios_30m/*.npz
+outputs/*_test_*.npz

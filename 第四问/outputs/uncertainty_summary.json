@@ -1,0 +1,26 @@
+{
+  "selected_main_scenario": "R3_011",
+  "selection_reason": "参数搜索与GLUE权重只使用到时和上游校准区；在固定行为集合后，以0.70×校准得分+0.30×下游留出CSI选择主情景，兼顾拟合与空间迁移。",
+  "robust_selection_score": 0.716703859791356,
+  "best_calibration_scenario": "R3_012",
+  "best_holdout_scenario": "R3_020",
+  "ensemble_arrival_weighted_mean_s": 459.2380726536761,
+  "ensemble_arrival_p10_s": 440.76247971796676,
+  "ensemble_arrival_p90_s": 475.8632825321983,
+  "observation_aware_arrival_interval_s": [
+    380.76247971796676,
+    535.8632825321984
+  ],
+  "ensemble_port_depth_weighted_mean_m": 33.597179689958736,
+  "ensemble_port_speed_weighted_mean_m_s": 42.55276997450475,
+  "ensemble_port_impact_intensity_weighted_mean_m3_s2": 14493.554582715133,
+  "ensemble_port_dynamic_pressure_proxy_weighted_mean_mpa": 1.844543523415361,
+  "target_travel_time_s": 463.0,
+  "grid_30m_60m_arrival_delta_range_s": [
+    -99.03690834311305,
+    -82.38066803599293
+  ],
+  "median_absolute_grid_arrival_delta_s": 96.63941467592696,
+  "grid_note": "30/60 m同时更换了地形离散网格，因此该差值是分辨率—地形离散联合敏感性，不能只归因于像元大小。",
+  "evidence_note": "集合离散范围仅表示保留情景差异；观测感知区间另叠加CCTV时钟约±60 s，不是严格贝叶斯可信区间。"
+}

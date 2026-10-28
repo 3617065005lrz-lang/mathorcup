@@ -1,0 +1,25 @@
+{
+  "resolution_m": 30.0,
+  "grid_zip": "D:\\MathorCup_Data\\External_Gyirong\\Q4_simulation_inputs\\P1_open_reconstruction\\v2-upper-30m.zip",
+  "grid_shape": [
+    543,
+    668
+  ],
+  "active_cells": 83963,
+  "source_cells": 2174,
+  "source_area_km2": 1.9566,
+  "source_volume_m3": 35420000.0,
+  "derived_source_thickness_m": 18.102831442297862,
+  "port_cell": [
+    272,
+    126
+  ],
+  "port_chainage_m": 21720.0,
+  "observed_cells_in_domain": 23206,
+  "calibration_observed_cells": 13165,
+  "holdout_observed_cells": 2756,
+  "crs": "EPSG:32645",
+  "vertical_datum": "EGM2008",
+  "simulation_bed_note": "raw DSM breached along priority-flood D8 receivers with minimum slope 0.0005; raw DSM kept as z_raw",
+  "evidence_boundary": "网格地形和观测坐标来自公开重建资产；本项目重新计算模型，不继承其参数和结果。UNOSAT为初步卫星解译范围。"
+}

@@ -1,0 +1,6 @@
+{
+  "status": "not_run_in_final_pipeline",
+  "rejected_extension": "uniform_initial_channel_water_depth_scenarios",
+  "reason": "在陡峻河床上铺设统一静水深会自行产生重力调整波，不能代表稳态基流或溃决洪水；真实扩展必须使用有来源的上游边界流量过程线。",
+  "decision": "不把0.5/2.0/5.0 m任意水深情景写入论文结果，也不用于模型评分。"
+}

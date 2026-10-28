@@ -1,0 +1,65 @@
+{
+  "event": {
+    "source_onset_utc": "2026-08-26T02:52:10Z",
+    "port_arrival_utc": "2026-08-26T02:59:53Z",
+    "target_travel_time_s": 463.0,
+    "arrival_clock_uncertainty_s": 60.0,
+    "source_volume_center_m3": 35420000.0,
+    "source_volume_range_m3": [28000000.0, 43000000.0],
+    "source_volume_note": "中心值来自公开重建资料中的QHNU估算；作为先验中心而非现场精确测量。"
+  },
+  "inputs": {
+    "grid_60m_zip": "D:/MathorCup_Data/External_Gyirong/Q4_simulation_inputs/P1_open_reconstruction/v2-corridor-60m.zip",
+    "grid_30m_zip": "D:/MathorCup_Data/External_Gyirong/Q4_simulation_inputs/P1_open_reconstruction/v2-upper-30m.zip",
+    "unosat_shapefile": "D:/MathorCup_Data/External_Gyirong/Q4_simulation_inputs/P0_UNOSAT_extent/floodextent/FloodExtent_20260826_Nepal.shp",
+    "observations_csv": "D:/MathorCup_Data/External_Gyirong/Q4_simulation_inputs/P1_open_reconstruction/langtang-2026-cascade/data/observations/event_observations.csv",
+    "cctv_video": "D:/MathorCup_Data/External_Gyirong/Q4_simulation_inputs/P0_field_observations/CCTV/Mudslide_at_Gyirong_Port_2.webm"
+  },
+  "domain": {
+    "max_upper_chainage_m": 30000.0,
+    "crop_margin_cells": 40,
+    "arrival_depth_threshold_m": 0.20,
+    "runout_depth_threshold_m": 0.10,
+    "zone_break_chainage_m": 10000.0,
+    "t_end_s": 1100.0,
+    "cfl": 0.38,
+    "max_dt_s": 1.0
+  },
+  "search": {
+    "seed": 20261028,
+    "lhs_samples_m1": 12,
+    "lhs_samples_m2": 18,
+    "lhs_samples_m3": 24,
+    "keep_for_30m": 5,
+    "ranges": {
+      "mu_uniform": [0.02, 0.20],
+      "xi_uniform_m_s2": [200.0, 5000.0],
+      "mu_source": [0.02, 0.20],
+      "xi_source_m_s2": [300.0, 6000.0],
+      "mu_valley": [0.01, 0.15],
+      "xi_valley_m_s2": [300.0, 8000.0],
+      "erosion_k": [0.0002, 0.0030],
+      "erosion_ucrit_m_s": [4.0, 14.0],
+      "erodible_depth_m": [0.5, 4.0],
+      "volume_scale": [0.79, 1.21]
+    },
+    "hypermobile_ranges": {
+      "mu_source": [0.0005, 0.0200],
+      "xi_source_m_s2": [10000.0, 50000.0],
+      "mu_valley": [0.0020, 0.0300],
+      "xi_valley_m_s2": [5000.0, 25000.0],
+      "erosion_k": [0.0001, 0.0015],
+      "erosion_ucrit_m_s": [6.0, 14.0],
+      "erodible_depth_m": [0.5, 4.0],
+      "volume_scale": [0.79, 1.21],
+      "release_duration_s": [60.0, 120.0],
+      "release_speed_m_s": [35.0, 60.0]
+    }
+  },
+  "scoring": {
+    "arrival_weight": 0.50,
+    "calibration_csi_weight": 0.30,
+    "calibration_recall_weight": 0.20,
+    "arrival_scale_s": 120.0
+  }
+}

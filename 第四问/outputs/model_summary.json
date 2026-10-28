@@ -1,0 +1,72 @@
+{
+  "model_comparison_60m": [
+    {
+      "model": "M1_uniform_literature",
+      "scenarios": 12,
+      "accepted": 0,
+      "best_score": 0.22974644403215833,
+      "median_score": 0.08596165739022882,
+      "best_arrival_error_s": NaN
+    },
+    {
+      "model": "M2_zoned_hypermobile",
+      "scenarios": 18,
+      "accepted": 13,
+      "best_score": 0.6289505714054808,
+      "median_score": 0.3308781053074272,
+      "best_arrival_error_s": 47.330249339793966
+    },
+    {
+      "model": "M3_zoned_entrainment",
+      "scenarios": 24,
+      "accepted": 18,
+      "best_score": 0.5643044107991863,
+      "median_score": 0.39842995245311547,
+      "best_arrival_error_s": 72.87553813239845
+    }
+  ],
+  "best_30m": {
+    "scenario_id": "R3_012",
+    "model": "M3_refined_entrainment",
+    "mu_source": 0.004753621360983411,
+    "xi_source": 28657.498410273805,
+    "mu_valley": 0.01852093289705775,
+    "xi_valley": 8824.381512632946,
+    "erosion_k": 0.0009452082004202966,
+    "erosion_ucrit": 8.36837366838666,
+    "erodible_depth": 2.197271766071541,
+    "volume_scale": 1.1014705830010674,
+    "release_duration_s": 65.62680949230267,
+    "release_speed_m_s": 46.157282906783465,
+    "background_water_depth_m": 0.0,
+    "resolution_m": 30.0,
+    "status": "ok",
+    "arrival_time_s": 462.68003172438404,
+    "arrival_error_s": -0.3199682756159632,
+    "max_speed_m_s": 103.43071428832837,
+    "speed_p99_m_s": 91.26612342613703,
+    "max_depth_m": 127.2469819810192,
+    "max_impact_intensity_m3_s2": 543374.5617527249,
+    "max_dynamic_pressure_pa": 10697912.658193815,
+    "initial_volume_m3": 39014088.049897805,
+    "background_water_volume_m3": 0.0,
+    "entrained_volume_m3": 10058357.570806848,
+    "final_volume_m3": 49102071.27835771,
+    "numerical_volume_error_fraction": 0.0006037126798619637,
+    "calibration_csi": 0.6588253744217047,
+    "calibration_recall": 0.678675282714055,
+    "calibration_precision": 0.9574928774928775,
+    "holdout_csi": 0.3419170243204578,
+    "holdout_recall": 0.3468795355587808,
+    "holdout_precision": 0.9598393574297188,
+    "global_csi": 0.47771407434806734,
+    "global_recall": 0.49097129823227526,
+    "global_precision": 0.9465005496518871,
+    "score": 0.8320512435675003
+  },
+  "interpretation_boundary": [
+    "M1若无法再现到时，不等于Voellmy方程无效，只说明普通均一泥石流参数不足以描述本次高位冰岩崩塌链。",
+    "M2/M3的mu与xi是栅格尺度下的有效参数，不应解释为可直接移植到其他沟谷的材料常数。",
+    "30 m留出区表现用于检验空间迁移；UNOSAT为初步卫星解译，不能等同现场逐点实测。"
+  ]
+}

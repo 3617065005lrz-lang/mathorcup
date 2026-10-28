@@ -1,0 +1,52 @@
+{
+  "scenario": {
+    "scenario_id": "R3_011",
+    "model": "M3_refined_entrainment",
+    "mu_source": 0.0182606842447193,
+    "xi_source": 46970.22826114415,
+    "mu_valley": 0.0032212686096357,
+    "xi_valley": 8225.414357200301,
+    "erosion_k": 0.0007206915606205,
+    "erosion_ucrit": 11.443806189319403,
+    "erodible_depth": 3.624830759242979,
+    "volume_scale": 1.0521790185890878,
+    "release_duration_s": 96.04220848366111,
+    "release_speed_m_s": 52.84157930074754,
+    "background_water_depth_m": 0.0
+  },
+  "metrics": {
+    "scenario_id": "R3_011",
+    "model": "M3_refined_entrainment",
+    "resolution_m": 30.0,
+    "status": "ok",
+    "arrival_time_s": 454.0373728372518,
+    "arrival_error_s": -8.96262716274822,
+    "max_speed_m_s": 101.25174564667158,
+    "speed_p99_m_s": 83.74255136670966,
+    "max_depth_m": 122.629538075437,
+    "max_impact_intensity_m3_s2": 394144.91370821727,
+    "max_dynamic_pressure_pa": 10251915.996498277,
+    "initial_volume_m3": 37268180.83842549,
+    "background_water_volume_m3": 0.0,
+    "entrained_volume_m3": 14074578.434717966,
+    "final_volume_m3": 51369364.76964136,
+    "numerical_volume_error_fraction": 0.0005181937409395065,
+    "calibration_csi": 0.6068143645525074,
+    "calibration_recall": 0.612843295638126,
+    "calibration_precision": 0.9840466926070038,
+    "holdout_csi": 0.5955447267664462,
+    "holdout_recall": 0.6208272859216255,
+    "holdout_precision": 0.9359956236323851,
+    "global_csi": 0.4711985352800338,
+    "global_recall": 0.47695305075080785,
+    "global_precision": 0.9750340003885759,
+    "score": 0.7686292025163164
+  },
+  "snapshot_times_s": [
+    30.0,
+    90.0,
+    180.0,
+    454.037372837252,
+    600.0
+  ]
+}
