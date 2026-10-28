@@ -1,0 +1,6 @@
+﻿nominal_issue_h,issue_time_beijing,actual_lead_h,highest_persistent_level_code,highest_persistent_level,first_blue_time,first_yellow_time,first_orange_time,first_red_time,blue_lead_to_event_h,yellow_lead_to_event_h,orange_lead_to_event_h,red_lead_to_event_h,two_issue_confirmed_level_code,two_issue_confirmed_level,confirmed_level_issue_lead_h
+168,2026-08-19 08:00:00,170.87275,4,红色,2026-08-19 08:00:00,2026-08-19 08:00:00,2026-08-19 09:00:00,2026-08-20 23:00:00,170.87275,170.87275,169.87275,131.87275,0,常态,
+120,2026-08-21 08:00:00,122.87275,0,常态,,,,,,,,,0,常态,
+72,2026-08-23 08:00:00,74.87275,1,蓝色,2026-08-23 08:00:00,,,,74.87275,,,,0,常态,
+48,2026-08-24 08:00:00,50.87275,3,橙色,2026-08-24 08:00:00,2026-08-24 08:00:00,2026-08-25 20:00:00,,50.87275,50.87275,14.87275,,1,蓝色,50.87275
+24,2026-08-25 08:00:00,26.87275,3,橙色,2026-08-25 08:00:00,2026-08-25 10:00:00,2026-08-25 13:00:00,,26.87275,24.87275,21.87275,,3,橙色,26.87275

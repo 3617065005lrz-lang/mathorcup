@@ -1,0 +1,15 @@
+﻿date,cycle,product,lead_min_h,lead_max_h,lead_count,variables,all_four_variables,covers_f174
+20260819,00,geavg,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260819,00,gespr,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260821,00,geavg,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260821,00,gespr,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260823,00,geavg,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260823,00,gespr,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260824,00,geavg,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260824,00,gespr,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260825,00,geavg,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260825,00,gespr,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260825,12,geavg,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260825,12,gespr,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260826,00,geavg,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True
+20260826,00,gespr,0,174,30,precipitation_6h_mm;shortwave_down_w_m2;soil_water_0_10m;temperature_2m_c,True,True

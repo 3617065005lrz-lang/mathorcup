@@ -1,0 +1,6 @@
+﻿nominal_issue_h,issue_time_beijing,nominal_late_latency_h,latest_observable_time_beijing,rain24_available,rain24_mm,rain24_valid_halfhours,rain24_expected_halfhours,rain24_completeness,rain72_available,rain72_mm,rain72_valid_halfhours,rain72_expected_halfhours,rain72_completeness,historical_q90_72h_mm,historical_q95_72h_mm,rainfall_branch_supports_high_trigger,rainfall_evidence_level,interpretation
+168,2026-08-19 08:00:00,14,2026-08-18 18:00:00,False,,0,48,0.0,False,,0,144,0.0,39.83049901518971,41.70299904495478,,资料窗不完整,不得把缺测解释为零降雨或弱降雨
+120,2026-08-21 08:00:00,14,2026-08-20 18:00:00,False,,20,48,0.4166666666666667,False,,20,144,0.1388888888888889,39.83049901518971,41.70299904495478,,资料窗不完整,不得把缺测解释为零降雨或弱降雨
+72,2026-08-23 08:00:00,14,2026-08-22 18:00:00,True,2.129999954253435,48,48,1.0,False,,116,144,0.8055555555555556,39.83049901518971,41.70299904495478,,资料窗不完整,不得把缺测解释为零降雨或弱降雨
+48,2026-08-24 08:00:00,14,2026-08-23 18:00:00,True,2.9349999241530895,48,48,1.0,True,5.85999986436218,144,144,1.0,39.83049901518971,41.70299904495478,False,未达到q90,可用完整72 h Late Run，仅作为已发生降雨证据
+24,2026-08-25 08:00:00,14,2026-08-24 18:00:00,True,1.3349999589845538,48,48,1.0,True,6.3999998373910785,144,144,1.0,39.83049901518971,41.70299904495478,False,未达到q90,可用完整72 h Late Run，仅作为已发生降雨证据

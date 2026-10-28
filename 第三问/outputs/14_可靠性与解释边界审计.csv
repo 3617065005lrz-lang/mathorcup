@@ -1,0 +1,10 @@
+﻿audit_item,value,interpretation
+2026_event_nearest_hour,2026-08-26 11:00:00,closest available hourly reconstruction to verified onset
+event_thermal_percentile,0.7419354838709677,MCD43-ETI72 percentile against 2021-2024 seasonal background
+event_short_rain_percentile,0.1532258064516129,"rain is secondary, not forced to dominate"
+event_antecedent_rain_percentile,0.6290322580645161,15-day moisture proxy
+event_rootzone_percentile,0.008064516129032258,SMAP root-zone state
+event_dynamic_score,0.7989495422759738,"mechanism union score, not probability"
+event_source_hotspot_joint_risk,0.8752652162533731,source hotspot gate times dynamic score
+q80_joint_threshold,0.7803381506725519,Q2 historical space-time screening threshold
+seasonal_daily_source_hotspot_exceedance_share,0.7983870967741935,diagnostic only; high value means q80 is not a rare-event alarm threshold

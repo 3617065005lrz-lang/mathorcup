@@ -1,0 +1,7 @@
+﻿model,antecedent_window_h,rolling_issue_count,median_abs_error_h,mean_abs_error_h,raw_coverage_count,operational_coverage_count,median_raw_width_h,median_operational_width_h,mean_trigger_support
+main,mixed(72/72/120),5,46.87275,59.32365,4,4,87.0,93.0,0.7464000000000001
+uniform_120,120,5,63.87275,64.97274999999999,4,4,82.0,88.0,0.7166
+uniform_168,168,5,63.87275,74.67275,4,4,85.05,91.05,0.7074
+uniform_24,24,5,26.87275,44.772749999999995,4,5,87.0,93.0,0.8036
+uniform_48,48,5,25.87275,44.272749999999995,4,5,87.0,93.0,0.7638
+uniform_72,72,5,46.87275,59.32365,4,4,87.0,93.0,0.7462

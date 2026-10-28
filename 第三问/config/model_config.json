@@ -1,0 +1,44 @@
+{
+  "event_catalog_time_utc": "2026-08-26T02:52:10Z",
+  "event_first_detachment_offset_s": 11.9,
+  "event_massive_runout_offset_s": 33.9,
+  "port_front_offset_s": 458.0,
+  "source_point_wgs84": {"longitude": 85.52515, "latitude": 28.28532},
+  "nominal_issue_hours": {
+    "168": "2026-08-19T00:00:00Z",
+    "120": "2026-08-21T00:00:00Z",
+    "72": "2026-08-23T00:00:00Z",
+    "48": "2026-08-24T00:00:00Z",
+    "24": "2026-08-25T00:00:00Z"
+  },
+  "antecedent_windows_h": [24, 48, 72, 120, 168],
+  "main_feature_windows_h": {
+    "positive_degree": 48,
+    "soil_moisture_change": 120,
+    "net_radiation": 120,
+    "vpd_p90": 48,
+    "potential_temperature_gradient": 168,
+    "eti_melt": 72
+  },
+  "scenario_draws": 1000,
+  "random_seed": 20261028,
+  "trigger_reference_quantile": 0.80,
+  "persistence_steps_6h": 2,
+  "weather_ar1": 0.70,
+  "eti_model": {
+    "temperature_factor_range": [0.02, 0.10],
+    "shortwave_factor_range": [0.0047, 0.0141],
+    "temperature_threshold_range_c": [0.0, 1.5],
+    "central_temperature_factor": 0.05,
+    "central_shortwave_factor": 0.0094,
+    "central_temperature_threshold_c": 1.0,
+    "albedo_sd": 0.03
+  },
+  "propagation_segments": [
+    {"name": "A-B", "ground_distance_km": 1.6834308448, "speed_mode_m_s": 76.5196, "speed_low_m_s": 68.0, "speed_high_m_s": 86.0},
+    {"name": "B-C", "ground_distance_km": 5.4135775506, "speed_mode_m_s": 111.3905, "speed_low_m_s": 85.1191, "speed_high_m_s": 161.1184},
+    {"name": "C-D", "ground_distance_km": 14.5842506586, "speed_mode_m_s": 38.8395, "speed_low_m_s": 37.3476, "speed_high_m_s": 40.4556}
+  ],
+  "transport_path_horizontal_to_port_km": 20.909,
+  "observed_transport_corridor_max_km": 28.8282535845
+}

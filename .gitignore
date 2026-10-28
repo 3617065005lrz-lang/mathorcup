@@ -21,3 +21,8 @@
 /第二问/04_基线模型_零一线性评价/
 /第二问/05_升级模型_机理约束双分支/
 /第二问/06_时空统一判级模型/
+
+# Question 3 raw external downloads and rebuildable scenario samples.
+# Keep scripts, configuration, compact cache, final CSV/Markdown outputs and PNG figures in Git.
+/第三问/外源资料/
+/第三问/processed/
