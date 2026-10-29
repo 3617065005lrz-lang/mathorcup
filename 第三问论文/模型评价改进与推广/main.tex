@@ -1,0 +1,14 @@
+% !TEX program = xelatex
+% 独立预览入口；并入总论文时只需使用 正文.tex。
+\documentclass[UTF8,a4paper,zihao=-4,fontset=windows]{ctexart}
+\usepackage[margin=25mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setCJKmainfont[Path=./fonts/,BoldFont=SourceHanSerifCN-Bold.otf]{SourceHanSerifCN-Regular.otf}
+\linespread{1.38}
+\setlength{\parindent}{2em}
+\ctexset{section={format=\centering\bfseries\zihao{4},name={,、},number=\chinese{section}},subsection={format=\bfseries\zihao{-4}}}
+\begin{document}
+\setcounter{section}{9}
+\input{正文}
+\end{document}
