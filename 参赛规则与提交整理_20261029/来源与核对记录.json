@@ -1,0 +1,51 @@
+{
+  "checked_date": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "scope": "第七届MathorCup大数据竞赛初赛，赛道B；不是春季第十六届MathorCup或全国大学生数学建模竞赛",
+  "original_archive": "2026年第七届MathorCup数学应用挑战赛—大数据竞赛初赛赛题(1).zip",
+  "files": [
+    {
+      "name": "2026年MathorCup数学应用挑战赛—大数据竞赛承诺书（手写或者电子签名后上传）.docx",
+      "source": "用户提供赛题总包",
+      "sha256": "2560fe9393310855778948bdb08271db671a040bb4c573bc370b45f01704cb5e"
+    },
+    {
+      "name": "2026年MathorCup数学应用挑战赛—大数据竞赛论文模板.docx",
+      "source": "用户提供赛题总包",
+      "sha256": "04fd7918d973338cdb50318132dd00df213d3b7b044bc25ff29a5bda57150bd6"
+    },
+    {
+      "name": "2026年MathorCup数学应用挑战赛—大数据挑战赛论文格式及提交规范.pdf",
+      "source": "用户提供赛题总包",
+      "sha256": "75beb9a6acbe000bce28b9ded9acfd3cf385a05c32901932e50b3ea851597e41"
+    },
+    {
+      "name": "MathorCup数学应用挑战赛人工智能工具使用规定（试行）.pdf",
+      "source": "用户提供赛题总包",
+      "sha256": "34be7fabb7a6df6b800bfb9cf1944c056246a89d1675efe1d860d1ddf8c71e83"
+    },
+    {
+      "name": "2026年MathorCup大数据挑战赛-赛道B初赛.pdf",
+      "source": "用户提供总包内B题压缩包",
+      "sha256": "c50a72f809703de0c80304f2002314d749a7fc00f276d289de960cfa376de0fb"
+    },
+    {
+      "name": "2026大数据竞赛报名通知及章程_官网附件.pdf",
+      "source": "https://publicqn.saikr.com/contest/1788430591423/RuoePinZVCR8frG4H0yh3oS0yb14arQQ.pdf",
+      "sha256": "a45b950e7284ede52ea3dd1ceb11da83982fa34eebbd23147fc69676eec3a9f0"
+    }
+  ],
+  "official_pages": {
+    "截止时间": "https://www.mathorcup.org/detail/2497",
+    "格式提交": "https://m.saikr.com/contest/notice_detail/49567",
+    "AI规定": "https://m.saikr.com/contest/notice_detail/49194",
+    "章程入口": "https://m.saikr.com/contest/notice_detail/47436",
+    "比赛主页": "https://www.saikr.com/vse/bigdata2026"
+  },
+  "not_verified": [
+    "登录后的实际文件大小上限",
+    "本队真实参赛队号及文件名是否包含MCB",
+    "每天一次与可重复更新的实际平台限制",
+    "是否存在群内新增公告"
+  ]
+}
