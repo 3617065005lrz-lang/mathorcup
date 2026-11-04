@@ -61,7 +61,7 @@ IMERG Late独立核验进一步表明：按14 h资料延迟截断后，48 h与24
 
 ## 五、运行入口
 
-从 `MathorCup赛道B建模` 目录运行：
+从克隆后的仓库根目录运行：
 
 ```powershell
 python .\第三问\run_models.py

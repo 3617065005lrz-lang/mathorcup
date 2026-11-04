@@ -38,7 +38,7 @@ scripts\08_download_era5_land_official.py
 
 ```powershell
 & "D:\MathorCup_Data\ERA5_Land_Gyirong\.venv\Scripts\python.exe" `
-  ".\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\08_download_era5_land_official.py" `
+  ".\第一问\05_重构方案_多源事件对照\scripts\08_download_era5_land_official.py" `
   --start-year 2026 --end-year 2026 --workers 2
 ```
 

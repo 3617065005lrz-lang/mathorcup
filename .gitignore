@@ -9,10 +9,25 @@
 
 # Local editor settings
 /.vscode/
+/.idea/
+
+# Local Python environments and tooling caches
+/.venv/
+/venv/
+/.pytest_cache/
+/.mypy_cache/
+/.ruff_cache/
 
 # Python bytecode
 **/__pycache__/
 **/*.py[cod]
+
+# Operating-system and temporary files
+**/.DS_Store
+**/Thumbs.db
+**/*.tmp
+**/*.bak
+**/~$*
 
 # Question 2 historical experiments and duplicate intermediate caches.
 # They remain available locally; the authoritative delivery is 07_正式模型_外源数据融合.

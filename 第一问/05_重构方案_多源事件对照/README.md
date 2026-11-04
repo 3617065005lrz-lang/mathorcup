@@ -74,17 +74,17 @@
 正式结果见`docs/05_正式建模阶段一结果.md`。在VS Code终端中从项目根目录运行：
 
 ```powershell
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\03_build_station_feature_cache.py
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\25_build_official_source_feature_cache.py
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\05_run_event_control_ranking.py
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\06_run_robustness_matrix.py
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\07_check_top_factor_redundancy.py
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\26_validate_imerg_precipitation.py
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\27_check_gmm_stability.py
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\28_year_block_bootstrap.py
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\32_run_supplementary_checks.py
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\33_station_source_transfer_reliability.py
-python .\MathorCup赛道B建模\第一问\05_重构方案_多源事件对照\scripts\29_prepare_formal_plot_cache.py
+python ".\第一问\05_重构方案_多源事件对照\scripts\03_build_station_feature_cache.py"
+python ".\第一问\05_重构方案_多源事件对照\scripts\25_build_official_source_feature_cache.py"
+python ".\第一问\05_重构方案_多源事件对照\scripts\05_run_event_control_ranking.py"
+python ".\第一问\05_重构方案_多源事件对照\scripts\06_run_robustness_matrix.py"
+python ".\第一问\05_重构方案_多源事件对照\scripts\07_check_top_factor_redundancy.py"
+python ".\第一问\05_重构方案_多源事件对照\scripts\26_validate_imerg_precipitation.py"
+python ".\第一问\05_重构方案_多源事件对照\scripts\27_check_gmm_stability.py"
+python ".\第一问\05_重构方案_多源事件对照\scripts\28_year_block_bootstrap.py"
+python ".\第一问\05_重构方案_多源事件对照\scripts\32_run_supplementary_checks.py"
+python ".\第一问\05_重构方案_多源事件对照\scripts\33_station_source_transfer_reliability.py"
+python ".\第一问\05_重构方案_多源事件对照\scripts\29_prepare_formal_plot_cache.py"
 ```
 
 脚本03和25负责正式特征缓存；脚本05—07只读缓存；脚本28完成年份整块自助法；脚本33核查站点与源区的空间迁移可靠性；脚本29只整理绘图缓存。脚本04仅保留为早期公开派生数据复核，不进入正式结果。正式图片由脚本30单独生成，使用方法见`docs/06_绘图运行说明.md`，后续改图不需要重跑数据清洗、特征构造或模型。
